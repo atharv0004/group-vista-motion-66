@@ -64,7 +64,7 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
             </Card>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Pagination dots */}
       <div className="flex justify-center mt-8 space-x-2">
