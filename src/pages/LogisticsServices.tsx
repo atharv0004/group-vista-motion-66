@@ -13,7 +13,8 @@ const LogisticsServices = () => {
         'Risk management and mitigation',
         'Performance analytics and reporting'
       ],
-      icon: '🚛'
+      icon: '🚛',
+      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Global Shipping & Freight',
@@ -25,7 +26,8 @@ const LogisticsServices = () => {
         'Multi-modal transportation',
         'Route optimization and planning'
       ],
-      icon: '🌍'
+      icon: '🌍',
+      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Warehouse Solutions',
@@ -37,7 +39,8 @@ const LogisticsServices = () => {
         'Cross-docking services',
         'Technology integration'
       ],
-      icon: '📦'
+      icon: '📦',
+      image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Last Mile Delivery',
@@ -49,7 +52,8 @@ const LogisticsServices = () => {
         'Returns management',
         'Customer service support'
       ],
-      icon: '🚚'
+      icon: '🚚',
+      image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Logistics Technology',
@@ -61,7 +65,8 @@ const LogisticsServices = () => {
         'IoT and sensor integration',
         'Automated reporting tools'
       ],
-      icon: '💻'
+      icon: '💻',
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Consulting Services',
@@ -73,7 +78,8 @@ const LogisticsServices = () => {
         'Network optimization',
         'Change management support'
       ],
-      icon: '📊'
+      icon: '📊',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center'
     }
   ];
 

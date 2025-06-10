@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronRight, Users, Globe, Award, TrendingUp } from 'lucide-react';
 
 const Index = () => {
   const categories = [
@@ -14,7 +14,8 @@ const Index = () => {
       href: '/logistics',
       bgGradient: 'from-blue-600 to-blue-800',
       textColor: 'text-blue-50',
-      features: ['Supply Chain Management', 'Global Shipping', 'Warehouse Solutions']
+      features: ['Supply Chain Management', 'Global Shipping', 'Warehouse Solutions'],
+      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&crop=center'
     },
     {
       id: 'enterprises',
@@ -23,7 +24,8 @@ const Index = () => {
       href: '/enterprises',
       bgGradient: 'from-red-600 to-red-800',
       textColor: 'text-red-50',
-      features: ['Business Consulting', 'Enterprise Development', 'Strategic Planning']
+      features: ['Business Consulting', 'Enterprise Development', 'Strategic Planning'],
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop&crop=center'
     },
     {
       id: 'enviro',
@@ -32,41 +34,112 @@ const Index = () => {
       href: '/enviro',
       bgGradient: 'from-green-600 to-green-800',
       textColor: 'text-green-50',
-      features: ['Environmental Consulting', 'Sustainability Solutions', 'Green Technology']
+      features: ['Environmental Consulting', 'Sustainability Solutions', 'Green Technology'],
+      image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=600&fit=crop&crop=center'
     }
+  ];
+
+  const stats = [
+    { icon: Users, value: '500+', label: 'Happy Clients' },
+    { icon: Globe, value: '25+', label: 'Countries Served' },
+    { icon: Award, value: '15+', label: 'Years Experience' },
+    { icon: TrendingUp, value: '95%', label: 'Success Rate' }
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-background via-accent/20 to-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section with Parallax Effect */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <motion.div
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=1920&h=1080&fit=crop&crop=center')"
+            }}
+          />
+        </div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+          >
+            Welcome to{' '}
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+              Economic Group
+            </span>
+          </motion.h1>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto"
+          >
+            Leading the way in logistics, enterprise solutions, and environmental innovation across global markets
+          </motion.p>
+          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Welcome to{' '}
-              <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-                Economic Group
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Leading the way in logistics, enterprise solutions, and environmental innovation
-            </p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <Button size="lg" className="text-lg px-8 py-3">
-                Explore Our Services
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </motion.div>
+            <Button size="lg" className="text-lg px-8 py-4 bg-blue-600 hover:bg-blue-700">
+              Explore Our Services
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-gray-900">
+              Contact Us Today
+            </Button>
           </motion.div>
+        </motion.div>
+
+        {/* Floating Animation Elements */}
+        <motion.div
+          animate={{ y: [-10, 10, -10] }}
+          transition={{ duration: 4, repeat: Infinity }}
+          className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl"
+        />
+        <motion.div
+          animate={{ y: [10, -10, 10] }}
+          transition={{ duration: 6, repeat: Infinity }}
+          className="absolute bottom-20 right-10 w-32 h-32 bg-emerald-500/20 rounded-full blur-xl"
+        />
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <Icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -80,30 +153,38 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Business Categories
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Our Business Solutions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover our comprehensive range of services across three specialized divisions
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Discover our comprehensive range of services across three specialized divisions, 
+              each designed to drive success and innovation in your industry
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8">
             {categories.map((category, index) => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="group"
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group cursor-pointer"
               >
-                <Card className="h-full overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <div className={`bg-gradient-to-br ${category.bgGradient} p-8 relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-300" />
-                    <div className="relative z-10">
-                      <CardHeader className="p-0 mb-6">
+                <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500">
+                  <div className="relative h-64 overflow-hidden">
+                    <motion.img
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.5 }}
+                      src={category.image}
+                      alt={category.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-t ${category.bgGradient} opacity-80 group-hover:opacity-70 transition-opacity duration-300`} />
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                      <CardHeader className="p-0 mb-4">
                         <CardTitle className={`text-2xl font-bold ${category.textColor} mb-2`}>
                           {category.title}
                         </CardTitle>
@@ -111,29 +192,34 @@ const Index = () => {
                           {category.description}
                         </CardDescription>
                       </CardHeader>
-                      
-                      <CardContent className="p-0">
-                        <ul className="space-y-2 mb-6">
-                          {category.features.map((feature, idx) => (
-                            <li key={idx} className={`${category.textColor}/80 flex items-center`}>
-                              <ChevronRight className="w-4 h-4 mr-2" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                        
-                        <Link to={category.href}>
-                          <Button 
-                            variant="secondary" 
-                            className="w-full group-hover:scale-105 transition-transform duration-200"
-                          >
-                            Explore {category.title.split(' ')[1]}
-                            <ArrowRight className="ml-2 w-4 h-4" />
-                          </Button>
-                        </Link>
-                      </CardContent>
                     </div>
                   </div>
+                  
+                  <CardContent className="p-6">
+                    <ul className="space-y-3 mb-6">
+                      {category.features.map((feature, idx) => (
+                        <motion.li
+                          key={idx}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: idx * 0.1 }}
+                          className="flex items-center text-muted-foreground"
+                        >
+                          <ChevronRight className="w-4 h-4 mr-2 text-blue-600" />
+                          {feature}
+                        </motion.li>
+                      ))}
+                    </ul>
+                    
+                    <Link to={category.href}>
+                      <Button 
+                        className="w-full group-hover:scale-105 transition-transform duration-200"
+                      >
+                        Explore {category.title.split(' ')[1]}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Button>
+                    </Link>
+                  </CardContent>
                 </Card>
               </motion.div>
             ))}
@@ -141,32 +227,42 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 bg-accent/5">
+      {/* About Section with Enhanced Design */}
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-3xl font-bold text-foreground mb-6">
+              <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Building Tomorrow's Economy Today
               </h3>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 With decades of combined experience across logistics, enterprise development, 
                 and environmental solutions, Economic Group stands at the forefront of 
                 innovation and sustainable growth.
               </p>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Our integrated approach ensures that every client receives comprehensive 
-                solutions tailored to their unique needs and challenges.
+                solutions tailored to their unique needs and challenges, delivered with 
+                excellence and reliability.
               </p>
-              <Button size="lg">
-                Learn More About Us
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex">
+                <Link to="/about">
+                  <Button size="lg" className="px-8 py-3">
+                    Learn More About Us
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="px-8 py-3">
+                    Get In Touch
+                  </Button>
+                </Link>
+              </div>
             </motion.div>
             
             <motion.div
@@ -176,10 +272,19 @@ const Index = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-4xl md:text-6xl font-bold text-primary mb-4">25+</div>
-                  <div className="text-lg text-muted-foreground">Years of Excellence</div>
+              <div className="relative">
+                <motion.img
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center"
+                  alt="Modern business solutions"
+                  className="rounded-2xl shadow-2xl"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-blue-600 mb-2">25+</div>
+                    <div className="text-sm text-gray-600">Years of Excellence</div>
+                  </div>
                 </div>
               </div>
             </motion.div>

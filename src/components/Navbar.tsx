@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, Home, List } from 'lucide-react';
+import { ChevronDown, Home, List, Users, Contact } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +13,8 @@ const Navbar = () => {
     { name: 'Logistics', href: '/logistics', icon: List },
     { name: 'Enterprises', href: '/enterprises', icon: List },
     { name: 'Enviro Solutions', href: '/enviro', icon: List },
+    { name: 'About Us', href: '/about', icon: Users },
+    { name: 'Contact', href: '/contact', icon: Contact },
   ];
 
   return (
@@ -26,7 +28,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -47,7 +49,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <Button
               variant="ghost"
               size="sm"
@@ -61,7 +63,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t">
               {navigation.map((item) => {
                 const Icon = item.icon;

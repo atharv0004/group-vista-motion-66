@@ -10,6 +10,7 @@ interface Service {
   description: string;
   features: string[];
   icon: string;
+  image: string;
 }
 
 interface ServicePageProps {
@@ -87,7 +88,7 @@ const ServicePage = ({
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -98,11 +99,25 @@ const ServicePage = ({
                 whileHover={{ y: -5 }}
                 className="group"
               >
-                <Card className="h-full border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-2xl">{service.icon}</span>
+                <Card className="h-full border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                  {/* Service Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <motion.img
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.5 }}
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute top-4 left-4">
+                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <span className="text-2xl">{service.icon}</span>
+                      </div>
                     </div>
+                  </div>
+
+                  <CardHeader className="pb-4">
                     <CardTitle className="text-xl font-bold text-foreground mb-2">
                       {service.title}
                     </CardTitle>
@@ -112,7 +127,7 @@ const ServicePage = ({
                   </CardHeader>
                   
                   <CardContent>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-6">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start text-sm text-muted-foreground">
                           <ChevronRight className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
@@ -121,7 +136,7 @@ const ServicePage = ({
                       ))}
                     </ul>
                     
-                    <Button className="w-full mt-6 group-hover:scale-105 transition-transform duration-200">
+                    <Button className="w-full group-hover:scale-105 transition-transform duration-200">
                       Learn More
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -150,10 +165,12 @@ const ServicePage = ({
               with our comprehensive solutions and expert guidance.
             </p>
             <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-              <Button size="lg" className="text-lg px-8 py-3">
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              <Link to="/contact">
+                <Button size="lg" className="text-lg px-8 py-3">
+                  Contact Us
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="text-lg px-8 py-3">
                 Schedule Consultation
               </Button>
