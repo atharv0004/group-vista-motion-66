@@ -13,7 +13,8 @@ const EnviroServices = () => {
         'Risk assessment and management',
         'Environmental monitoring programs'
       ],
-      icon: '🌱'
+      icon: '🌱',
+      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Sustainability Consulting',
@@ -25,7 +26,8 @@ const EnviroServices = () => {
         'Sustainable supply chain design',
         'ESG reporting and frameworks'
       ],
-      icon: '♻️'
+      icon: '♻️',
+      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Renewable Energy Solutions',
@@ -37,7 +39,8 @@ const EnviroServices = () => {
         'Energy storage solutions',
         'Renewable energy financing'
       ],
-      icon: '⚡'
+      icon: '⚡',
+      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Waste Management',
@@ -49,7 +52,8 @@ const EnviroServices = () => {
         'Hazardous waste management',
         'Zero waste consulting'
       ],
-      icon: '🗂️'
+      icon: '🗂️',
+      image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Green Technology',
@@ -61,7 +65,8 @@ const EnviroServices = () => {
         'Pollution control technologies',
         'Smart environmental solutions'
       ],
-      icon: '🔬'
+      icon: '🔬',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Climate Solutions',
@@ -73,7 +78,8 @@ const EnviroServices = () => {
         'Climate resilience strategies',
         'Green finance solutions'
       ],
-      icon: '🌍'
+      icon: '🌍',
+      image: 'https://images.unsplash.com/photo-1569163139394-de44cb5894c6?w=600&h=400&fit=crop&crop=center'
     }
   ];
 

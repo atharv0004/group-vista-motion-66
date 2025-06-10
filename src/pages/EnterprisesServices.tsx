@@ -13,7 +13,8 @@ const EnterprisesServices = () => {
         'Business model innovation',
         'Performance measurement frameworks'
       ],
-      icon: '🎯'
+      icon: '🎯',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Digital Transformation',
@@ -25,7 +26,8 @@ const EnterprisesServices = () => {
         'Change management support',
         'Digital adoption training'
       ],
-      icon: '🔄'
+      icon: '🔄',
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Process Optimization',
@@ -37,7 +39,8 @@ const EnterprisesServices = () => {
         'Workflow automation',
         'Continuous improvement programs'
       ],
-      icon: '⚙️'
+      icon: '⚙️',
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Leadership Development',
@@ -49,7 +52,8 @@ const EnterprisesServices = () => {
         'Team building initiatives',
         'Management training workshops'
       ],
-      icon: '👥'
+      icon: '👥',
+      image: 'https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Market Expansion',
@@ -61,7 +65,8 @@ const EnterprisesServices = () => {
         'International expansion planning',
         'Revenue growth strategies'
       ],
-      icon: '📈'
+      icon: '📈',
+      image: 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=600&h=400&fit=crop&crop=center'
     },
     {
       title: 'Innovation Management',
@@ -73,7 +78,8 @@ const EnterprisesServices = () => {
         'Technology transfer programs',
         'Innovation culture building'
       ],
-      icon: '💡'
+      icon: '💡',
+      image: 'https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=600&h=400&fit=crop&crop=center'
     }
   ];
 
