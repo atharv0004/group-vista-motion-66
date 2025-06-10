@@ -33,6 +33,14 @@ const CategoryHome = ({
   clients,
   features
 }: CategoryHomeProps) => {
+  const buttonColorClass = bgGradient.includes('red') ? 'hover:bg-red-600/10' :
+                          bgGradient.includes('blue') ? 'hover:bg-blue-600/10' : 
+                          'hover:bg-green-600/10';
+  
+  const accentColor = bgGradient.includes('red') ? 'text-red-600' :
+                     bgGradient.includes('blue') ? 'text-blue-600' : 
+                     'text-green-600';
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -72,9 +80,11 @@ const CategoryHome = ({
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className={`text-lg px-8 py-3 border-white/30 ${textColor} hover:bg-white/10`}>
-                Contact Us
-              </Button>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className={`text-lg px-8 py-3 border-white/30 ${textColor} ${buttonColorClass}`}>
+                  Contact Us
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -106,7 +116,7 @@ const CategoryHome = ({
                     viewport={{ once: true }}
                     className="flex items-center"
                   >
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3" />
+                    <div className={`w-2 h-2 bg-primary rounded-full mr-3`} />
                     <span className="text-foreground">{feature}</span>
                   </motion.div>
                 ))}
@@ -126,7 +136,7 @@ const CategoryHome = ({
                   <ul className="space-y-3">
                     {features.slice(4).map((feature, index) => (
                       <li key={index} className="flex items-start">
-                        <ArrowRight className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                        <ArrowRight className={`w-5 h-5 ${accentColor} mr-3 mt-0.5 flex-shrink-0`} />
                         <span className="text-muted-foreground">{feature}</span>
                       </li>
                     ))}

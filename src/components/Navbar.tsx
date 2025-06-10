@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-primary">Economic Group</span>
+              <span className="text-xl font-bold text-red-600">Economic Group</span>
             </Link>
           </div>
 
@@ -35,9 +35,9 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-primary ${
+                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-red-600 ${
                     location.pathname === item.href
-                      ? 'text-primary bg-accent'
+                      ? 'text-red-600 bg-red-50'
                       : 'text-muted-foreground hover:text-foreground'
                   }`}
                 >
@@ -73,7 +73,7 @@ const Navbar = () => {
                     to={item.href}
                     className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       location.pathname === item.href
-                        ? 'text-primary bg-accent'
+                        ? 'text-red-600 bg-red-50'
                         : 'text-muted-foreground hover:text-foreground'
                     }`}
                     onClick={() => setIsOpen(false)}

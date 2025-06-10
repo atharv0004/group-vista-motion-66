@@ -54,7 +54,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-red-600 to-red-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -159,7 +159,7 @@ const Contact = () => {
                       />
                     </div>
                     
-                    <Button type="submit" size="lg" className="w-full">
+                    <Button type="submit" size="lg" className="w-full bg-red-600 hover:bg-red-700">
                       Send Message
                       <Send className="ml-2 w-5 h-5" />
                     </Button>
@@ -200,7 +200,7 @@ const Contact = () => {
                       <CardContent className="p-6">
                         <div className="flex items-start">
                           <div className="flex-shrink-0">
-                            <Icon className="w-8 h-8 text-blue-600" />
+                            <Icon className="w-8 h-8 text-red-600" />
                           </div>
                           <div className="ml-4">
                             <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -226,7 +226,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-accent/5">
+      <section className="py-20 bg-red-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -250,11 +250,11 @@ const Contact = () => {
             viewport={{ once: true }}
             className="rounded-2xl overflow-hidden shadow-2xl"
           >
-            <div className="bg-gray-200 h-96 flex items-center justify-center">
+            <div className="bg-red-100 h-96 flex items-center justify-center">
               <div className="text-center">
-                <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600">Interactive Map Placeholder</p>
-                <p className="text-sm text-gray-500">
+                <MapPin className="w-16 h-16 text-red-400 mx-auto mb-4" />
+                <p className="text-red-600">Interactive Map Placeholder</p>
+                <p className="text-sm text-red-500">
                   Replace with actual map integration (Google Maps, Mapbox, etc.)
                 </p>
               </div>

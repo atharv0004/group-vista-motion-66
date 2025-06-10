@@ -30,8 +30,8 @@ const LogisticsHome = () => {
       subtitle="Comprehensive Supply Chain & Logistics Solutions"
       description="We provide end-to-end logistics solutions that streamline your supply chain, reduce costs, and improve efficiency across global markets."
       mission="To revolutionize global logistics through innovative technology, strategic partnerships, and uncompromising commitment to excellence. We connect businesses worldwide with reliable, efficient, and cost-effective logistics solutions."
-      bgGradient="from-blue-600 to-blue-800"
-      textColor="text-blue-50"
+      bgGradient="from-red-600 to-red-800"
+      textColor="text-red-50"
       servicesLink="/logistics/services"
       clients={clients}
       features={features}
