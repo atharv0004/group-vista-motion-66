@@ -44,7 +44,7 @@ const CategoryHome = ({
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className={`py-20 bg-gradient-to-br ${bgGradient} relative overflow-hidden`}>
+      <section className={`py-12 sm:py-16 lg:py-20 bg-gradient-to-br ${bgGradient} relative overflow-hidden`}>
         <div className="absolute inset-0 bg-black/20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -53,18 +53,18 @@ const CategoryHome = ({
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <Link to="/" className={`inline-flex items-center ${textColor}/80 hover:${textColor} mb-6 transition-colors`}>
+            <Link to="/" className={`inline-flex items-center ${textColor}/80 hover:${textColor} mb-4 sm:mb-6 transition-colors text-sm sm:text-base`}>
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Economic Group
             </Link>
             
-            <h1 className={`text-4xl md:text-6xl font-bold ${textColor} mb-6`}>
+            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${textColor} mb-4 sm:mb-6 px-2`}>
               {title}
             </h1>
-            <p className={`text-xl md:text-2xl ${textColor}/90 mb-8 max-w-3xl mx-auto`}>
+            <p className={`text-lg sm:text-xl md:text-2xl ${textColor}/90 mb-6 sm:mb-8 max-w-3xl mx-auto px-4`}>
               {subtitle}
             </p>
-            <p className={`text-lg ${textColor}/80 mb-8 max-w-4xl mx-auto`}>
+            <p className={`text-base sm:text-lg ${textColor}/80 mb-6 sm:mb-8 max-w-4xl mx-auto px-4`}>
               {description}
             </p>
             
@@ -72,16 +72,16 @@ const CategoryHome = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center px-4"
             >
               <Link to={servicesLink}>
-                <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
+                <Button size="lg" variant="secondary" className="text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto">
                   Explore Services
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className={`text-lg px-8 py-3 border-white/30 ${textColor} ${buttonColorClass}`}>
+                <Button size="lg" variant="outline" className={`text-base sm:text-lg px-6 sm:px-8 py-3 border-white/30 ${textColor} ${buttonColorClass} w-full sm:w-auto`}>
                   Contact Us
                 </Button>
               </Link>
@@ -91,22 +91,23 @@ const CategoryHome = ({
       </section>
 
       {/* Mission & Features Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-20">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="order-2 lg:order-1"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
                 {mission}
               </p>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {features.slice(0, 4).map((feature, index) => (
                   <motion.div
                     key={index}
@@ -116,8 +117,8 @@ const CategoryHome = ({
                     viewport={{ once: true }}
                     className="flex items-center"
                   >
-                    <div className={`w-2 h-2 bg-primary rounded-full mr-3`} />
-                    <span className="text-foreground">{feature}</span>
+                    <div className={`w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0`} />
+                    <span className="text-foreground text-sm sm:text-base">{feature}</span>
                   </motion.div>
                 ))}
               </div>
@@ -128,16 +129,16 @@ const CategoryHome = ({
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative order-1 lg:order-2"
             >
-              <Card className="p-8 border-0 shadow-lg bg-gradient-to-br from-accent/50 to-background">
+              <Card className="p-6 sm:p-8 border-0 shadow-lg bg-gradient-to-br from-accent/50 to-background">
                 <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Key Highlights</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Key Highlights</h3>
                   <ul className="space-y-3">
                     {features.slice(4).map((feature, index) => (
                       <li key={index} className="flex items-start">
-                        <ArrowRight className={`w-5 h-5 ${accentColor} mr-3 mt-0.5 flex-shrink-0`} />
-                        <span className="text-muted-foreground">{feature}</span>
+                        <ArrowRight className={`w-4 sm:w-5 h-4 sm:h-5 ${accentColor} mr-3 mt-0.5 flex-shrink-0`} />
+                        <span className="text-muted-foreground text-sm sm:text-base">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -149,19 +150,19 @@ const CategoryHome = ({
       </section>
 
       {/* Clients Section */}
-      <section className="py-20 bg-accent/5">
+      <section className="py-12 sm:py-16 lg:py-20 bg-accent/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Trusted by Industry Leaders
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               We're proud to partner with leading companies across various industries
             </p>
           </motion.div>

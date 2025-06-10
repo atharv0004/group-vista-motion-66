@@ -1,8 +1,6 @@
 
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,7 +34,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gradient-to-br from-red-900 to-red-800 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
@@ -45,35 +43,35 @@ const Footer = () => {
             <Link to="/" className="inline-block mb-6">
               <h3 className="text-2xl font-bold text-white">Economic Group</h3>
             </Link>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-red-100 mb-6 leading-relaxed">
               Leading provider of logistics, enterprise, and environmental solutions. 
               Transforming businesses worldwide through innovation and excellence.
             </p>
             <div className="space-y-3">
               <div className="flex items-center">
-                <MapPin className="w-5 h-5 text-blue-400 mr-3" />
-                <span className="text-gray-300">123 Business District, Economic Plaza</span>
+                <MapPin className="w-5 h-5 text-red-300 mr-3 flex-shrink-0" />
+                <span className="text-red-100">123 Business District, Economic Plaza</span>
               </div>
               <div className="flex items-center">
-                <Phone className="w-5 h-5 text-blue-400 mr-3" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <Phone className="w-5 h-5 text-red-300 mr-3 flex-shrink-0" />
+                <span className="text-red-100">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center">
-                <Mail className="w-5 h-5 text-blue-400 mr-3" />
-                <span className="text-gray-300">info@economicgroup.com</span>
+                <Mail className="w-5 h-5 text-red-300 mr-3 flex-shrink-0" />
+                <span className="text-red-100">info@economicgroup.com</span>
               </div>
             </div>
           </div>
 
           {/* Company Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Company</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white">Company</h4>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
+                    className="text-red-100 hover:text-white transition-colors duration-200 flex items-center group"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                     {link.name}
@@ -85,13 +83,13 @@ const Footer = () => {
 
           {/* Services Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
+                    className="text-red-100 hover:text-white transition-colors duration-200 flex items-center group"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                     {link.name}
@@ -101,33 +99,32 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter Signup */}
+          {/* Resources & Social */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Stay Updated</h4>
-            <p className="text-gray-300 mb-4">
-              Subscribe to our newsletter for industry insights and company updates.
-            </p>
-            <div className="space-y-3">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
-              />
-              <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                Subscribe
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </div>
+            <h4 className="text-lg font-semibold mb-6 text-white">Resources</h4>
+            <ul className="space-y-3 mb-8">
+              {resourceLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-red-100 hover:text-white transition-colors duration-200 flex items-center group"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
             {/* Social Links */}
-            <div className="mt-8">
-              <h5 className="text-sm font-semibold mb-4">Follow Us</h5>
+            <div>
+              <h5 className="text-sm font-semibold mb-4 text-white">Follow Us</h5>
               <div className="flex space-x-4">
                 {socialLinks.map(({ Icon, href, label }) => (
                   <a
                     key={label}
                     href={href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-red-200 hover:text-white transition-colors duration-200 hover:scale-110 transform"
                     aria-label={label}
                   >
                     <Icon className="w-6 h-6" />
@@ -140,23 +137,23 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-red-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="md:flex md:items-center md:justify-between">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
-              <p className="text-gray-400 text-sm">
+              <p className="text-red-200 text-sm">
                 © {currentYear} Economic Group. All rights reserved.
               </p>
             </div>
-            <div className="mt-4 md:mt-0 text-center md:text-right">
+            <div className="text-center md:text-right">
               <div className="flex justify-center md:justify-end space-x-6 text-sm">
-                <Link to="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <Link to="#" className="text-red-200 hover:text-white transition-colors duration-200">
                   Privacy Policy
                 </Link>
-                <Link to="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <Link to="#" className="text-red-200 hover:text-white transition-colors duration-200">
                   Terms of Service
                 </Link>
-                <Link to="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <Link to="#" className="text-red-200 hover:text-white transition-colors duration-200">
                   Cookie Policy
                 </Link>
               </div>

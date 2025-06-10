@@ -30,8 +30,8 @@ const EnterprisesHome = () => {
       subtitle="Business Development & Enterprise Solutions"
       description="We empower businesses to achieve sustainable growth through strategic planning, process optimization, and innovative solutions tailored to your unique challenges."
       mission="To drive business transformation and sustainable growth through strategic consulting, innovative solutions, and collaborative partnerships. We help enterprises navigate complex challenges and unlock their full potential."
-      bgGradient="from-red-600 to-red-800"
-      textColor="text-red-50"
+      bgGradient="from-blue-600 to-blue-800"
+      textColor="text-blue-50"
       servicesLink="/enterprises/services"
       clients={clients}
       features={features}
