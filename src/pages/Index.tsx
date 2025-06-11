@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -56,6 +57,21 @@ const Index = () => {
     }
   };
 
+  const scrollToLogistics = () => {
+    // Navigate to logistics page
+    window.location.href = '/logistics';
+  };
+
+  const scrollToEnterprises = () => {
+    // Navigate to enterprises page
+    window.location.href = '/enterprises';
+  };
+
+  const scrollToEnviro = () => {
+    // Navigate to enviro page
+    window.location.href = '/enviro';
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section with Updated Background */}
@@ -67,7 +83,7 @@ const Index = () => {
             transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: "linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=1080&fit=crop&crop=center')"
+              backgroundImage: "linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=1080&fit=crop&crop=center')"
             }}
           />
         </div>
@@ -114,7 +130,7 @@ const Index = () => {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-gray-900">
+              <Button size="lg" className="text-lg px-8 py-4 bg-white text-red-600 hover:bg-gray-100 hover:text-red-700">
                 Contact Us Today
               </Button>
             </Link>
@@ -179,66 +195,77 @@ const Index = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {categories.map((category, index) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group cursor-pointer"
-              >
-                <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500">
-                  <div className="relative h-64 overflow-hidden">
-                    <motion.img
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.5 }}
-                      src={category.image}
-                      alt={category.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${category.bgGradient} opacity-80 group-hover:opacity-70 transition-opacity duration-300`} />
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                      <CardHeader className="p-0 mb-4">
-                        <CardTitle className={`text-2xl font-bold ${category.textColor} mb-2`}>
-                          {category.title}
-                        </CardTitle>
-                        <CardDescription className={`${category.textColor}/90 text-base`}>
-                          {category.description}
-                        </CardDescription>
-                      </CardHeader>
+            {categories.map((category, index) => {
+              const handleExploreClick = () => {
+                if (category.id === 'logistics') {
+                  scrollToLogistics();
+                } else if (category.id === 'enterprises') {
+                  scrollToEnterprises();
+                } else if (category.id === 'enviro') {
+                  scrollToEnviro();
+                }
+              };
+
+              return (
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="group cursor-pointer"
+                >
+                  <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <div className="relative h-64 overflow-hidden">
+                      <motion.img
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.5 }}
+                        src={category.image}
+                        alt={category.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${category.bgGradient} opacity-80 group-hover:opacity-70 transition-opacity duration-300`} />
+                      <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                        <CardHeader className="p-0 mb-4">
+                          <CardTitle className={`text-2xl font-bold ${category.textColor} mb-2`}>
+                            {category.title}
+                          </CardTitle>
+                          <CardDescription className={`${category.textColor}/90 text-base`}>
+                            {category.description}
+                          </CardDescription>
+                        </CardHeader>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <CardContent className="p-6">
-                    <ul className="space-y-3 mb-6">
-                      {category.features.map((feature, idx) => (
-                        <motion.li
-                          key={idx}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.5, delay: idx * 0.1 }}
-                          className="flex items-center text-muted-foreground"
-                        >
-                          <ChevronRight className="w-4 h-4 mr-2 text-red-600" />
-                          {feature}
-                        </motion.li>
-                      ))}
-                    </ul>
                     
-                    <Link to={category.href}>
+                    <CardContent className="p-6">
+                      <ul className="space-y-3 mb-6">
+                        {category.features.map((feature, idx) => (
+                          <motion.li
+                            key={idx}
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: idx * 0.1 }}
+                            className="flex items-center text-muted-foreground"
+                          >
+                            <ChevronRight className="w-4 h-4 mr-2 text-red-600" />
+                            {feature}
+                          </motion.li>
+                        ))}
+                      </ul>
+                      
                       <Button 
                         className="w-full group-hover:scale-105 transition-transform duration-200"
+                        onClick={handleExploreClick}
                       >
                         Explore {category.title.split(' ')[1]}
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
