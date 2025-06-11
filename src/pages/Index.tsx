@@ -1,11 +1,11 @@
-
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, ChevronRight, Users, Globe, Award, TrendingUp } from 'lucide-react';
 
 const Index = () => {
+  const navigate = useNavigate();
   const categories = [
     {
       id: 'logistics',
@@ -59,17 +59,17 @@ const Index = () => {
 
   const scrollToLogistics = () => {
     // Navigate to logistics page
-    window.location.href = '/logistics';
+    navigate('/logistics');
   };
 
   const scrollToEnterprises = () => {
     // Navigate to enterprises page
-    window.location.href = '/enterprises';
+    navigate('/enterprises');
   };
 
   const scrollToEnviro = () => {
     // Navigate to enviro page
-    window.location.href = '/enviro';
+    navigate('/enviro');
   };
 
   return (
