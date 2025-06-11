@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Home, List, Users, Contact } from 'lucide-react';
-
+import logo from '@/assets/logo.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -23,8 +23,13 @@ const Navbar = () => {
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 w-full">
             <div className="flex items-center flex-shrink-0 min-w-0">
-              <Link to="/" className="flex items-center">
-                <span className="text-lg sm:text-xl font-bold text-red-600 truncate">Economic Group</span>
+            <Link to="/" className="flex-shrink-0 flex items-center space-x-2">
+                <img
+                  src={logo}
+                  alt="Economic Group Logo"
+                  className="h-8 w-8 rounded-sm" // or use rounded-md for slightly more curve
+                />
+                <span className="text-xl font-bold text-red-600">Economic Group</span>
               </Link>
             </div>
 

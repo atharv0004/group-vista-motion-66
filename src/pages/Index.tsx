@@ -78,14 +78,14 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background with improved visibility and fallback */}
         <div className="absolute inset-0 z-0">
-          <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
+        <motion.div
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
+            className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `
-                linear-gradient(rgba(220, 38, 38, 0.7), rgba(185, 28, 28, 0.7)),
-                url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=1080&fit=crop&crop=center&q=80')
-              `,
-              backgroundColor: '#dc2626' // Fallback color
+              backgroundImage:
+                "linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url('https://images.unsplash.com/photo-1678182451047-196f22a4143e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
             }}
           />
         </div>
