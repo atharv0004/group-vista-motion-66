@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, ChevronRight, Users, Globe, Award, TrendingUp } from 'lucide-react';
 
 const Index = () => {
-  const navigate = useNavigate();
   const categories = [
     {
       id: 'logistics',
@@ -55,21 +54,6 @@ const Index = () => {
         behavior: 'smooth'
       });
     }
-  };
-
-  const scrollToLogistics = () => {
-    // Navigate to logistics page
-    navigate('/logistics');
-  };
-
-  const scrollToEnterprises = () => {
-    // Navigate to enterprises page
-    navigate('/enterprises');
-  };
-
-  const scrollToEnviro = () => {
-    // Navigate to enviro page
-    navigate('/enviro');
   };
 
   return (
@@ -196,77 +180,64 @@ const Index = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {categories.map((category, index) => {
-              const handleExploreClick = () => {
-                if (category.id === 'logistics') {
-                  scrollToLogistics();
-                } else if (category.id === 'enterprises') {
-                  scrollToEnterprises();
-                } else if (category.id === 'enviro') {
-                  scrollToEnviro();
-                }
-              };
-
-              return (
-                <motion.div
-                  key={category.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className="group cursor-pointer"
-                >
-                  <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500">
-                    <div className="relative h-64 overflow-hidden">
-                      <motion.img
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.5 }}
-                        src={category.image}
-                        alt={category.title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className={`absolute inset-0 bg-gradient-to-t ${category.bgGradient} opacity-80 group-hover:opacity-70 transition-opacity duration-300`} />
-                      <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                        <CardHeader className="p-0 mb-4">
-                          <CardTitle className={`text-2xl font-bold ${category.textColor} mb-2`}>
-                            {category.title}
-                          </CardTitle>
-                          <CardDescription className={`${category.textColor}/90 text-base`}>
-                            {category.description}
-                          </CardDescription>
-                        </CardHeader>
-                      </div>
+            {categories.map((category, index) => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group cursor-pointer"
+              >
+                <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500">
+                  <div className="relative h-64 overflow-hidden">
+                    <motion.img
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.5 }}
+                      src={category.image}
+                      alt={category.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-t ${category.bgGradient} opacity-80 group-hover:opacity-70 transition-opacity duration-300`} />
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                      <CardHeader className="p-0 mb-4">
+                        <CardTitle className={`text-2xl font-bold ${category.textColor} mb-2`}>
+                          {category.title}
+                        </CardTitle>
+                        <CardDescription className={`${category.textColor}/90 text-base`}>
+                          {category.description}
+                        </CardDescription>
+                      </CardHeader>
                     </div>
+                  </div>
+                  
+                  <CardContent className="p-6">
+                    <ul className="space-y-3 mb-6">
+                      {category.features.map((feature, idx) => (
+                        <motion.li
+                          key={idx}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: idx * 0.1 }}
+                          className="flex items-center text-muted-foreground"
+                        >
+                          <ChevronRight className="w-4 h-4 mr-2 text-red-600" />
+                          {feature}
+                        </motion.li>
+                      ))}
+                    </ul>
                     
-                    <CardContent className="p-6">
-                      <ul className="space-y-3 mb-6">
-                        {category.features.map((feature, idx) => (
-                          <motion.li
-                            key={idx}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            className="flex items-center text-muted-foreground"
-                          >
-                            <ChevronRight className="w-4 h-4 mr-2 text-red-600" />
-                            {feature}
-                          </motion.li>
-                        ))}
-                      </ul>
-                      
-                      <Button 
-                        className="w-full group-hover:scale-105 transition-transform duration-200"
-                        onClick={handleExploreClick}
-                      >
+                    <Link to={category.href} className="block">
+                      <Button className="w-full group-hover:scale-105 transition-transform duration-200">
                         Explore {category.title.split(' ')[1]}
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
+                    </Link>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
