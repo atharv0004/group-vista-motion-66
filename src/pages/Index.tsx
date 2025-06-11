@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -83,7 +82,7 @@ const Index = () => {
             transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: "linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=1080&fit=crop&crop=center')"
+              backgroundImage: "linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url('https://images.unsplash.com/photo-1586528116493-a029325f4946?w=1920&h=1080&fit=crop&crop=center')"
             }}
           />
         </div>

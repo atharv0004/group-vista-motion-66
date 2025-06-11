@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -33,10 +32,6 @@ const CategoryHome = ({
   clients,
   features
 }: CategoryHomeProps) => {
-  const buttonColorClass = bgGradient.includes('red') ? 'hover:bg-red-600/10' :
-                          bgGradient.includes('blue') ? 'hover:bg-blue-600/10' : 
-                          'hover:bg-green-600/10';
-  
   const accentColor = bgGradient.includes('red') ? 'text-red-600' :
                      bgGradient.includes('blue') ? 'text-blue-600' : 
                      'text-green-600';
@@ -81,7 +76,7 @@ const CategoryHome = ({
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className={`text-base sm:text-lg px-6 sm:px-8 py-3 border-white/30 ${textColor} ${buttonColorClass} w-full sm:w-auto`}>
+                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-white text-red-600 hover:bg-gray-100 hover:text-red-700 w-full sm:w-auto">
                   Contact Us
                 </Button>
               </Link>
