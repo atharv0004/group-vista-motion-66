@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -73,16 +74,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Updated Background */}
+      {/* Hero Section with Fixed Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background with improved visibility and fallback */}
         <div className="absolute inset-0 z-0">
-          <motion.div
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
-            className="w-full h-full bg-cover bg-center"
+          <div 
+            className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url('https://images.unsplash.com/photo-1586528116493-a029325f4946?w=1920&h=1080&fit=crop&crop=center')"
+              backgroundImage: `
+                linear-gradient(rgba(220, 38, 38, 0.7), rgba(185, 28, 28, 0.7)),
+                url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=1080&fit=crop&crop=center&q=80')
+              `,
+              backgroundColor: '#dc2626' // Fallback color
             }}
           />
         </div>
@@ -97,7 +100,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6"
           >
             Welcome to{' '}
             <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
@@ -109,7 +112,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto"
+            className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto px-2"
           >
             Leading the way in logistics, enterprise solutions, and environmental innovation across global markets
           </motion.p>
@@ -118,18 +121,18 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center px-2"
           >
             <Button 
               size="lg" 
-              className="text-lg px-8 py-4 bg-red-600 hover:bg-red-700"
+              className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-red-600 hover:bg-red-700 w-full sm:w-auto"
               onClick={scrollToBusinessSolutions}
             >
               Explore Our Solutions
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Link to="/contact">
-              <Button size="lg" className="text-lg px-8 py-4 bg-white text-red-600 hover:bg-gray-100 hover:text-red-700">
+            <Link to="/contact" className="w-full sm:w-auto">
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-white text-red-600 hover:bg-gray-100 hover:text-red-700 w-full">
                 Contact Us Today
               </Button>
             </Link>
@@ -174,7 +177,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Categories Section */}
       <section id="business-solutions" className="py-20 bg-gradient-to-b from-background to-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -269,7 +271,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section with Enhanced Design */}
       <section className="py-20 bg-gradient-to-r from-red-50 to-red-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -292,15 +293,15 @@ const Index = () => {
                 solutions tailored to their unique needs and challenges, delivered with 
                 excellence and reliability.
               </p>
-              <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/about">
-                  <Button size="lg" className="px-8 py-3 bg-red-600 hover:bg-red-700">
+                  <Button size="lg" className="px-8 py-3 bg-red-600 hover:bg-red-700 w-full sm:w-auto">
                     Learn More About Us
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="px-8 py-3 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+                  <Button size="lg" variant="outline" className="px-8 py-3 border-red-600 text-red-600 hover:bg-red-600 hover:text-white w-full sm:w-auto">
                     Get In Touch
                   </Button>
                 </Link>
