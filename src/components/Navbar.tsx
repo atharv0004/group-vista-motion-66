@@ -1,9 +1,9 @@
-
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Home, List, Users, Contact } from 'lucide-react';
 import logo from '@/assets/logo.png';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -23,11 +23,11 @@ const Navbar = () => {
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 w-full">
             <div className="flex items-center flex-shrink-0 min-w-0">
-            <Link to="/" className="flex-shrink-0 flex items-center space-x-2">
+              <Link to="/" className="flex-shrink-0 flex items-center space-x-2">
                 <img
                   src={logo}
                   alt="Economic Group Logo"
-                  className="h-8 w-8 rounded-sm" // or use rounded-md for slightly more curve
+                  className="h-8 w-8 rounded-sm"
                 />
                 <span className="text-xl font-bold text-red-600">Economic Group</span>
               </Link>
@@ -54,13 +54,13 @@ const Navbar = () => {
               })}
             </div>
 
-            {/* Mobile menu button - Fixed with proper sizing and positioning */}
-            <div className="lg:hidden flex items-center flex-shrink-0">
+            {/* Mobile menu button - Fixed positioning and z-index */}
+            <div className="lg:hidden flex items-center flex-shrink-0 relative z-[60]">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 h-10 w-10 text-muted-foreground hover:text-foreground flex items-center justify-center"
+                className="p-2 h-10 w-10 text-muted-foreground hover:text-foreground flex items-center justify-center relative z-[60]"
               >
                 {isOpen ? (
                   <X className="w-6 h-6" />
@@ -82,8 +82,8 @@ const Navbar = () => {
             onClick={() => setIsOpen(false)}
           />
           
-          {/* Mobile Navigation */}
-          <div className="fixed top-16 left-0 right-0 bg-background border-b shadow-lg z-40 lg:hidden">
+          {/* Mobile Navigation - Fixed z-index */}
+          <div className="fixed top-16 left-0 right-0 bg-background border-b shadow-lg z-50 lg:hidden">
             <div className="px-4 pt-2 pb-3 space-y-2">
               {navigation.map((item) => {
                 const Icon = item.icon;
