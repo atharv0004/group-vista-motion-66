@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -49,13 +48,17 @@ const Index = () => {
   const scrollToBusinessSolutions = () => {
     const element = document.getElementById('business-solutions');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const elementPosition = element.offsetTop - 80; // Account for fixed navbar height
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Parallax Effect */}
+      {/* Hero Section with Updated Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <motion.div
@@ -64,7 +67,7 @@ const Index = () => {
             transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: "linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url('https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=1920&h=1080&fit=crop&crop=center')"
+              backgroundImage: "linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=1080&fit=crop&crop=center')"
             }}
           />
         </div>
