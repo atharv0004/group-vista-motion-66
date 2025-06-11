@@ -20,11 +20,11 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50 border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center flex-shrink-0">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16 w-full">
+            <div className="flex items-center flex-shrink-0 min-w-0">
               <Link to="/" className="flex items-center">
-                <span className="text-lg sm:text-xl font-bold text-red-600">Economic Group</span>
+                <span className="text-lg sm:text-xl font-bold text-red-600 truncate">Economic Group</span>
               </Link>
             </div>
 
@@ -49,18 +49,18 @@ const Navbar = () => {
               })}
             </div>
 
-            {/* Mobile menu button - Fixed positioning and size */}
-            <div className="lg:hidden flex items-center">
+            {/* Mobile menu button - Fixed with proper sizing and positioning */}
+            <div className="lg:hidden flex items-center flex-shrink-0">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-muted-foreground hover:text-foreground"
+                className="p-2 h-10 w-10 text-muted-foreground hover:text-foreground flex items-center justify-center"
               >
                 {isOpen ? (
-                  <X className="w-5 h-5" />
+                  <X className="w-6 h-6" />
                 ) : (
-                  <Menu className="w-5 h-5" />
+                  <Menu className="w-6 h-6" />
                 )}
               </Button>
             </div>
