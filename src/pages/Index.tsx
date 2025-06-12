@@ -86,7 +86,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6"
           >
-            Welcome to{' '}
+            WELCOME TO{' '}
             <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
               Economic Group
             </span>
