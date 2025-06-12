@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -51,14 +50,6 @@ const About = () => {
       title: 'Innovation',
       description: 'Continuous improvement and innovative solutions drive our approach to solving complex challenges.'
     }
-  ];
-
-  const timeline = [
-    { year: '2008', event: 'Economic Group founded with a vision to transform business solutions' },
-    { year: '2012', event: 'Expanded into logistics and supply chain management services' },
-    { year: '2016', event: 'Launched environmental solutions division for sustainable practices' },
-    { year: '2020', event: 'Achieved global reach with operations in 25+ countries' },
-    { year: '2024', event: 'Leading provider with 500+ satisfied clients worldwide' }
   ];
 
   const handleImageUpload = (founderId: number, event: React.ChangeEvent<HTMLInputElement>) => {
@@ -299,51 +290,63 @@ const About = () => {
           </div>
         </div>
       </section>
-      <IndiaMap />
 
-      {/* Timeline Section */}
-      <section className="py-20 bg-background">
+      {/* Network Map Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Journey
+              Our Network
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Milestones that have shaped our growth and success over the years
+              Strategically positioned across India to serve you better with our comprehensive logistics and business solutions
             </p>
           </motion.div>
 
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-red-600"></div>
-            {timeline.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative flex items-center mb-12 ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                }`}
-              >
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                  <Card className="border-0 shadow-lg">
-                    <CardContent className="p-6">
-                      <div className="text-2xl font-bold text-red-600 mb-2">{item.year}</div>
-                      <p className="text-muted-foreground">{item.event}</p>
-                    </CardContent>
-                  </Card>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-blue-200"
+          >
+            <div className="p-6 bg-gradient-to-r from-blue-600 to-blue-800">
+              <h3 className="text-xl font-semibold text-white text-center">
+                Pan-India Presence
+              </h3>
+            </div>
+            <div className="p-8">
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl border-2 border-blue-100 overflow-hidden shadow-inner">
+                <IndiaMap />
+              </div>
+            </div>
+            <div className="px-8 pb-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-blue-600">15+</div>
+                  <div className="text-sm text-blue-800">Major Cities</div>
                 </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full border-4 border-white shadow-lg"></div>
-              </motion.div>
-            ))}
-          </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-green-600">50+</div>
+                  <div className="text-sm text-green-800">Service Centers</div>
+                </div>
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-orange-600">100+</div>
+                  <div className="text-sm text-orange-800">Partners</div>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-purple-600">24/7</div>
+                  <div className="text-sm text-purple-800">Support</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
