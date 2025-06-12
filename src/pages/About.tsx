@@ -292,7 +292,7 @@ const About = () => {
       </section>
 
       {/* Network Map Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100 relative z-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -314,7 +314,7 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-blue-200"
+            className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-blue-200 relative z-0"
           >
             <div className="p-6 bg-gradient-to-r from-blue-600 to-blue-800">
               <h3 className="text-xl font-semibold text-white text-center">
@@ -322,11 +322,12 @@ const About = () => {
               </h3>
             </div>
             <div className="p-8">
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl border-2 border-blue-100 overflow-hidden shadow-inner">
-                <IndiaMap />
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl border-2 border-blue-100 overflow-hidden shadow-inner relative z-0">
+                <div className="relative z-0">
+                  <IndiaMap />
+                </div>
               </div>
             </div>
-            
           </motion.div>
         </div>
       </section>
