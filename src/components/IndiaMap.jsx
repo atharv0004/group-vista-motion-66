@@ -41,7 +41,7 @@ const IndiaMap = () => {
   return (
       <MapContainer
     center={[22.9734, 78.6569]} // Center of India
-    zoom={6}
+    zoom={5.5}
     scrollWheelZoom={false} // 🔴 Disable scroll zoom
     style={{ height: "100vh", width: "100%" }}
       >
