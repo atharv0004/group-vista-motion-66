@@ -57,9 +57,9 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden">
       {/* Hero Section with Fixed Background */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden w-full max-w-full">
         {/* Background with improved visibility and fallback */}
         <div className="absolute inset-0 z-0">
         <motion.div
