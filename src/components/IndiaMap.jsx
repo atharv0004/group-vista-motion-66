@@ -43,7 +43,7 @@ const IndiaMap = () => {
     center={[22.9734, 78.6569]} // Center of India
     zoom={5.2}
     scrollWheelZoom={false} // 🔴 Disable scroll zoom
-    style={{ height: "100vh", width: "100%" }}
+    style={{ height: "60vh", width: "100%" }}
       >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
