@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, ChevronRight, Users, Globe, Award, TrendingUp } from 'lucide-react';
+import bgImage from '../assets/HeroImage.png'; // Adjust the path as needed
+
 
 const Index = () => {
   const categories = [
@@ -63,15 +65,14 @@ const Index = () => {
         {/* Background with improved visibility and fallback */}
         <div className="absolute inset-0 z-0">
         <motion.div
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
-            className="w-full h-full bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url('https://images.unsplash.com/photo-1678182451047-196f22a4143e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-            }}
-          />
+  initial={{ scale: 1.1 }}
+  animate={{ scale: 1 }}
+  transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
+  className="w-full h-full bg-cover bg-center"
+  style={{
+    backgroundImage: `linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url(${bgImage})`,
+  }}
+/>
         </div>
         
         <motion.div
