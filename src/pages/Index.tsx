@@ -18,7 +18,7 @@ const Index = () => {
       href: '/logistics',
       bgGradient: 'from-red-600 to-red-800',
       textColor: 'text-red-50',
-      features: ['Supply Chain Management', 'Global Shipping', 'Warehouse Solutions'],
+      features: ["Pan-India Transport", "Multi-Modal Freight (Road, Rail, Sea)", "Real-Time Tracking"],
       image: 'https://cdn.pixabay.com/photo/2024/07/25/14/54/truck-8921536_1280.jpg'
     },
     {
@@ -28,7 +28,7 @@ const Index = () => {
       href: '/enterprises',
       bgGradient: 'from-blue-600 to-blue-800',
       textColor: 'text-blue-50',
-      features: ['Business Consulting', 'Enterprise Development', 'Strategic Planning'],
+      features: [ "Manpower Solutions", "Warehouse & Facility Management", "Retail & Staffing Services"],
       image: businessImage,
     },
     {
@@ -38,7 +38,7 @@ const Index = () => {
       href: '/enviro',
       bgGradient: 'from-green-600 to-green-800',
       textColor: 'text-green-50',
-      features: ['Environmental Consulting', 'Sustainability Solutions', 'Green Technology'],
+      features: [ "Waste Management", "Eco-Friendly Recycling", "Regulatory Compliance"],
       image: 'https://cdn.pixabay.com/photo/2023/07/06/18/12/recycled-8111001_1280.jpg'
     }
   ];
