@@ -16,7 +16,7 @@ const Index = () => {
       bgGradient: 'from-red-600 to-red-800',
       textColor: 'text-red-50',
       features: ['Supply Chain Management', 'Global Shipping', 'Warehouse Solutions'],
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&crop=center'
+      image: 'https://cdn.pixabay.com/photo/2024/07/25/14/54/truck-8921536_1280.jpg'
     },
     {
       id: 'enterprises',
