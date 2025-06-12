@@ -4,6 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, ChevronRight, Users, Globe, Award, TrendingUp } from 'lucide-react';
 import bgImage from '../assets/HeroImage.png'; // Adjust the path as needed
+import businessImage from '../assets/business.jpg'; // adjust path as needed
+
+
 
 
 const Index = () => {
@@ -26,7 +29,7 @@ const Index = () => {
       bgGradient: 'from-blue-600 to-blue-800',
       textColor: 'text-blue-50',
       features: ['Business Consulting', 'Enterprise Development', 'Strategic Planning'],
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop&crop=center'
+      image: businessImage,
     },
     {
       id: 'enviro',
