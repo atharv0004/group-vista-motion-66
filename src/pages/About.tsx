@@ -352,7 +352,7 @@ const About = () => {
                 Contact Us Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-red-600">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-text-red-600 hover:bg-white ">
                 View Our Services
               </Button>
             </div>
