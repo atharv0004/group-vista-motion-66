@@ -39,12 +39,12 @@ const locations = [
 
 const IndiaMap = () => {
   return (
-    <MapContainer
-      center={[22.9734, 78.6569]} // Center of India
-      zoom={5}
-      scrollWheelZoom={true}
-      style={{ height: "100vh", width: "100%" }}
-    >
+      <MapContainer
+    center={[22.9734, 78.6569]} // Center of India
+    zoom={5}
+    scrollWheelZoom={false} // 🔴 Disable scroll zoom
+    style={{ height: "100vh", width: "100%" }}
+      >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
