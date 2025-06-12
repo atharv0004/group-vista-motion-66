@@ -65,8 +65,7 @@ const Index = () => {
   {/* Background Image */}
   <div className="absolute inset-0 z-0">
     <motion.div
-      initial={{ scale: 1.1 }}
-      animate={{ scale: 1 }}
+      initial={{ scale: 1 }}
       className="w-full h-full bg-cover bg-center"
       style={{
         backgroundImage: `url(${bgImage})`,
