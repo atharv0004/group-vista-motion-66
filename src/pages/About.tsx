@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -6,6 +5,7 @@ import { ArrowRight, Users, Globe, Award, Target, Eye, Heart, Upload } from 'luc
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import IndiaMap from '@/components/IndiaMap';
 
 const About = () => {
   const [coFounders, setCoFounders] = useState([
@@ -148,6 +148,35 @@ const About = () => {
               </Card>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* India Map Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our National Network
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Strategically positioned across India to serve our clients with excellence and efficiency
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <IndiaMap />
+          </motion.div>
         </div>
       </section>
 
