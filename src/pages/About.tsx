@@ -326,26 +326,7 @@ const About = () => {
                 <IndiaMap />
               </div>
             </div>
-            <div className="px-8 pb-8">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-blue-600">15+</div>
-                  <div className="text-sm text-blue-800">Major Cities</div>
-                </div>
-                <div className="bg-green-50 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-green-600">50+</div>
-                  <div className="text-sm text-green-800">Service Centers</div>
-                </div>
-                <div className="bg-orange-50 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-orange-600">100+</div>
-                  <div className="text-sm text-orange-800">Partners</div>
-                </div>
-                <div className="bg-purple-50 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-purple-600">24/7</div>
-                  <div className="text-sm text-purple-800">Support</div>
-                </div>
-              </div>
-            </div>
+            
           </motion.div>
         </div>
       </section>
