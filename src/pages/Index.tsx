@@ -67,7 +67,6 @@ const Index = () => {
     <motion.div
       initial={{ scale: 1.1 }}
       animate={{ scale: 1 }}
-      transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
       className="w-full h-full bg-cover bg-center"
       style={{
         backgroundImage: `url(${bgImage})`,
@@ -125,10 +124,30 @@ const Index = () => {
     </motion.div>
   </motion.div>
 
-  
+  {/* Floating Animation Elements */}
+  <motion.div
+    animate={{ y: [-10, 10, -10] }}
+    transition={{ duration: 4, repeat: Infinity }}
+    className="absolute top-20 left-10 w-20 h-20 bg-red-500/20 rounded-full blur-xl"
+  />
+  <motion.div
+    animate={{ y: [10, -10, 10] }}
+    transition={{ duration: 6, repeat: Infinity }}
+    className="absolute bottom-20 right-10 w-32 h-32 bg-orange-500/20 rounded-full blur-xl"
+  />
 
 
-
+        {/* Floating Animation Elements */}
+        <motion.div
+          animate={{ y: [-10, 10, -10] }}
+          transition={{ duration: 4, repeat: Infinity }}
+          className="absolute top-20 left-10 w-20 h-20 bg-red-500/20 rounded-full blur-xl"
+        />
+        <motion.div
+          animate={{ y: [10, -10, 10] }}
+          transition={{ duration: 6, repeat: Infinity }}
+          className="absolute bottom-20 right-10 w-32 h-32 bg-orange-500/20 rounded-full blur-xl"
+        />
       </section>
 
       {/* Stats Section */}
