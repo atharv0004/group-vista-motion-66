@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, ChevronRight, Users, Globe, Award, TrendingUp } from 'lucide-react';
+import bgImage from '../assets/HeroImage.png'; // Adjust the path as needed
+import businessImage from '../assets/business.jpg'; // adjust path as needed
+
+
+
 
 const Index = () => {
   const categories = [
@@ -14,7 +19,7 @@ const Index = () => {
       bgGradient: 'from-red-600 to-red-800',
       textColor: 'text-red-50',
       features: ['Supply Chain Management', 'Global Shipping', 'Warehouse Solutions'],
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&crop=center'
+      image: 'https://cdn.pixabay.com/photo/2024/07/25/14/54/truck-8921536_1280.jpg'
     },
     {
       id: 'enterprises',
@@ -24,7 +29,7 @@ const Index = () => {
       bgGradient: 'from-blue-600 to-blue-800',
       textColor: 'text-blue-50',
       features: ['Business Consulting', 'Enterprise Development', 'Strategic Planning'],
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop&crop=center'
+      image: businessImage,
     },
     {
       id: 'enviro',
@@ -34,7 +39,7 @@ const Index = () => {
       bgGradient: 'from-green-600 to-green-800',
       textColor: 'text-green-50',
       features: ['Environmental Consulting', 'Sustainability Solutions', 'Green Technology'],
-      image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=600&fit=crop&crop=center'
+      image: 'https://cdn.pixabay.com/photo/2023/07/06/18/12/recycled-8111001_1280.jpg'
     }
   ];
 
@@ -60,68 +65,79 @@ const Index = () => {
     <div className="min-h-screen w-full max-w-full overflow-x-hidden">
       {/* Hero Section with Fixed Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden w-full max-w-full">
-        {/* Background with improved visibility and fallback */}
-        <div className="absolute inset-0 z-0">
-        <motion.div
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
-            className="w-full h-full bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url('https://images.unsplash.com/photo-1678182451047-196f22a4143e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-            }}
-          />
-        </div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6"
-          >
-            WELCOME TO{' '}
-            <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-              Economic Group
-            </span>
-          </motion.h1>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto px-2"
-          >
-            Leading the way in logistics, enterprise solutions, and environmental innovation across global markets
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center px-2"
-          >
-            <Button 
-              size="lg" 
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-red-600 hover:bg-red-700 w-full sm:w-auto"
-              onClick={scrollToBusinessSolutions}
-            >
-              Explore Our Solutions
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Link to="/contact" className="w-full sm:w-auto">
-              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-white text-red-600 hover:bg-gray-100 hover:text-red-700 w-full">
-                Contact Us Today
-              </Button>
-            </Link>
-          </motion.div>
-        </motion.div>
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <motion.div
+      initial={{ scale: 1 }}
+      className="w-full h-full bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
+    />
+  </div>
+
+  {/* Black gradient overlay to improve text contrast */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-0" />
+
+  {/* Hero Content */}
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
+  >
+    <motion.h1
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6"
+    >
+      WELCOME TO ECONOMIC GROUP
+    </motion.h1>
+
+    <motion.p
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto px-2"
+    >
+      Leading the way in logistics, enterprise solutions, and environmental innovation across global markets
+    </motion.p>
+
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.6 }}
+      className="flex flex-col sm:flex-row gap-4 justify-center px-2"
+    >
+      <Button 
+        size="lg" 
+        className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-red-600 hover:bg-red-700 w-full sm:w-auto"
+        onClick={scrollToBusinessSolutions}
+      >
+        Explore Our Solutions
+        <ArrowRight className="ml-2 w-5 h-5" />
+      </Button>
+      <Link to="/contact" className="w-full sm:w-auto">
+        <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-white text-red-600 hover:bg-gray-100 hover:text-red-700 w-full">
+          Contact Us Today
+        </Button>
+      </Link>
+    </motion.div>
+  </motion.div>
+
+  {/* Floating Animation Elements */}
+  <motion.div
+    animate={{ y: [-10, 10, -10] }}
+    transition={{ duration: 4, repeat: Infinity }}
+    className="absolute top-20 left-10 w-20 h-20 bg-red-500/20 rounded-full blur-xl"
+  />
+  <motion.div
+    animate={{ y: [10, -10, 10] }}
+    transition={{ duration: 6, repeat: Infinity }}
+    className="absolute bottom-20 right-10 w-32 h-32 bg-orange-500/20 rounded-full blur-xl"
+  />
+
 
         {/* Floating Animation Elements */}
         <motion.div
