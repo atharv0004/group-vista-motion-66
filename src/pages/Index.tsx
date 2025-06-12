@@ -36,7 +36,7 @@ const Index = () => {
       bgGradient: 'from-green-600 to-green-800',
       textColor: 'text-green-50',
       features: ['Environmental Consulting', 'Sustainability Solutions', 'Green Technology'],
-      image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=600&fit=crop&crop=center'
+      image: 'https://cdn.pixabay.com/photo/2023/07/06/18/12/recycled-8111001_1280.jpg'
     }
   ];
 
