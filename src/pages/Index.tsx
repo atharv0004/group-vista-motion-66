@@ -28,7 +28,7 @@ const Index = () => {
       href: '/enterprises',
       bgGradient: 'from-blue-600 to-blue-800',
       textColor: 'text-blue-50',
-      ffeatures: [ "Manpower Solutions", "Warehouse & Facility Management", "Retail & Staffing Services"],
+      features: [ "Manpower Solutions", "Warehouse & Facility Management", "Retail & Staffing Services"],
       image: businessImage,
     },
     {

@@ -6,6 +6,7 @@ import { ArrowRight, Users, Globe, Award, Target, Eye, Heart, Upload } from 'luc
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import IndiaMap from "../components/IndiaMap.jsx"
 
 const About = () => {
   const [coFounders, setCoFounders] = useState([
@@ -298,6 +299,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      <IndiaMap />
 
       {/* Timeline Section */}
       <section className="py-20 bg-background">
