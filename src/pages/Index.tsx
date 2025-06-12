@@ -70,7 +70,7 @@ const Index = () => {
   transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
   className="w-full h-full bg-cover bg-center"
   style={{
-    backgroundImage: `linear-gradient(rgba(220,38,38,0.7), rgba(185,28,28,0.7)), url(${bgImage})`,
+    backgroundImage: `url(${bgImage})`,
   }}
 />
         </div>
