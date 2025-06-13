@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, ChevronRight, Users, Globe, Award, TrendingUp } from 'lucide-react';
-import bgImage from '../assets/HeroImage.png'; // Adjust the path as needed
+import bgImage from '../assets/HeroImage.jpg'; // Adjust the path as needed
 import businessImage from '../assets/business.jpg'; // adjust path as needed
 
 
@@ -92,7 +92,8 @@ const Index = () => {
       transition={{ duration: 0.8, delay: 0.2 }}
       className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6"
     >
-      WELCOME TO ECONOMIC GROUP
+      <div>WELCOME TO</div>
+      <div>ECONOMIC GROUP</div>
     </motion.h1>
 
     <motion.p
@@ -101,7 +102,7 @@ const Index = () => {
       transition={{ duration: 0.8, delay: 0.4 }}
       className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto px-2"
     >
-      Leading the way in logistics, enterprise solutions, and environmental innovation across global markets
+      Leading the way in Logistics, Enterprises and Environmental Solutions across Pan India Markets.
     </motion.p>
 
     <motion.div
@@ -152,7 +153,7 @@ const Index = () => {
         />
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section - अब Footer के ऊपर */}
       <section className="py-20 bg-gradient-to-r from-red-900 to-red-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
