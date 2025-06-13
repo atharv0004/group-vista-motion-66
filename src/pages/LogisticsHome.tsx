@@ -1,8 +1,8 @@
-
 import CategoryHero from '@/components/CategoryHero';
 import CategoryMission from '@/components/CategoryMission';
 import CategoryClients from '@/components/CategoryClients';
 import ServicePage from '@/components/ServicePage';
+import AchievementsSection from '@/components/AchievementsSection';
 
 const LogisticsHome = () => {
   const clients = [
@@ -34,7 +34,6 @@ const LogisticsHome = () => {
   const bgGradient="from-red-600 to-red-800"
   const textColor="text-red-50"
   const servicesLink = "#services";
-
 
   const accentColor = bgGradient.includes('red')
     ? 'text-red-600'
@@ -146,6 +145,8 @@ const LogisticsHome = () => {
           services={services}
         />
       </div>
+
+      <AchievementsSection />
 
       <CategoryClients clients={clients} />
     </div>
