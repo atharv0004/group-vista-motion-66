@@ -29,7 +29,7 @@ const Navbar = () => {
                   alt="Economic Group Logo"
                   className="h-8 w-8 rounded-sm"
                 />
-                <span className="text-xl font-bold text-red-600">ECONOMIC GROUP</span>
+                <span className="text-3xl font-bold text-red-600 -mt-1">ECONOMIC GROUP</span>
               </Link>
             </div>
 
