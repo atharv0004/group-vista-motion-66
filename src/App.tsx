@@ -9,9 +9,7 @@ import Contact from "./pages/Contact";
 import LogisticsHome from "./pages/LogisticsHome";
 import EnterprisesHome from "./pages/EnterprisesHome";
 import EnviroHome from "./pages/EnviroHome";
-import LogisticsServices from "./pages/LogisticsServices";
-import EnterprisesServices from "./pages/EnterprisesServices";
-import EnviroServices from "./pages/EnviroServices";
+
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -36,9 +34,6 @@ const App = () => (
               <Route path="/logistics" element={<LogisticsHome />} />
               <Route path="/enterprises" element={<EnterprisesHome />} />
               <Route path="/enviro" element={<EnviroHome />} />
-              <Route path="/logistics/services" element={<LogisticsServices />} />
-              <Route path="/enterprises/services" element={<EnterprisesServices />} />
-              <Route path="/enviro/services" element={<EnviroServices />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
