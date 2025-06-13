@@ -14,64 +14,21 @@ interface Service {
 }
 
 interface ServicePageProps {
-  categoryTitle: string;
-  subtitle: string;
-  description: string;
-  backLink: string;
   bgGradient: string;
   textColor: string;
   services: Service[];
 }
 
 const ServicePage = ({
-  categoryTitle,
-  subtitle,
-  description,
-  backLink,
   bgGradient,
   textColor,
   services
 }: ServicePageProps) => {
   return (
-    <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <section className={`py-20 bg-gradient-to-br ${bgGradient} relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <Link to={backLink} className={`inline-flex items-center ${textColor}/80 hover:${textColor} mb-6 transition-colors`}>
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to {categoryTitle}
-            </Link>
-            
-            <h1 className={`text-4xl md:text-6xl font-bold ${textColor} mb-6`}>
-              {subtitle}
-            </h1>
-            <p className={`text-xl md:text-2xl ${textColor}/90 mb-8 max-w-4xl mx-auto`}>
-              {description}
-            </p>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+    <div className="min-h-screen">
 
       {/* Services Grid */}
-      <section className="py-20 bg-background">
+      <section className="bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -135,47 +92,11 @@ const ServicePage = ({
                         </li>
                       ))}
                     </ul>
-                    
-                    <Button className="w-full group-hover:scale-105 transition-transform duration-200">
-                      Learn More
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-accent/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Contact our team today to discuss how we can help you achieve your goals 
-              with our comprehensive solutions and expert guidance.
-            </p>
-            <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="text-lg px-8 py-3">
-                  Contact Us
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3">
-                Schedule Consultation
-              </Button>
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>
