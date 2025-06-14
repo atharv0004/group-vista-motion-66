@@ -1,4 +1,4 @@
-import CategoryHero from '@/components/CategoryHero';
+pimport CategoryHero from '@/components/CategoryHero';
 import CategoryMission from '@/components/CategoryMission';
 import CategoryClients from '@/components/CategoryClients';
 import ServicePage from '@/components/ServicePage';
@@ -18,10 +18,10 @@ const EnviroHome = () => {
   }, []);
 
   const clients = [
-  { name: 'Welspun Group', logo: '/assets/logisticsClients/Welspun-World.jpg' },
-  { name: 'APL Logistics', logo: '/assets/logisticsClients/apl.png' },
-  { name: 'Carlsberg Group', logo: '/assets/logisticsClients/carlsberg.png' },
-  { name: 'Allana Consumer Products', logo: '/assets/logisticsClients/Allana.jpg' },
+  { name: 'Wipro', logo: '/assets/EnviroClients/wipro.webp' },
+  { name: 'Uniliver', logo: '/assets/EnviroClients/' },
+  { name: 'Carlsberg Group', logo: '/assets/EnviroClients/wipro.webp' },
+  { name: 'Allana Consumer Products', logo: '/assets/EnviroClients/wipro.webp' },
   { name: 'Indofil Industries Limited', logo: '/assets/logisticsClients/Indofil.jpg' },
   { name: 'Mahindra Summit', logo: '/assets/logisticsClients/mahindra.jpg' },
   { name: 'Finerchem', logo: '/assets/logisticsClients/finorchem.png' },
