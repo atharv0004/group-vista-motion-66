@@ -1,4 +1,3 @@
-
 import CategoryHero from '@/components/CategoryHero';
 import CategoryMission from '@/components/CategoryMission';
 import CategoryClients from '@/components/CategoryClients';
@@ -25,6 +24,14 @@ const EnterprisesHome = () => {
     { name: 'HOMETOWN', logo: '/assets/EnterpriseClients/HomeTown.png', industry: 'Consulting' },
     { name: 'SEABIRD', logo: '/assets/EnterpriseClients/seaBird.png', industry: 'Management' }
   ];
+
+  // Add console logging to debug image loading
+  useEffect(() => {
+    console.log('Enterprise clients data:', clients);
+    clients.forEach(client => {
+      console.log(`Checking image: ${client.logo}`);
+    });
+  }, []);
 
   const title = "Economic Enterprises";
 const subtitle = "One Stop Solution For All Manpower & Operational Needs";

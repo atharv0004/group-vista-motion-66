@@ -14,6 +14,7 @@ interface CompanySliderProps {
 
 const CompanySlider = ({ clients }: CompanySliderProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageErrors, setImageErrors] = useState<{[key: string]: boolean}>({});
 
   const itemsPerPage = 4;
 
@@ -29,9 +30,17 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
 
   // Function to get fallback image based on company name
   const getFallbackImage = (companyName: string) => {
-    // Create a simple placeholder with company initials
     const initials = companyName.split(' ').map(word => word.charAt(0)).join('').toUpperCase().slice(0, 2);
     return `https://via.placeholder.com/200x120/4f46e5/ffffff?text=${encodeURIComponent(initials)}`;
+  };
+
+  const handleImageError = (clientLogo: string, clientName: string) => {
+    console.error(`Failed to load image: ${clientLogo} for client: ${clientName}`);
+    setImageErrors(prev => ({ ...prev, [clientLogo]: true }));
+  };
+
+  const handleImageLoad = (clientLogo: string, clientName: string) => {
+    console.log(`Successfully loaded image: ${clientLogo} for client: ${clientName}`);
   };
 
   return (
@@ -57,16 +66,15 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
               <CardContent className="p-6 text-center">
                 <div className='flex items-center justify-center mb-4'>
                   <img
-                    src={client.logo}
+                    src={imageErrors[client.logo] ? getFallbackImage(client.name) : client.logo}
                     alt={client.name}
                     className="max-w-[200px] min-w-[200px] max-h-[120px] object-contain rounded-lg"
                     style={{ 
                       filter: 'brightness(1.1) contrast(1.1)',
                       backgroundColor: '#f8fafc'
                     }}
-                    onError={(e) => {
-                      e.currentTarget.src = getFallbackImage(client.name);
-                    }}
+                    onError={() => handleImageError(client.logo, client.name)}
+                    onLoad={() => handleImageLoad(client.logo, client.name)}
                   />
                 </div>
                 <h3 className="text-base font-semibold text-foreground">{client.name}</h3>
