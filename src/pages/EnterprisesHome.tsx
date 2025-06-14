@@ -19,10 +19,10 @@ const EnterprisesHome = () => {
   }, []);
 
   const clients = [
-    { name: 'Tech Innovators Inc.', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Technology' },
-    { name: 'Growth Partners LLC', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Business Development' },
-    { name: 'Strategic Solutions', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Consulting' },
-    { name: 'Enterprise Dynamics', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Management' },
+    { name: 'APL LOGISTICS', logo: '/src/assets/EnterpriseClients/APL_Logo.png', industry: 'Technology' },
+    { name: 'METRO SHOES', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Business Development' },
+    { name: 'HOMETOWM', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Consulting' },
+    { name: 'SEABIRD', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Management' },
     { name: 'Business Accelerators', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Startups' },
     { name: 'Corporate Excellence', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Enterprise' }
   ];
