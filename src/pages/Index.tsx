@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, ChevronRight, Users, Globe, Award, TrendingUp } from 'lucide-react';
-import bgImage from '../assets/HeroImage.png'; // Adjust the path as needed
+import bgImage from '../assets/HeroImage.jpg'; // Adjust the path as needed
 import businessImage from '../assets/business.jpg'; // adjust path as needed
 
 
