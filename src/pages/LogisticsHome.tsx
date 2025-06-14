@@ -1,3 +1,4 @@
+
 import CategoryHero from '@/components/CategoryHero';
 import CategoryMission from '@/components/CategoryMission';
 import CategoryClients from '@/components/CategoryClients';
@@ -94,7 +95,7 @@ const LogisticsHome = () => {
       'Transit movement reporting'
     ],
     icon: '🚛',
-    image: 'https://cdn.pixabay.com/photo/2017/08/07/14/02/people-2604149_1280.jpg'
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
   },
   {
     title: 'Warehousing Solutions',
@@ -107,7 +108,7 @@ const LogisticsHome = () => {
       'Real-time visibility of inventory'
     ],
     icon: '🏬',
-    image: 'https://cdn.pixabay.com/photo/2019/06/15/15/58/warehouse-4276504_1280.jpg'
+    image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
   },
   {
     title: 'Last Mile Delivery',
@@ -120,7 +121,7 @@ const LogisticsHome = () => {
       'Customer service support'
     ],
     icon: '🚚',
-    image: 'https://cdn.pixabay.com/photo/2017/08/06/09/11/truck-2590067_1280.jpg'
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
   },
   {
     title: 'Sea Freight & Global Logistics',
@@ -133,7 +134,7 @@ const LogisticsHome = () => {
       '24/7 cargo tracking & monitoring'
     ],
     icon: '🚢',
-    image: 'https://cdn.pixabay.com/photo/2021/08/23/10/32/container-ship-6567687_1280.jpg'
+    image: 'https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
   },
   {
     title: 'Tracking & Backend Support',
@@ -146,7 +147,7 @@ const LogisticsHome = () => {
       'Live vehicle monitoring'
     ],
     icon: '📡',
-    image: 'https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg'
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
   },
   {
     title: 'Consulting Services',
@@ -159,7 +160,7 @@ const LogisticsHome = () => {
       'Change management and training'
     ],
     icon: '📊',
-    image: 'https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_1280.jpg'
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
   }
 ];
 
