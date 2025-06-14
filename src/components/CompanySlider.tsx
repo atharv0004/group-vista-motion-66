@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { useEffect, useState } from 'react';
@@ -26,6 +27,13 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
 
   const visibleClients = clients.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage);
 
+  // Function to get fallback image based on company name
+  const getFallbackImage = (companyName: string) => {
+    // Create a simple placeholder with company initials
+    const initials = companyName.split(' ').map(word => word.charAt(0)).join('').toUpperCase().slice(0, 2);
+    return `https://via.placeholder.com/200x120/4f46e5/ffffff?text=${encodeURIComponent(initials)}`;
+  };
+
   return (
     <div className="relative overflow-hidden">
       <motion.div
@@ -49,11 +57,12 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
               <CardContent className="p-6 text-center">
                 <div className='flex items-center justify-center mb-4'>
                   <img
-                    src={client.logo}
+                    src={getFallbackImage(client.name)}
                     alt={client.name}
-                    className="max-w-[200px] min-w-[200px] max-h-[120px] object-contain"
-                    onError={(e) => {
-                      e.currentTarget.src = `https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center`;
+                    className="max-w-[200px] min-w-[200px] max-h-[120px] object-contain rounded-lg"
+                    style={{ 
+                      filter: 'brightness(1.1) contrast(1.1)',
+                      backgroundColor: '#f8fafc'
                     }}
                   />
                 </div>
