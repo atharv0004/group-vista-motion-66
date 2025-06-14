@@ -1,8 +1,11 @@
-
 import CategoryHero from '@/components/CategoryHero';
 import CategoryMission from '@/components/CategoryMission';
 import CategoryClients from '@/components/CategoryClients';
 import ServicePage from '@/components/ServicePage';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const EnviroHome = () => {
   const clients = [
@@ -123,14 +126,75 @@ const EnviroHome = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      <CategoryHero
-        title={title}
-        subtitle={subtitle}
-        description={description}
-        bgGradient={bgGradient}
-        textColor={textColor}
-        servicesLink={servicesLink}
-      />
+      {/* Parallax Hero Section */}
+      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden min-h-[60vh] flex items-center">
+        {/* Parallax Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{
+            backgroundImage: 'url(https://cdn.pixabay.com/photo/2023/07/06/18/12/recycled-8111001_1280.jpg)',
+            transform: 'translateZ(0)', // Force hardware acceleration
+          }}
+        />
+        
+        {/* Green Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-green-600/90 to-green-800/90" />
+        
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <Link
+              to="/"
+              className="inline-flex items-center text-green-50/80 hover:text-green-50 mb-4 sm:mb-6 transition-colors text-sm sm:text-base"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Economic Group
+            </Link>
+
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-green-50 mb-4 sm:mb-6 px-2">
+              {title}
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-green-50/90 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
+              {subtitle}
+            </p>
+            <p className="text-base sm:text-lg text-green-50/80 mb-6 sm:mb-8 max-w-4xl mx-auto px-4">
+              {description}
+            </p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center px-4"
+            >
+              <a href={servicesLink}>
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto"
+                >
+                  Explore Services
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-white text-green-600 hover:bg-gray-100 hover:text-green-700 w-full sm:w-auto"
+                >
+                  Contact Us
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       <CategoryMission
         mission={mission}
         features={features}
