@@ -6,8 +6,17 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const EnviroHome = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const clients = [
     { name: 'Green Energy Corp', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Renewable Energy' },
     { name: 'EcoSolutions Ltd', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Environmental' },
@@ -130,10 +139,11 @@ const EnviroHome = () => {
       <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden min-h-[60vh] flex items-center">
         {/* Parallax Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: 'url(https://cdn.pixabay.com/photo/2023/07/06/18/12/recycled-8111001_1280.jpg)',
-            transform: 'translateZ(0)', // Force hardware acceleration
+            transform: `translateY(${scrollY * 0.5}px)`,
+            willChange: 'transform',
           }}
         />
         

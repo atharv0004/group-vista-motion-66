@@ -7,8 +7,17 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const LogisticsHome = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const clients = [
   { name: 'Welspun Group', logo: '/src/assets/logisticsClients/Welspun-World.jpg' },
   { name: 'APL Logistics', logo: '/src/assets/logisticsClients/apl.png' },
@@ -143,10 +152,11 @@ const LogisticsHome = () => {
       <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden min-h-[60vh] flex items-center">
         {/* Parallax Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: 'url(https://cdn.pixabay.com/photo/2024/07/25/14/54/truck-8921536_1280.jpg)',
-            transform: 'translateZ(0)', // Force hardware acceleration
+            transform: `translateY(${scrollY * 0.5}px)`,
+            willChange: 'transform',
           }}
         />
         

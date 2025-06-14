@@ -6,9 +6,18 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import businessImage from '@/assets/business.jpg';
 
 const EnterprisesHome = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const clients = [
     { name: 'Tech Innovators Inc.', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Technology' },
     { name: 'Growth Partners LLC', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Business Development' },
@@ -132,10 +141,11 @@ const EnterprisesHome = () => {
       <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden min-h-[60vh] flex items-center">
         {/* Parallax Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${businessImage})`,
-            transform: 'translateZ(0)', // Force hardware acceleration
+            transform: `translateY(${scrollY * 0.5}px)`,
+            willChange: 'transform',
           }}
         />
         
