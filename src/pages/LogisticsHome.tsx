@@ -95,7 +95,7 @@ const LogisticsHome = () => {
       'Transit movement reporting'
     ],
     icon: '🚛',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+    image: 'https://unsplash.com/photos/white-and-blue-truck-on-road-during-daytime-mVqTumQH-c0'
   },
   {
     title: 'Warehousing Solutions',
