@@ -94,7 +94,7 @@ const LogisticsHome = () => {
       'Transit movement reporting'
     ],
     icon: '🚛',
-    image: 'https://images.unsplash.com/photo-1602101024303-2158f8a96f5d?w=600&h=400&fit=crop&crop=center'
+    image: 'https://cdn.pixabay.com/photo/2017/08/07/14/02/people-2604149_1280.jpg'
   },
   {
     title: 'Warehousing Solutions',
@@ -107,7 +107,7 @@ const LogisticsHome = () => {
       'Real-time visibility of inventory'
     ],
     icon: '🏬',
-    image: 'https://images.unsplash.com/photo-1588776814546-ec7e1fcbf8a5?w=600&h=400&fit=crop&crop=center'
+    image: 'https://cdn.pixabay.com/photo/2019/06/15/15/58/warehouse-4276504_1280.jpg'
   },
   {
     title: 'Last Mile Delivery',
@@ -120,7 +120,7 @@ const LogisticsHome = () => {
       'Customer service support'
     ],
     icon: '🚚',
-    image: 'https://images.unsplash.com/photo-1606813902221-1f9fc8b73bff?w=600&h=400&fit=crop&crop=center'
+    image: 'https://cdn.pixabay.com/photo/2017/08/06/09/11/truck-2590067_1280.jpg'
   },
   {
     title: 'Sea Freight & Global Logistics',
@@ -133,7 +133,7 @@ const LogisticsHome = () => {
       '24/7 cargo tracking & monitoring'
     ],
     icon: '🚢',
-    image: 'https://images.unsplash.com/photo-1605902711622-cfb43c4437c2?w=600&h=400&fit=crop&crop=center'
+    image: 'https://cdn.pixabay.com/photo/2021/08/23/10/32/container-ship-6567687_1280.jpg'
   },
   {
     title: 'Tracking & Backend Support',
@@ -146,7 +146,7 @@ const LogisticsHome = () => {
       'Live vehicle monitoring'
     ],
     icon: '📡',
-    image: 'https://images.unsplash.com/photo-1554224155-8d1d633d6b48?w=600&h=400&fit=crop&crop=center'
+    image: 'https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg'
   },
   {
     title: 'Consulting Services',
@@ -159,7 +159,7 @@ const LogisticsHome = () => {
       'Change management and training'
     ],
     icon: '📊',
-    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop&crop=center'
+    image: 'https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_1280.jpg'
   }
 ];
 
