@@ -57,12 +57,15 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
               <CardContent className="p-6 text-center">
                 <div className='flex items-center justify-center mb-4'>
                   <img
-                    src={getFallbackImage(client.name)}
+                    src={client.logo}
                     alt={client.name}
                     className="max-w-[200px] min-w-[200px] max-h-[120px] object-contain rounded-lg"
                     style={{ 
                       filter: 'brightness(1.1) contrast(1.1)',
                       backgroundColor: '#f8fafc'
+                    }}
+                    onError={(e) => {
+                      e.currentTarget.src = getFallbackImage(client.name);
                     }}
                   />
                 </div>
