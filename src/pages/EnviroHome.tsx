@@ -18,13 +18,24 @@ const EnviroHome = () => {
   }, []);
 
   const clients = [
-    { name: 'Green Energy Corp', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Renewable Energy' },
-    { name: 'EcoSolutions Ltd', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Environmental' },
-    { name: 'Sustainable Systems', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Sustainability' },
-    { name: 'Clean Tech Innovations', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Clean Technology' },
-    { name: 'Environmental Partners', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Consulting' },
-    { name: 'Carbon Solutions', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Carbon Management' }
-  ];
+  { name: 'Welspun Group', logo: '/src/assets/logisticsClients/Welspun-World.jpg' },
+  { name: 'APL Logistics', logo: '/src/assets/logisticsClients/apl.png' },
+  { name: 'Carlsberg Group', logo: '/src/assets/logisticsClients/carlsberg.png' },
+  { name: 'Allana Consumer Products', logo: '/src/assets/logisticsClients/Allana.jpg' },
+  { name: 'Indofil Industries Limited', logo: '/src/assets/logisticsClients/Indofil.jpg' },
+  { name: 'Mahindra Summit', logo: '/src/assets/logisticsClients/mahindra.jpg' },
+  { name: 'Finerchem', logo: '/src/assets/logisticsClients/finorchem.png' },
+  { name: 'Rasna', logo: '/src/assets/logisticsClients/rasna.jpg' },
+  { name: 'Truefrost', logo: '/src/assets/logisticsClients/trufrost.jpg' },
+  { name: 'Revival Engineers', logo: '/src/assets/logisticsClients/revival.jpg' },
+  { name: 'Indiabulls Enterprises', logo: '/src/assets/logisticsClients/IndiaBulls.png' },
+  { name: 'SML', logo: '/src/assets/logisticsClients/sml.jpg' },
+  { name: 'Sumitomo Chemical', logo: '/src/assets/logisticsClients/sumitomo.png' },
+  { name: 'Johnson', logo: '/src/assets/logisticsClients/johnson.jpg' },
+  { name: 'Mahanand', logo: '/src/assets/logisticsClients/mahanand.jpg' },
+  { name: 'Pittie', logo: '/src/assets/logisticsClients/Pittie.png' },
+  { name: 'Seabird Int.', logo: '/src/assets/logisticsClients/seabird.png' }
+];
 
   const services = [
   {
