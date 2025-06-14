@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, ArrowRight, ChevronRight, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronRight } from 'lucide-react';
 
 interface Service {
   title: string;
@@ -71,16 +71,6 @@ const ServicePage = ({
                       <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                         <span className="text-2xl">{service.icon}</span>
                       </div>
-                    </div>
-                    {/* Add CTA Button in the bottom right of image */}
-                    <div className="absolute bottom-4 right-4">
-                      <Button
-                        size="sm"
-                        className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 transition-all duration-300"
-                      >
-                        Learn More
-                        <ExternalLink className="w-4 h-4 ml-2" />
-                      </Button>
                     </div>
                   </div>
 
