@@ -20,11 +20,9 @@ const EnterprisesHome = () => {
 
   const clients = [
     { name: 'APL LOGISTICS', logo: '/src/assets/EnterpriseClients/APL_Logo.png', industry: 'Technology' },
-    { name: 'METRO SHOES', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Business Development' },
-    { name: 'HOMETOWM', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Consulting' },
-    { name: 'SEABIRD', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Management' },
-    { name: 'Business Accelerators', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Startups' },
-    { name: 'Corporate Excellence', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Enterprise' }
+    { name: 'METRO SHOES', logo:'/src/assets/EnterpriseClients/Metro_logo.webp'  , industry: 'Business Development' },
+    { name: 'HOMETOWM', logo:'/src/assets/EnterpriseClients/HomeTown.png' , industry: 'Consulting' },
+    { name: 'SEABIRD', logo: '/src/assets/EnterpriseClients/seaBird.png', industry: 'Management' }
   ];
 
   const title = "Economic Enterprises";
