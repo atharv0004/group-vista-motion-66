@@ -58,15 +58,19 @@ const ServicePage = ({
               >
                 <Card className="h-full border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
                   {/* Service Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <motion.img
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.5 }}
+                  <div className="relative h-48 overflow-hidden bg-gray-200">
+                    <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      onLoad={() => console.log(`Successfully loaded image for service: ${service.title}`)}
+                      onError={(e) => {
+                        console.error(`Failed to load image for service: ${service.title}`, e);
+                        // Set a fallback background color if image fails to load
+                        e.currentTarget.style.display = 'none';
+                      }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute top-4 left-4">
                       <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                         <span className="text-2xl">{service.icon}</span>
