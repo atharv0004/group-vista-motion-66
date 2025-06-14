@@ -71,7 +71,7 @@ const features = [
       'Scalable workforce across India',
     ],
     icon: '🧑‍💼',
-    image: 'https://images.unsplash.com/photo-1596075780750-81249df16d67?w=600&h=400&fit=crop&crop=center',
+    image: 'https://images.unsplash.com/photo-1551135049-8a33b5883817?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Financial & Strategic Solutions',
@@ -84,7 +84,7 @@ const features = [
       'Strategic partnerships and deal sourcing',
     ],
     icon: '💼',
-    image: 'https://images.unsplash.com/photo-1573164713347-df1e93c3258e?w=600&h=400&fit=crop&crop=center',
+    image: 'https://cdn.pixabay.com/photo/2014/11/25/08/08/financial-crisis-544944_1280.jpg',
   },
   {
     title: 'Facility & Resource Management',
@@ -97,7 +97,7 @@ const features = [
       'Works contract and outsourcing support',
     ],
     icon: '🏢',
-    image: 'https://images.unsplash.com/photo-1529429611278-1dab569c6b3d?w=600&h=400&fit=crop&crop=center',
+    image: 'https://okrinternational.com/wp-content/uploads/2023/06/OKR-Examples-in-Facilities-Management-2-scaled.jpg',
   },
   {
     title: 'Equipment & Machinery Support',
@@ -110,7 +110,7 @@ const features = [
       'Heavy lifting and transport gear',
     ],
     icon: '⚙️',
-    image: 'https://images.unsplash.com/photo-1581090700227-1b7c4e1ea8ae?w=600&h=400&fit=crop&crop=center',
+    image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Compliance & Legal Services',
@@ -123,21 +123,21 @@ const features = [
       'Audit readiness services',
     ],
     icon: '🛡️',
-    image: 'https://images.unsplash.com/photo-1600121848594-60d4a72f2c89?w=600&h=400&fit=crop&crop=center',
+    image: 'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
-  title: 'Commodity Trading Services',
-  description: 'Efficient sourcing, storage, and trading of fruits and vegetables across PAN India',
-  features: [
-    'Fruit and vegetable sourcing from reliable producers',
-    'Storage and warehousing solutions for perishables',
-    'PAN India distribution and logistics network',
-    'B2B trade partnerships with retailers and wholesalers',
-    'Planning for future global market expansion',
-  ],
-  icon: '🛒',
-  image: 'https://images.unsplash.com/photo-1565958011703-44b4ef2033c0?w=600&h=400&fit=crop&crop=center',
-},
+    title: 'Commodity Trading Services',
+    description: 'Efficient sourcing, storage, and trading of fruits and vegetables across PAN India',
+    features: [
+      'Fruit and vegetable sourcing from reliable producers',
+      'Storage and warehousing solutions for perishables',
+      'PAN India distribution and logistics network',
+      'B2B trade partnerships with retailers and wholesalers',
+      'Planning for future global market expansion',
+    ],
+    icon: '🛒',
+    image: 'https://images.unsplash.com/photo-1743416982545-eb6159f9746f?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
 ];
 
   const bgGradient = "from-blue-600 to-blue-800";
