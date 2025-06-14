@@ -26,104 +26,79 @@ const EnviroHome = () => {
     { name: 'Carbon Solutions', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Carbon Management' }
   ];
 
-  const features = [
-    'Environmental Assessment',
-    'Sustainability Planning',
-    'Carbon Footprint Analysis',
-    'Green Technology',
-    'Waste Management',
-    'Energy Efficiency',
-    'Compliance Monitoring',
-    'Environmental Impact',
-    'Renewable Solutions',
-    'Eco-friendly Practices'
-  ];
-
   const services = [
-    {
-      title: 'Environmental Assessment',
-      description: 'Comprehensive environmental impact and compliance assessments',
-      features: [
-        'Environmental impact studies',
-        'Site assessment and remediation',
-        'Regulatory compliance audits',
-        'Risk assessment and management',
-        'Environmental monitoring programs'
-      ],
-      icon: '🌱',
-      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Sustainability Consulting',
-      description: 'Strategic sustainability planning and implementation',
-      features: [
-        'Sustainability strategy development',
-        'Carbon footprint analysis',
-        'Life cycle assessments',
-        'Sustainable supply chain design',
-        'ESG reporting and frameworks'
-      ],
-      icon: '♻️',
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Renewable Energy Solutions',
-      description: 'Clean energy system design and implementation',
-      features: [
-        'Solar and wind energy systems',
-        'Energy efficiency audits',
-        'Grid integration planning',
-        'Energy storage solutions',
-        'Renewable energy financing'
-      ],
-      icon: '⚡',
-      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Waste Management',
-      description: 'Comprehensive waste reduction and management strategies',
-      features: [
-        'Waste audit and analysis',
-        'Recycling program development',
-        'Circular economy solutions',
-        'Hazardous waste management',
-        'Zero waste consulting'
-      ],
-      icon: '🗂️',
-      image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Green Technology',
-      description: 'Innovative environmental technology solutions',
-      features: [
-        'Clean technology assessment',
-        'Green product development',
-        'Environmental monitoring systems',
-        'Pollution control technologies',
-        'Smart environmental solutions'
-      ],
-      icon: '🔬',
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Climate Solutions',
-      description: 'Climate change mitigation and adaptation strategies',
-      features: [
-        'Climate risk assessment',
-        'Adaptation planning',
-        'Carbon offset programs',
-        'Climate resilience strategies',
-        'Green finance solutions'
-      ],
-      icon: '🌍',
-      image: 'https://images.unsplash.com/photo-1569163139394-de44cb5894c6?w=600&h=400&fit=crop&crop=center'
-    }
-  ];
+  {
+    title: 'Waste Management',
+    description: 'End-to-end waste management services across India with certified destruction and regulatory compliance.',
+    features: [
+      'Pan-India pickup and disposal',
+      'Recycling and destruction of expired/damaged goods',
+      'Hazardous waste handling',
+      'Regulatory and compliance documentation',
+      'Single source implementation'
+    ],
+    icon: '🗑️',
+    image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop&crop=center'
+  },
+  {
+    title: 'Site Assessment',
+    description: 'Thorough site assessments to ensure safe and compliant waste handling procedures.',
+    features: [
+      'Site surveys and risk identification',
+      'Environmental safety evaluations',
+      'Waste flow planning and logistics',
+      'Compliance audits',
+      'Customized action plans'
+    ],
+    icon: '📍',
+    image: 'https://images.unsplash.com/photo-1581090700227-1e8a8c0c430b?w=600&h=400&fit=crop&crop=center'
+  },
+  {
+    title: 'Climate Solutions',
+    description: 'Strategies that support carbon footprint reduction and eco-efficiency.',
+    features: [
+      'Carbon reduction strategies',
+      'Green logistics integration',
+      'Sustainability awareness training',
+      'Eco-efficiency planning',
+      'Climate-conscious waste methods'
+    ],
+    icon: '🌍',
+    image: 'https://images.unsplash.com/photo-1569163139394-de44cb5894c6?w=600&h=400&fit=crop&crop=center'
+  },
+  {
+  title: 'Certified Destruction Services',
+  description: 'Secure and compliant destruction and disposal of expired, damaged, or regulated goods across India.',
+  features: [
+    'Certificate of Destruction/Disposal',
+    'Compliance with government regulations',
+    'Destruction of pharmaceutical and FMCG products',
+    'Trained and certified operational workforce',
+    'End-to-end secure chain of custody'
+  ],
+  icon: '✅',
+  image: 'https://images.unsplash.com/photo-1606923829579-3b1c4e3b5c31?w=600&h=400&fit=crop&crop=center'
+}
+];
 
-  const title="Economic Enviro Solutions"
-  const subtitle="Sustainable Environmental Solutions"
-  const description="We provide comprehensive environmental consulting and sustainable solutions that help organizations reduce their ecological footprint while maintaining operational excellence."
-  const mission="To create a sustainable future through innovative environmental solutions, cutting-edge green technologies, and strategic environmental planning. We help organizations achieve their sustainability goals while driving positive environmental impact."
+
+  const title = "Economic Enviro Solutions";
+const subtitle = "Eco-Friendly Waste Management for a Healthier World";
+const description = "We provide clean, efficient, and compliant waste management solutions to leading pharmaceutical, FMCG, cosmetics, and personal care companies across India. Our Pan-India presence and logistics integration ensure seamless operations and certified destruction services.";
+  const mission = "To lead India's waste management sector through eco-friendly, regulation-compliant destruction and logistics solutions. We are committed to reducing environmental impact for our clients through reliable service, strict safety standards, and a customer-first approach.";
+const features = [
+  "Pan-India Waste Collection & Disposal",
+  "Site Assessment and Remediation",
+  "Certified Destruction of Expired/Damaged Goods",
+  "Carbon Footprint Reduction Strategies",
+  "Logistics-Integrated Waste Management",
+  "Hazardous Waste Handling",
+  "Eco-Friendly Waste Practices",
+  "Single Source Process Implementation",
+  "Regulatory Compliance",
+  "Workforce Trained in Safety Standards"
+];
+
   const bgGradient="from-green-600 to-green-800"
   const textColor="text-green-50"
   const servicesLink = "#services";

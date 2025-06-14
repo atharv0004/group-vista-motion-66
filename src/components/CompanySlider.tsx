@@ -51,7 +51,7 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="max-w-[100px] max-h-[60px] object-contain"
+                    className="max-w-[200px] min-w-[200px] max-h-[120px] object-contain"
                     onError={(e) => {
                       e.currentTarget.src = `https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center`;
                     }}

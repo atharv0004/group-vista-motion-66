@@ -59,9 +59,6 @@ const CategoryClients = ({ clients }: CategoryClientsProps) => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3">
-                Schedule Consultation
-              </Button>
             </div>
           </motion.div>
         </div>
