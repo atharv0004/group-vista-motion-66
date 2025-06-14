@@ -1,4 +1,3 @@
-
 import CategoryHero from '@/components/CategoryHero';
 import CategoryMission from '@/components/CategoryMission';
 import CategoryClients from '@/components/CategoryClients';
@@ -21,9 +20,9 @@ const EnterprisesHome = () => {
 
   const clients = [
     { name: 'APL LOGISTICS', logo: '/assets/logisticsClients/apl.png', industry: 'Technology' },
-    { name: 'METRO SHOES', logo: '/assets/logisticsClients/sml.jpg', industry: 'Business Development' },
-    { name: 'HOMETOWN', logo: '/assets/logisticsClients/johnson.jpg', industry: 'Consulting' },
-    { name: 'SEABIRD', logo: '/assets/logisticsClients/seabird.png', industry: 'Management' }
+    { name: 'METRO SHOES', logo: '/assets/EnterpriseClients/Metro_logo.webp', industry: 'Business Development' },
+    { name: 'HOMETOWN', logo: '/assets/EnterpriseClients/HomeTown.png', industry: 'Consulting' },
+    { name: 'SEABIRD', logo: '/assets/EnterpriseClients/seaBird.png', industry: 'Management' }
   ];
 
   // Add console logging to debug image loading
