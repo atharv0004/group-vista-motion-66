@@ -20,7 +20,7 @@ const EnterprisesHome = () => {
   }, []);
 
   const clients = [
-    { name: 'APL LOGISTICS', logo: /assets/EnterpriseClients/APL_Logo.png, industry: 'Technology' },
+    { name: 'APL LOGISTICS', logo: ''/assets/EnterpriseClients/APL_Logo.png', industry: 'Technology' },
     { name: 'METRO SHOES', logo: '/assets/EnterpriseClients/Metro_logo.webp', industry: 'Business Development' },
     { name: 'HOMETOWN', logo: '/assets/EnterpriseClients/HomeTown.png', industry: 'Consulting' },
     { name: 'SEABIRD', logo: '/assets/EnterpriseClients/seaBird.png', industry: 'Management' }
