@@ -1,11 +1,9 @@
-
-import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ExternalLink } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,17 +13,21 @@ const Contact = () => {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const [mapError, setMapError] = useState(false);
+
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
+    // Add your form submission logic here
+    alert('Thank you for your message! We\'ll get back to you soon.');
+    setFormData({ name: '', email: '', company: '', message: '' });
   };
 
   const contactInfo = [
@@ -51,25 +53,54 @@ const Contact = () => {
     }
   ];
 
+  const MapComponent = () => {
+    if (mapError) {
+      return (
+        <div className="w-full h-[450px] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center shadow-lg">
+          <div className="text-center p-8">
+            <MapPin className="w-16 h-16 text-red-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Map Unavailable</h3>
+            <p className="text-gray-600 mb-4">Unable to load the interactive map</p>
+            <Button
+              onClick={() => window.open('https://maps.google.com/?q=Steel+Chamber+K+B+And+O+P+Co-Op', '_blank')}
+              className="bg-red-600 hover:bg-red-700"
+            >
+              View on Google Maps
+              <ExternalLink className="ml-2 w-4 h-4" />
+            </Button>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg">
+        <iframe
+                  className="w-full h-full"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d965367.2131954873!2d72.61576065381905!3d19.06524665844417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9d0072fd3db%3A0x83596087895e2849!2sSteel%20Chamber%20K%20B%20And%20O%20P%20Co-Op!5e0!3m2!1sen!2sin!4v1749924923236!5m2!1sen!2sin"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+      </div>
+    );
+  };
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-red-600 to-red-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Contact Us
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
               Ready to transform your business? Get in touch with our experts today
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -77,13 +108,8 @@ const Contact = () => {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            {/* Contact Form + Map */}
+            <div className="space-y-12">
               <Card className="border-0 shadow-xl">
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold text-foreground">
@@ -94,17 +120,15 @@ const Contact = () => {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                        <label className="block text-sm font-medium text-foreground mb-2">
                           Full Name *
                         </label>
                         <Input
-                          id="name"
                           name="name"
                           type="text"
-                          required
                           value={formData.name}
                           onChange={handleChange}
                           className="w-full"
@@ -112,14 +136,12 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                        <label className="block text-sm font-medium text-foreground mb-2">
                           Email Address *
                         </label>
                         <Input
-                          id="email"
                           name="email"
                           type="email"
-                          required
                           value={formData.email}
                           onChange={handleChange}
                           className="w-full"
@@ -127,13 +149,12 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    
+
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Company Name
                       </label>
                       <Input
-                        id="company"
                         name="company"
                         type="text"
                         value={formData.company}
@@ -142,15 +163,13 @@ const Contact = () => {
                         placeholder="Your company name"
                       />
                     </div>
-                    
+
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Message *
                       </label>
                       <Textarea
-                        id="message"
                         name="message"
-                        required
                         value={formData.message}
                         onChange={handleChange}
                         rows={6}
@@ -158,24 +177,32 @@ const Contact = () => {
                         placeholder="Tell us about your project or inquiry..."
                       />
                     </div>
-                    
-                    <Button type="submit" size="lg" className="w-full bg-red-600 hover:bg-red-700">
+
+                    <Button onClick={handleSubmit} size="lg" className="w-full bg-red-600 hover:bg-red-700">
                       Send Message
                       <Send className="ml-2 w-5 h-5" />
                     </Button>
-                  </form>
+                  </div>
                 </CardContent>
               </Card>
-            </motion.div>
+
+              {/* Map Section */}
+              <div>
+                <div className="text-center mb-6">
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    Visit Our Office
+                  </h2>
+                  <p className="text-lg text-muted-foreground">
+                    Located in the heart of the business district for easy access
+                  </p>
+                </div>
+
+                <MapComponent />
+              </div>
+            </div>
 
             {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
+            <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-6">
                   Get in Touch
@@ -189,13 +216,7 @@ const Contact = () => {
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
                 return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
+                  <div key={index}>
                     <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
                       <CardContent className="p-6">
                         <div className="flex items-start">
@@ -217,99 +238,10 @@ const Contact = () => {
                         </div>
                       </CardContent>
                     </Card>
-                  </motion.div>
+                  </div>
                 );
               })}
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Visit Our Office Section with Map */}
-      <section className="py-20 bg-red-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Visit Our Office
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Located in the heart of the business district for easy access
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Office Details */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="lg:col-span-1"
-            >
-              <Card className="border-0 shadow-xl">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-foreground">
-                    Office Information
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-foreground">Address</p>
-                      <p className="text-muted-foreground text-sm">
-                        123 Business District<br />
-                        Economic Plaza, Suite 456<br />
-                        Global City, GC 12345
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Phone className="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-foreground">Phone</p>
-                      <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Clock className="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-foreground">Hours</p>
-                      <p className="text-muted-foreground text-sm">
-                        Monday - Friday: 9:00 AM - 6:00 PM<br />
-                        Saturday: 10:00 AM - 4:00 PM
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Map */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="lg:col-span-2"
-            >
-              <div className="rounded-2xl overflow-hidden shadow-2xl h-80">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d965367.2131954873!2d72.61576065381905!3d19.06524665844417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9d0072fd3db%3A0x83596087895e2849!2sSteel%20Chamber%20K%20B%20And%20O%20P%20Co-Op!5e0!3m2!1sen!2sin!4v1749924923236!5m2!1sen!2sin"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
