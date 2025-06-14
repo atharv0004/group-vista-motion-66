@@ -24,10 +24,10 @@ const EnterprisesHome = () => {
 
 
 const clients = [
-  { name: 'APL LOGISTICS', logo: aplLogo, industry: 'Technology' },
-  { name: 'METRO SHOES', logo: metroLogo, industry: 'Business Development' },
-  { name: 'HOMETOWN', logo: hometownLogo, industry: 'Consulting' },
-  { name: 'SEABIRD', logo: seabirdLogo, industry: 'Management' }
+  { name: 'APL LOGISTICS', logo: aplLogo},
+  { name: 'METRO SHOES', logo: metroLogo },
+  { name: 'HOMETOWN', logo: hometownLogo },
+  { name: 'SEABIRD', logo: seabirdLogo }
 ];
 
 

@@ -62,9 +62,9 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
             whileHover={{ y: -5 }}
             className="group"
           >
-            <Card className="h-full border-0 shadow-md hover:shadow-lg transition-all duration-300">
+            <Card className="h-full border border-gray-300 shadow-xl hover:shadow-xxl transition-all duration-300">
               <CardContent className="p-6 text-center">
-                <div className='flex items-center justify-center mb-4'>
+                <div className='flex items-center justify-center mb-4 min-h-[120px]'>
                   <img
                     src={imageErrors[client.logo] ? getFallbackImage(client.name) : client.logo}
                     alt={client.name}
