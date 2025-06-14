@@ -225,46 +225,94 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-<section className="py-20 bg-red-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="text-center mb-12"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-        Visit Our Office
-      </h2>
-      <p className="text-lg text-muted-foreground">
-        Located in the heart of the business district for easy access
-      </p>
-    </motion.div>
+      {/* Visit Our Office Section with Map */}
+      <section className="py-20 bg-red-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Visit Our Office
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Located in the heart of the business district for easy access
+            </p>
+          </motion.div>
 
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="rounded-2xl overflow-hidden shadow-2xl"
-    >
-      <div className="relative w-full pb-[56.25%] h-0">
-        <iframe
-          className="absolute top-0 left-0 w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d965367.2131954873!2d72.61576065381905!3d19.06524665844417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9d0072fd3db%3A0x83596087895e2849!2sSteel%20Chamber%20K%20B%20And%20O%20P%20Co-Op!5e0!3m2!1sen!2sin!4v1749924923236!5m2!1sen!2sin"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Office Details */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="lg:col-span-1"
+            >
+              <Card className="border-0 shadow-xl">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold text-foreground">
+                    Office Information
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start">
+                    <MapPin className="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-foreground">Address</p>
+                      <p className="text-muted-foreground text-sm">
+                        123 Business District<br />
+                        Economic Plaza, Suite 456<br />
+                        Global City, GC 12345
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Phone className="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-foreground">Phone</p>
+                      <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Clock className="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-foreground">Hours</p>
+                      <p className="text-muted-foreground text-sm">
+                        Monday - Friday: 9:00 AM - 6:00 PM<br />
+                        Saturday: 10:00 AM - 4:00 PM
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-    </motion.div>
-  </div>
-</section>
-
+            {/* Map */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="lg:col-span-2"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-2xl h-80">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d965367.2131954873!2d72.61576065381905!3d19.06524665844417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9d0072fd3db%3A0x83596087895e2849!2sSteel%20Chamber%20K%20B%20And%20O%20P%20Co-Op!5e0!3m2!1sen!2sin!4v1749924923236!5m2!1sen!2sin"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
