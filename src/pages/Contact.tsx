@@ -226,42 +226,45 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-red-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Visit Our Office
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Located in the heart of the business district for easy access
-            </p>
-          </motion.div>
+<section className="py-20 bg-red-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-12"
+    >
+      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        Visit Our Office
+      </h2>
+      <p className="text-lg text-muted-foreground">
+        Located in the heart of the business district for easy access
+      </p>
+    </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden shadow-2xl"
-          >
-            <div className="bg-red-100 h-96 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-red-400 mx-auto mb-4" />
-                <p className="text-red-600">Interactive Map Placeholder</p>
-                <p className="text-sm text-red-500">
-                  Replace with actual map integration (Google Maps, Mapbox, etc.)
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="rounded-2xl overflow-hidden shadow-2xl"
+    >
+      <div className="relative w-full pb-[56.25%] h-0">
+        <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d965367.2131954873!2d72.61576065381905!3d19.06524665844417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9d0072fd3db%3A0x83596087895e2849!2sSteel%20Chamber%20K%20B%20And%20O%20P%20Co-Op!5e0!3m2!1sen!2sin!4v1749924923236!5m2!1sen!2sin"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+    </motion.div>
+  </div>
+</section>
+
     </div>
   );
 };
