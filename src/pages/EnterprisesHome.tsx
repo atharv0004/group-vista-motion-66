@@ -27,104 +27,107 @@ const EnterprisesHome = () => {
     { name: 'Corporate Excellence', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Enterprise' }
   ];
 
-  const features = [
-    'Business Strategy',
-    'Market Analysis',
-    'Growth Planning',
-    'Process Optimization',
-    'Digital Transformation',
-    'Leadership Development',
-    'Performance Metrics',
-    'Change Management',
-    'Innovation Programs',
-    'Partnership Development'
-  ];
+  const title = "Economic Enterprises";
+const subtitle = "One Stop Solution For All Manpower & Operational Needs";
+const description =
+  "From sourcing manpower and machinery to compliance, RTO, and real-time support, Economic Enterprises provides end-to-end business support across warehousing, facility management, trading, and beyond. We serve clients across India with scalable, reliable, and customized solutions.";
+const mission =
+  "To empower clients by delivering reliable manpower, equipment, and operational solutions—enabling efficiency, scalability, and business growth. We aim to be the trusted partner for businesses seeking real-time support, compliance, and expansion-ready services.";
+
+const features = [
+  "Works Contract Services",
+  "Manpower Solutions",
+  "Equipment Support",
+  "Resources Management",
+  "Facility Management",
+  "Warehouse Manpower Support",
+  "RTO & ODC Permissions",
+  "Compliance Management & 24/7 Support",
+  "Fundraising & Financial Management Solutions",
+  "Commodity Trading – Fruits & Vegetables"
+];
 
   const services = [
-    {
-      title: 'Business Strategy Consulting',
-      description: 'Strategic planning and business development solutions',
-      features: [
-        'Market analysis and research',
-        'Competitive intelligence',
-        'Strategic planning and roadmapping',
-        'Business model innovation',
-        'Performance measurement frameworks'
-      ],
-      icon: '🎯',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Digital Transformation',
-      description: 'Technology-driven business transformation initiatives',
-      features: [
-        'Digital strategy development',
-        'Process automation solutions',
-        'Technology platform selection',
-        'Change management support',
-        'Digital adoption training'
-      ],
-      icon: '🔄',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Process Optimization',
-      description: 'Operational excellence and process improvement services',
-      features: [
-        'Business process reengineering',
-        'Lean methodology implementation',
-        'Quality management systems',
-        'Workflow automation',
-        'Continuous improvement programs'
-      ],
-      icon: '⚙️',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Leadership Development',
-      description: 'Executive coaching and leadership training programs',
-      features: [
-        'Executive coaching and mentoring',
-        'Leadership assessment programs',
-        'Succession planning',
-        'Team building initiatives',
-        'Management training workshops'
-      ],
-      icon: '👥',
-      image: 'https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Market Expansion',
-      description: 'Strategic market entry and expansion support',
-      features: [
-        'Market opportunity assessment',
-        'Go-to-market strategy',
-        'Partnership development',
-        'International expansion planning',
-        'Revenue growth strategies'
-      ],
-      icon: '📈',
-      image: 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Innovation Management',
-      description: 'Innovation strategy and new product development',
-      features: [
-        'Innovation strategy development',
-        'R&D project management',
-        'Product development processes',
-        'Technology transfer programs',
-        'Innovation culture building'
-      ],
-      icon: '💡',
-      image: 'https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=600&h=400&fit=crop&crop=center'
-    }
-  ];
+  {
+    title: 'Manpower Solutions',
+    description: 'Tailored manpower support for warehousing, retail, logistics, and corporate needs',
+    features: [
+      'Warehouse staff (pickers, loaders, SAP/ERP operators)',
+      'Retail staff (packers, scanners, delivery personnel)',
+      'Pantry & housekeeping staff',
+      'Contract staffing & payroll solutions',
+      'Scalable workforce across India',
+    ],
+    icon: '🧑‍💼',
+    image: 'https://images.unsplash.com/photo-1596075780750-81249df16d67?w=600&h=400&fit=crop&crop=center',
+  },
+  {
+    title: 'Financial & Strategic Solutions',
+    description: 'Fuel your business growth with expert financial and strategic advisory',
+    features: [
+      'Fundraising advisory and solutions',
+      'Financial management and cash flow planning',
+      'Go-to-market strategies',
+      'International expansion planning',
+      'Strategic partnerships and deal sourcing',
+    ],
+    icon: '💼',
+    image: 'https://images.unsplash.com/photo-1573164713347-df1e93c3258e?w=600&h=400&fit=crop&crop=center',
+  },
+  {
+    title: 'Facility & Resource Management',
+    description: 'End-to-end operational support for businesses to run efficiently',
+    features: [
+      'Facility upkeep and management',
+      'Real-time operational support',
+      'Compliance monitoring and management',
+      '24/7 support infrastructure',
+      'Works contract and outsourcing support',
+    ],
+    icon: '🏢',
+    image: 'https://images.unsplash.com/photo-1529429611278-1dab569c6b3d?w=600&h=400&fit=crop&crop=center',
+  },
+  {
+    title: 'Equipment & Machinery Support',
+    description: 'Provision of reliable equipment and machinery for various operational needs',
+    features: [
+      'Material handling machinery',
+      'Temporary equipment rentals',
+      'Support for men, material, and machinery',
+      'Customized logistics setup',
+      'Heavy lifting and transport gear',
+    ],
+    icon: '⚙️',
+    image: 'https://images.unsplash.com/photo-1581090700227-1b7c4e1ea8ae?w=600&h=400&fit=crop&crop=center',
+  },
+  {
+    title: 'Compliance & Legal Services',
+    description: 'Navigate legal requirements with ease and focus on operations',
+    features: [
+      'RTO/ODC permissions handling',
+      'Labor law and Shops & Establishments compliance',
+      '24/7 monitoring and documentation support',
+      'PAN, GST, ESIC, PF, and PT management',
+      'Audit readiness services',
+    ],
+    icon: '🛡️',
+    image: 'https://images.unsplash.com/photo-1600121848594-60d4a72f2c89?w=600&h=400&fit=crop&crop=center',
+  },
+  {
+  title: 'Commodity Trading Services',
+  description: 'Efficient sourcing, storage, and trading of fruits and vegetables across PAN India',
+  features: [
+    'Fruit and vegetable sourcing from reliable producers',
+    'Storage and warehousing solutions for perishables',
+    'PAN India distribution and logistics network',
+    'B2B trade partnerships with retailers and wholesalers',
+    'Planning for future global market expansion',
+  ],
+  icon: '🛒',
+  image: 'https://images.unsplash.com/photo-1565958011703-44b4ef2033c0?w=600&h=400&fit=crop&crop=center',
+},
+];
 
-  const title = "Economic Enterprises";
-  const subtitle = "Business Development & Enterprise Solutions";
-  const description = "We empower businesses to achieve sustainable growth through strategic planning, process optimization, and innovative solutions tailored to your unique challenges.";
-  const mission = "To drive business transformation and sustainable growth through strategic consulting, innovative solutions, and collaborative partnerships. We help enterprises navigate complex challenges and unlock their full potential.";
   const bgGradient = "from-blue-600 to-blue-800";
   const textColor = "text-blue-50";
   const servicesLink = "#services";
