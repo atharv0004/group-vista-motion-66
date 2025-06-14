@@ -9,6 +9,22 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import wel from "@/assets/logisticsClients/Welspun-World.jpg";
+import apl from "@/assets/logisticsClients/apl.png";
+import carlsberg from "@/assets/logisticsClients/carlsberg.png";
+import allana from "@/assets/logisticsClients/Allana.jpg";
+import indofil from "@/assets/logisticsClients/Indofil.jpg";
+import mahindra from "@/assets/logisticsClients/mahindra.jpg";
+import finorchem from "@/assets/logisticsClients/finorchem.png";
+import rasna from "@/assets/logisticsClients/rasna.jpg";
+import trufrost from "@/assets/logisticsClients/trufrost.jpg";
+import revival from "@/assets/logisticsClients/revival.jpg";
+import indiabulls from "@/assets/logisticsClients/IndiaBulls.png";
+import sml from "@/assets/logisticsClients/sml.jpg";
+import sumitomo from "@/assets/logisticsClients/sumitomo.png";
+import johnson from "@/assets/logisticsClients/johnson.jpg";
+import mahanand from "@/assets/logisticsClients/mahanand.jpg";
+import pittie from "@/assets/logisticsClients/Pittie.png";
+import seabird from "@/assets/logisticsClients/seabird.png";
 
 const LogisticsHome = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -21,22 +37,22 @@ const LogisticsHome = () => {
 
   const clients = [
   { name: 'Welspun Group', logo: wel },
-  { name: 'APL Logistics', logo: '/assets/logisticsClients/apl.png' },
-  { name: 'Carlsberg Group', logo: '/assets/logisticsClients/carlsberg.png' },
-  { name: 'Allana Consumer Products', logo: '/assets/logisticsClients/Allana.jpg' },
-  { name: 'Indofil Industries Limited', logo: '/assets/logisticsClients/Indofil.jpg' },
-  { name: 'Mahindra Summit', logo: '/assets/logisticsClients/mahindra.jpg' },
-  { name: 'Finerchem', logo: '/assets/logisticsClients/finorchem.png' },
-  { name: 'Rasna', logo: '/assets/logisticsClients/rasna.jpg' },
-  { name: 'Truefrost', logo: '/assets/logisticsClients/trufrost.jpg' },
-  { name: 'Revival Engineers', logo: '/assets/logisticsClients/revival.jpg' },
-  { name: 'Indiabulls Enterprises', logo: '/assets/logisticsClients/IndiaBulls.png' },
-  { name: 'SML', logo: '/assets/logisticsClients/sml.jpg' },
-  { name: 'Sumitomo Chemical', logo: '/assets/logisticsClients/sumitomo.png' },
-  { name: 'Johnson', logo: '/assets/logisticsClients/johnson.jpg' },
-  { name: 'Mahanand', logo: '/assets/logisticsClients/mahanand.jpg' },
-  { name: 'Pittie', logo: '/assets/logisticsClients/Pittie.png' },
-  { name: 'Seabird Int.', logo: '/assets/logisticsClients/seabird.png' }
+  { name: 'APL Logistics', logo: apl },
+  { name: 'Carlsberg Group', logo: carlsberg },
+  { name: 'Allana Consumer Products', logo: allana },
+  { name: 'Indofil Industries Limited', logo: indofil },
+  { name: 'Mahindra Summit', logo: mahindra },
+  { name: 'Finerchem', logo: finorchem },
+  { name: 'Rasna', logo: rasna },
+  { name: 'Truefrost', logo: trufrost },
+  { name: 'Revival Engineers', logo: revival },
+  { name: 'Indiabulls Enterprises', logo: indiabulls },
+  { name: 'SML', logo: sml },
+  { name: 'Sumitomo Chemical', logo: sumitomo },
+  { name: 'Johnson', logo: johnson },
+  { name: 'Mahanand', logo: mahanand },
+  { name: 'Pittie', logo: pittie },
+  { name: 'Seabird Int.', logo: seabird },
 ];
 
   const features = [
