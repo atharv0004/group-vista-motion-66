@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import wipro from "@/assets/EnviroClients/wipro.webp";
+import novo from "@/assets/EnviroClients/novo.jpg";
+import uniwin from "@/assets/EnviroClients/uniwin.png";
+import uniliver from "@/assets/EnviroClients/uniliver.webp";
 
 const EnviroHome = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -18,23 +22,10 @@ const EnviroHome = () => {
   }, []);
 
   const clients = [
-  { name: 'Wipro', logo: '/assets/EnviroClients/wipro.webp' },
-  { name: 'Uniliver', logo: '/assets/EnviroClients/' },
-  { name: 'Carlsberg Group', logo: '/assets/EnviroClients/wipro.webp' },
-  { name: 'Allana Consumer Products', logo: '/assets/EnviroClients/wipro.webp' },
-  { name: 'Indofil Industries Limited', logo: '/assets/logisticsClients/Indofil.jpg' },
-  { name: 'Mahindra Summit', logo: '/assets/logisticsClients/mahindra.jpg' },
-  { name: 'Finerchem', logo: '/assets/logisticsClients/finorchem.png' },
-  { name: 'Rasna', logo: '/assets/logisticsClients/rasna.jpg' },
-  { name: 'Truefrost', logo: '/assets/logisticsClients/trufrost.jpg' },
-  { name: 'Revival Engineers', logo: '/assets/logisticsClients/revival.jpg' },
-  { name: 'Indiabulls Enterprises', logo: '/assets/logisticsClients/IndiaBulls.png' },
-  { name: 'SML', logo: '/assets/logisticsClients/sml.jpg' },
-  { name: 'Sumitomo Chemical', logo: '/assets/logisticsClients/sumitomo.png' },
-  { name: 'Johnson', logo: '/assets/logisticsClients/johnson.jpg' },
-  { name: 'Mahanand', logo: '/assets/logisticsClients/mahanand.jpg' },
-  { name: 'Pittie', logo: '/assets/logisticsClients/Pittie.png' },
-  { name: 'Seabird Int.', logo: '/assets/logisticsClients/seabird.png' }
+  { name: 'Wipro', logo: wipro },
+  { name: 'Uniliver', logo: uniliver },
+  { name: "Novo Pharma", logo: novo },
+  { name: "Uniwin", logo: uniwin }
 ];
 
   const services = [
