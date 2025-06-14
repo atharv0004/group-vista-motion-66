@@ -6,31 +6,43 @@ import AchievementsSection from '@/components/AchievementsSection';
 
 const LogisticsHome = () => {
   const clients = [
-    { name: 'Global Shipping Co.', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Maritime Logistics' },
-    { name: 'FastTrack Express', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Express Delivery' },
-    { name: 'Supply Chain Solutions', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Supply Chain' },
-    { name: 'International Freight', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Freight Services' },
-    { name: 'Warehouse Pro', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Warehousing' },
-    { name: 'Logistics Tech', logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center', industry: 'Technology' }
-  ];
+  { name: 'Welspun Group', logo: '/src/assets/logisticsClients/Welspun-World.jpg' },
+  { name: 'APL Logistics', logo: '/src/assets/logisticsClients/apl.png' },
+  { name: 'Carlsberg Group', logo: '/src/assets/logisticsClients/carlsberg.png' },
+  { name: 'Allana Consumer Products', logo: '/src/assets/logisticsClients/Allana.jpg' },
+  { name: 'Indofil Industries Limited', logo: '/src/assets/logisticsClients/Indofil.jpg' },
+  { name: 'Mahindra Summit', logo: '/src/assets/logisticsClients/mahindra.jpg' },
+  { name: 'Finerchem', logo: '/src/assets/logisticsClients/finorchem.png' },
+  { name: 'Rasna', logo: '/src/assets/logisticsClients/rasna.jpg' },
+  { name: 'Truefrost', logo: '/src/assets/logisticsClients/trufrost.jpg' },
+  { name: 'Revival Engineers', logo: '/src/assets/logisticsClients/revival.jpg' },
+  { name: 'Indiabulls Enterprises', logo: '/src/assets/logisticsClients/IndiaBulls.png' },
+  { name: 'SML', logo: '/src/assets/logisticsClients/sml.jpg' },
+  { name: 'Sumitomo Chemical', logo: '/src/assets/logisticsClients/sumitomo.png' },
+  { name: 'Johnson', logo: '/src/assets/logisticsClients/johnson.jpg' },
+  { name: 'Mahanand', logo: '/src/assets/logisticsClients/mahanand.jpg' },
+  { name: 'Pittie', logo: '/src/assets/logisticsClients/Pittie.png' },
+  { name: 'Seabird Int.', logo: '/src/assets/logisticsClients/seabird.png' }
+];
+
 
   const features = [
+    'Pan India Network',
+    '24x7 Dedicated Support',
+    'Customized Freight Solutions',
+    'All-weather Vehicles',
+    'Just-in-Time Transit Scheduling',
     'Supply Chain Optimization',
-    'Global Shipping Network',
-    'Warehouse Management',
-    'Inventory Solutions',
-    'Real-time Tracking',
-    'Cost-effective Logistics',
-    'Advanced Analytics',
-    'Custom Integration',
-    '24/7 Support',
-    'Compliance Management'
+    'SIM & GPS Based Tracking',
+    'Real-Time Reporting & E-POD',
+    'Cost-Effective Logistics',
+    'MIS and Customer Ledger Reports'
   ];
 
-  const subtitle="Comprehensive Supply Chain & Logistics Solutions"
+  const subtitle="Integrated Transport & Logistics Solutions Across India"
   const title="Economic Logistics"
-  const description="We provide end-to-end logistics solutions that streamline your supply chain, reduce costs, and improve efficiency across global markets."
-  const mission="To revolutionize global logistics through innovative technology, strategic partnerships, and uncompromising commitment to excellence. We connect businesses worldwide with reliable, efficient, and cost-effective logistics solutions."
+  const description="Headquartered in Navi Mumbai, we offer Pan India logistics services with passion and commitment. Through empowered teams and innovative multilevel transport models, we ensure timely, safe, and reliable freight movement."
+  const mission="To be the most dependable and environmentally conscious logistics provider in India. Our goal is to offer cost-effective, technology-driven transportation solutions while ensuring safe, timely delivery and exceptional customer satisfaction."
   const bgGradient="from-red-600 to-red-800"
   const textColor="text-red-50"
   const servicesLink = "#services";
@@ -42,85 +54,85 @@ const LogisticsHome = () => {
     : 'text-green-600';
 
     const services = [
-    {
-      title: 'Supply Chain Management',
-      description: 'End-to-end supply chain optimization and management solutions',
-      features: [
-        'Strategic supply chain planning',
-        'Vendor management and sourcing',
-        'Inventory optimization',
-        'Risk management and mitigation',
-        'Performance analytics and reporting'
-      ],
-      icon: '🚛',
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Global Shipping & Freight',
-      description: 'Comprehensive shipping solutions for international trade',
-      features: [
-        'Ocean and air freight services',
-        'Door-to-door delivery solutions',
-        'Customs clearance and documentation',
-        'Multi-modal transportation',
-        'Route optimization and planning'
-      ],
-      icon: '🌍',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Warehouse Solutions',
-      description: 'Advanced warehousing and distribution center management',
-      features: [
-        'Warehouse design and optimization',
-        'Inventory management systems',
-        'Order fulfillment and processing',
-        'Cross-docking services',
-        'Technology integration'
-      ],
-      icon: '📦',
-      image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Last Mile Delivery',
-      description: 'Efficient final delivery solutions to end customers',
-      features: [
-        'Urban and rural delivery networks',
-        'Real-time tracking and notifications',
-        'Flexible delivery options',
-        'Returns management',
-        'Customer service support'
-      ],
-      icon: '🚚',
-      image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Logistics Technology',
-      description: 'Cutting-edge technology solutions for logistics operations',
-      features: [
-        'Transportation management systems',
-        'Real-time visibility platforms',
-        'Predictive analytics',
-        'IoT and sensor integration',
-        'Automated reporting tools'
-      ],
-      icon: '💻',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop&crop=center'
-    },
-    {
-      title: 'Consulting Services',
-      description: 'Expert consulting for logistics strategy and optimization',
-      features: [
-        'Logistics strategy development',
-        'Process improvement consulting',
-        'Cost reduction analysis',
-        'Network optimization',
-        'Change management support'
-      ],
-      icon: '📊',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center'
-    }
-  ];
+  {
+    title: 'Road Transport – FTL/PTL',
+    description: 'Pan India Full Truck Load and Part Truck Load transportation with reliable and flexible options.',
+    features: [
+      'Door-to-door transport across India',
+      'Real-time GPS tracking',
+      'Custom freight scheduling',
+      'All-weather fleet',
+      'Transit movement reporting'
+    ],
+    icon: '🚛',
+    image: 'https://images.unsplash.com/photo-1602101024303-2158f8a96f5d?w=600&h=400&fit=crop&crop=center'
+  },
+  {
+    title: 'Warehousing Solutions',
+    description: 'End-to-end warehouse design, management, and distribution operations.',
+    features: [
+      'Strategically located warehouses',
+      'Inventory control systems',
+      'Order fulfillment & cross-docking',
+      'Integrated IT systems',
+      'Real-time visibility of inventory'
+    ],
+    icon: '🏬',
+    image: 'https://images.unsplash.com/photo-1588776814546-ec7e1fcbf8a5?w=600&h=400&fit=crop&crop=center'
+  },
+  {
+    title: 'Last Mile Delivery',
+    description: 'Reliable last-mile delivery solutions across urban and rural regions.',
+    features: [
+      'Timely final-mile execution',
+      'Proof of delivery and tracking',
+      'Returns handling',
+      'Flexible delivery windows',
+      'Customer service support'
+    ],
+    icon: '🚚',
+    image: 'https://images.unsplash.com/photo-1606813902221-1f9fc8b73bff?w=600&h=400&fit=crop&crop=center'
+  },
+  {
+    title: 'Sea Freight & Global Logistics',
+    description: 'Export/import logistics, LCL/FCL, and specialized international routes.',
+    features: [
+      'Global LCL/FCL & break bulk',
+      'Service to Africa & Moscow (via Odessa)',
+      'Port coverage across India',
+      'DDP/DDU & round-trip tank movements',
+      '24/7 cargo tracking & monitoring'
+    ],
+    icon: '🚢',
+    image: 'https://images.unsplash.com/photo-1605902711622-cfb43c4437c2?w=600&h=400&fit=crop&crop=center'
+  },
+  {
+    title: 'Tracking & Backend Support',
+    description: 'Technology-enabled visibility, reporting, and customer backend tools.',
+    features: [
+      'SIM-based and GPS tracking',
+      'E-POD generation',
+      'Custom MIS reports',
+      'Customer ledger & outstanding reports',
+      'Live vehicle monitoring'
+    ],
+    icon: '📡',
+    image: 'https://images.unsplash.com/photo-1554224155-8d1d633d6b48?w=600&h=400&fit=crop&crop=center'
+  },
+  {
+    title: 'Consulting Services',
+    description: 'Expert guidance in supply chain, transportation strategy, and process improvement.',
+    features: [
+      'Cost reduction analysis',
+      'Logistics strategy development',
+      'Network design optimization',
+      'Process audits and SOP building',
+      'Change management and training'
+    ],
+    icon: '📊',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop&crop=center'
+  }
+];
 
   return (
     <div className="min-h-screen pt-16">
@@ -145,8 +157,9 @@ const LogisticsHome = () => {
           services={services}
         />
       </div>
-
-      <AchievementsSection />
+      <div className='mt-10'>
+        <AchievementsSection />
+      </div>
 
       <CategoryClients clients={clients} />
     </div>

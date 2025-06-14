@@ -7,7 +7,6 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 interface Client {
   name: string;
   logo: string;
-  industry: string;
 }
 
 interface CategoryClientsProps {
@@ -27,7 +26,7 @@ const CategoryClients = ({ clients }: CategoryClientsProps) => {
           className="text-center mb-8 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Trusted by Industry Leaders
+            Trusted by Customers
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             We're proud to partner with leading companies across various industries
