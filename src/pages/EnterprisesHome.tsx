@@ -19,10 +19,10 @@ const EnterprisesHome = () => {
   }, []);
 
   const clients = [
-    { name: 'APL LOGISTICS', logo: '/public/assets/EnterpriseClients/APL_Logo.png', industry: 'Technology' },
-    { name: 'METRO SHOES', logo:'/public/assets/EnterpriseClients/Metro_logo.webp'  , industry: 'Business Developmen'},
-    { name: 'HOMETOWM', logo:'/public/assets/EnterpriseClients/HomeTown.png' , industry: 'Consulting' },
-    { name: 'SEABIRD', logo: '/public/assets/EnterpriseClients/seaBird.png', industry: 'Management' }
+    { name: 'APL LOGISTICS', logo: '/assets/EnterpriseClients/APL_Logo.png', industry: 'Technology' },
+    { name: 'METRO SHOES', logo:'/assets/EnterpriseClients/Metro_logo.webp'  , industry: 'Business Developmen'},
+    { name: 'HOMETOWM', logo:'/assets/EnterpriseClients/HomeTown.png' , industry: 'Consulting' },
+    { name: 'SEABIRD', logo: '/assets/EnterpriseClients/seaBird.png', industry: 'Management' }
   ];
 
   const title = "Economic Enterprises";
