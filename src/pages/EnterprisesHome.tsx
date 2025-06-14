@@ -8,6 +8,10 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import businessImage from '@/assets/business.jpg';
+import aplLogo from "@/assets/logisticsClients/apl.png";
+import metroLogo from "@/assets/EnterpriseClients/Metro_logo.webp";
+import hometownLogo from "@/assets/EnterpriseClients/HomeTown.png";
+import seabirdLogo from "@/assets/EnterpriseClients/seaBird.png";
 
 const EnterprisesHome = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -18,12 +22,14 @@ const EnterprisesHome = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const clients = [
-    { name: 'APL LOGISTICS', logo: '/assets/logisticsClients/apl.png', industry: 'Technology' },
-    { name: 'METRO SHOES', logo: '/assets/EnterpriseClients/Metro_logo.webp', industry: 'Business Development' },
-    { name: 'HOMETOWN', logo: '/assets/EnterpriseClients/HomeTown.png', industry: 'Consulting' },
-    { name: 'SEABIRD', logo: '/assets/EnterpriseClients/seaBird.png', industry: 'Management' }
-  ];
+
+const clients = [
+  { name: 'APL LOGISTICS', logo: aplLogo, industry: 'Technology' },
+  { name: 'METRO SHOES', logo: metroLogo, industry: 'Business Development' },
+  { name: 'HOMETOWN', logo: hometownLogo, industry: 'Consulting' },
+  { name: 'SEABIRD', logo: seabirdLogo, industry: 'Management' }
+];
+
 
   // Add console logging to debug image loading
   useEffect(() => {

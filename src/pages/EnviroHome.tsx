@@ -1,4 +1,4 @@
-pimport CategoryHero from '@/components/CategoryHero';
+import CategoryHero from '@/components/CategoryHero';
 import CategoryMission from '@/components/CategoryMission';
 import CategoryClients from '@/components/CategoryClients';
 import ServicePage from '@/components/ServicePage';
