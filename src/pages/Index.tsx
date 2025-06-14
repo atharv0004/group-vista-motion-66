@@ -6,9 +6,6 @@ import { ArrowRight, ChevronRight, Users, Globe, Award, TrendingUp } from 'lucid
 import bgImage from '../assets/HeroImage.png'; // Adjust the path as needed
 import businessImage from '../assets/business.jpg'; // adjust path as needed
 
-
-
-
 const Index = () => {
   const categories = [
     {
@@ -109,21 +106,16 @@ const Index = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-      className="flex flex-col sm:flex-row gap-4 justify-center px-2"
+      className="flex justify-center px-2"
     >
       <Button 
         size="lg" 
-        className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-red-600 hover:bg-red-700 w-full sm:w-auto"
+        className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-red-600 hover:bg-red-700"
         onClick={scrollToBusinessSolutions}
       >
         Explore Our Solutions
         <ArrowRight className="ml-2 w-5 h-5" />
       </Button>
-      <Link to="/contact" className="w-full sm:w-auto">
-        <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-white text-red-600 hover:bg-gray-100 hover:text-red-700 w-full">
-          Contact Us Today
-        </Button>
-      </Link>
     </motion.div>
   </motion.div>
 
