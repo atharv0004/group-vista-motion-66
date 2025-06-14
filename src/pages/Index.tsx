@@ -44,78 +44,9 @@ const Index = () => {
   ];
 
   const stats = [
-    { icon: Users, value: '100+', label: 'Happy Clients' },
-    { icon: Globe, value: '25+', label: 'States Served' },
-    { icon: Award, value: '15+<section className="py-20 bg-gradient-to-br from-[#B71C1C] via-[#C62828] to-[#D32F2F]">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-      {stats.map((stat, index) => {
-        const Icon = stat.icon;
-        return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <Icon className="w-12 h-12 text-red-100 mx-auto mb-4" />
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
-            <div className="text-red-100">{stat.label}</div>
-          </motion.div>
-        );
-      })}
-    </div>
-  </div>
-</section>
-<section className="py-20 bg-gradient-to-br from-[#B71C1C] via-[#C62828] to-[#D32F2F]">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-      {stats.map((stat, index) => {
-        const Icon = stat.icon;
-        return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <Icon className="w-12 h-12 text-red-100 mx-auto mb-4" />
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
-            <div className="text-red-100">{stat.label}</div>
-          </motion.div>
-        );
-      })}
-    </div>
-  </div>
-</section>
-<section className="py-20 bg-gradient-to-br from-[#B71C1C] via-[#C62828] to-[#D32F2F]">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-      {stats.map((stat, index) => {
-        const Icon = stat.icon;
-        return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <Icon className="w-12 h-12 text-red-100 mx-auto mb-4" />
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
-            <div className="text-red-100">{stat.label}</div>
-          </motion.div>
-        );
-      })}
-    </div>
-  </div>
-</section>
-', label: 'Years Experience' },
+    { icon: Users, value: '500+', label: 'Happy Clients' },
+    { icon: Globe, value: '25+', label: 'Countries Served' },
+    { icon: Award, value: '15+', label: 'Years Experience' },
     { icon: TrendingUp, value: '95%', label: 'Success Rate' }
   ];
 
@@ -368,7 +299,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section - Now above Footer */}
-      <section className="py-20 bg-gradient-to-r from-red-900 to-red-800">
+     <section className="py-20 bg-gradient-to-r from-red-900 to-red-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
@@ -393,6 +324,6 @@ const Index = () => {
       </section>
     </div>
   );
-};
+}; 
 
 export default Index;
