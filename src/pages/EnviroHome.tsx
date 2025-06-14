@@ -40,7 +40,7 @@ const EnviroHome = () => {
       'Single source implementation'
     ],
     icon: '🗑️',
-    image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop&crop=center'
+    image: 'https://images.unsplash.com/photo-1717667745836-145a38948ebf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     title: 'Site Assessment',
@@ -53,7 +53,7 @@ const EnviroHome = () => {
       'Customized action plans'
     ],
     icon: '📍',
-    image: 'https://images.unsplash.com/photo-1581090700227-1e8a8c0c430b?w=600&h=400&fit=crop&crop=center'
+    image: 'https://images.unsplash.com/photo-1723107638694-b7b98672d10d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     title: 'Climate Solutions',
@@ -66,7 +66,7 @@ const EnviroHome = () => {
       'Climate-conscious waste methods'
     ],
     icon: '🌍',
-    image: 'https://images.unsplash.com/photo-1569163139394-de44cb5894c6?w=600&h=400&fit=crop&crop=center'
+    image: 'https://cdn.pixabay.com/photo/2020/01/15/09/13/co2-4767388_1280.jpg'
   },
   {
   title: 'Certified Destruction Services',
@@ -79,7 +79,7 @@ const EnviroHome = () => {
     'End-to-end secure chain of custody'
   ],
   icon: '✅',
-  image: 'https://images.unsplash.com/photo-1606923829579-3b1c4e3b5c31?w=600&h=400&fit=crop&crop=center'
+  image: 'https://images.unsplash.com/photo-1626823208620-4643c1884b8b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 }
 ];
 
