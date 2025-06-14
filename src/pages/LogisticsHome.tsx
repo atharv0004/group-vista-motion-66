@@ -19,23 +19,23 @@ const LogisticsHome = () => {
   }, []);
 
   const clients = [
-  { name: 'Welspun Group', logo: '/src/assets/logisticsClients/Welspun-World.jpg' },
-  { name: 'APL Logistics', logo: '/src/assets/logisticsClients/apl.png' },
-  { name: 'Carlsberg Group', logo: '/src/assets/logisticsClients/carlsberg.png' },
-  { name: 'Allana Consumer Products', logo: '/src/assets/logisticsClients/Allana.jpg' },
-  { name: 'Indofil Industries Limited', logo: '/src/assets/logisticsClients/Indofil.jpg' },
-  { name: 'Mahindra Summit', logo: '/src/assets/logisticsClients/mahindra.jpg' },
-  { name: 'Finerchem', logo: '/src/assets/logisticsClients/finorchem.png' },
-  { name: 'Rasna', logo: '/src/assets/logisticsClients/rasna.jpg' },
-  { name: 'Truefrost', logo: '/src/assets/logisticsClients/trufrost.jpg' },
-  { name: 'Revival Engineers', logo: '/src/assets/logisticsClients/revival.jpg' },
-  { name: 'Indiabulls Enterprises', logo: '/src/assets/logisticsClients/IndiaBulls.png' },
-  { name: 'SML', logo: '/src/assets/logisticsClients/sml.jpg' },
-  { name: 'Sumitomo Chemical', logo: '/src/assets/logisticsClients/sumitomo.png' },
-  { name: 'Johnson', logo: '/src/assets/logisticsClients/johnson.jpg' },
-  { name: 'Mahanand', logo: '/src/assets/logisticsClients/mahanand.jpg' },
-  { name: 'Pittie', logo: '/src/assets/logisticsClients/Pittie.png' },
-  { name: 'Seabird Int.', logo: '/src/assets/logisticsClients/seabird.png' }
+  { name: 'Welspun Group', logo: '/assets/logisticsClients/Welspun-World.jpg' },
+  { name: 'APL Logistics', logo: '/assets/logisticsClients/apl.png' },
+  { name: 'Carlsberg Group', logo: '/assets/logisticsClients/carlsberg.png' },
+  { name: 'Allana Consumer Products', logo: '/assets/logisticsClients/Allana.jpg' },
+  { name: 'Indofil Industries Limited', logo: '/assets/logisticsClients/Indofil.jpg' },
+  { name: 'Mahindra Summit', logo: '/assets/logisticsClients/mahindra.jpg' },
+  { name: 'Finerchem', logo: '/assets/logisticsClients/finorchem.png' },
+  { name: 'Rasna', logo: '/assets/logisticsClients/rasna.jpg' },
+  { name: 'Truefrost', logo: '/assets/logisticsClients/trufrost.jpg' },
+  { name: 'Revival Engineers', logo: '/assets/logisticsClients/revival.jpg' },
+  { name: 'Indiabulls Enterprises', logo: '/assets/logisticsClients/IndiaBulls.png' },
+  { name: 'SML', logo: '/assets/logisticsClients/sml.jpg' },
+  { name: 'Sumitomo Chemical', logo: '/assets/logisticsClients/sumitomo.png' },
+  { name: 'Johnson', logo: '/assets/logisticsClients/johnson.jpg' },
+  { name: 'Mahanand', logo: '/assets/logisticsClients/mahanand.jpg' },
+  { name: 'Pittie', logo: '/assets/logisticsClients/Pittie.png' },
+  { name: 'Seabird Int.', logo: '/assets/logisticsClients/seabird.png' }
 ];
 
   const features = [
