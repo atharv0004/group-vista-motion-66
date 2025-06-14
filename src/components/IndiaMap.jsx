@@ -35,6 +35,9 @@ const locations = [
   { name: "Dahej", coords: [21.7119, 72.5197] },
   { name: "Ahm’dabad", coords: [23.0225, 72.5714] },
   { name: "Bikaner", coords: [28.0229, 73.3119] },
+  { name: "Patna", coords: [25.5941, 85.1376] },
+  { name: "Visakhapatnam", coords: [17.6868, 83.2185] },
+  { name: "Chennai", coords: [13.0827, 80.2707] } 
 ];
 
 const IndiaMap = () => {
