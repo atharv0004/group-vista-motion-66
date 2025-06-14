@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import wel from "@/assets/logisticsClients/Welspun-World.jpg";
 
 const LogisticsHome = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -19,7 +20,7 @@ const LogisticsHome = () => {
   }, []);
 
   const clients = [
-  { name: 'Welspun Group', logo: '/assets/logisticsClients/Welspun-World.jpg' },
+  { name: 'Welspun Group', logo: wel },
   { name: 'APL Logistics', logo: '/assets/logisticsClients/apl.png' },
   { name: 'Carlsberg Group', logo: '/assets/logisticsClients/carlsberg.png' },
   { name: 'Allana Consumer Products', logo: '/assets/logisticsClients/Allana.jpg' },
