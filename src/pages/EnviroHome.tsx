@@ -92,7 +92,6 @@ const EnviroHome = () => {
 }
 ];
 
-
   const title = "Economic Enviro Solutions";
 const subtitle = "Eco-Friendly Waste Management for a Healthier World";
 const description = "We provide clean, efficient, and compliant waste management solutions to leading pharmaceutical, FMCG, cosmetics, and personal care companies across India. Our Pan-India presence and logistics integration ensure seamless operations and certified destruction services.";
