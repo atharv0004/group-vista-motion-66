@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { useEffect, useState } from 'react';
@@ -6,7 +5,6 @@ import { useEffect, useState } from 'react';
 interface Client {
   name: string;
   logo: string;
-  industry: string;
 }
 
 interface CompanySliderProps {
@@ -16,15 +14,17 @@ interface CompanySliderProps {
 const CompanySlider = ({ clients }: CompanySliderProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const itemsPerPage = 4;
+
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % Math.ceil(clients.length / 3));
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % Math.ceil(clients.length / itemsPerPage));
     }, 4000);
 
     return () => clearInterval(timer);
   }, [clients.length]);
 
-  const visibleClients = clients.slice(currentIndex * 3, (currentIndex * 3) + 3);
+  const visibleClients = clients.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage);
 
   return (
     <div className="relative overflow-hidden">
@@ -34,7 +34,7 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -100 }}
         transition={{ duration: 0.8 }}
-        className="grid md:grid-cols-3 gap-6"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4"
       >
         {visibleClients.map((client, index) => (
           <motion.div
@@ -46,20 +46,18 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
             className="group"
           >
             <Card className="h-full border-0 shadow-md hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/10 to-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <CardContent className="p-6 text-center">
+                <div className='flex items-center justify-center mb-4'>
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="w-16 h-16 object-contain"
+                    className="max-w-[100px] max-h-[60px] object-contain"
                     onError={(e) => {
-                      // Fallback to placeholder if image fails to load
                       e.currentTarget.src = `https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center`;
                     }}
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{client.name}</h3>
-                <p className="text-sm text-muted-foreground">{client.industry}</p>
+                <h3 className="text-base font-semibold text-foreground">{client.name}</h3>
               </CardContent>
             </Card>
           </motion.div>
@@ -67,13 +65,13 @@ const CompanySlider = ({ clients }: CompanySliderProps) => {
       </motion.div>
 
       {/* Pagination dots */}
-      <div className="flex justify-center mt-8 space-x-2">
-        {Array.from({ length: Math.ceil(clients.length / 3) }).map((_, index) => (
+      <div className="flex justify-center mt-6 space-x-2">
+        {Array.from({ length: Math.ceil(clients.length / itemsPerPage) }).map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentIndex ? 'bg-primary' : 'bg-muted'
+              index === currentIndex ? 'bg-primary' : 'bg-gray-400'
             }`}
           />
         ))}
