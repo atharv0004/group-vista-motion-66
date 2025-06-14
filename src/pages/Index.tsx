@@ -44,9 +44,9 @@ const Index = () => {
   ];
 
   const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients' },
-    { icon: Globe, value: '25+', label: 'Countries Served' },
-    { icon: Award, value: '15+', label: 'Years Experience' },
+    { icon: Users, value: '100+', label: 'Happy Clients' },
+    { icon: Globe, value: '25+', label: 'States Served' },
+    { icon: Award, value: '25', label: 'Years Experience' },
     { icon: TrendingUp, value: '95%', label: 'Success Rate' }
   ];
 
