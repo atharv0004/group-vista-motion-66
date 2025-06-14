@@ -299,7 +299,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section - Now above Footer */}
-     <section className="py-10 bg-gradient-to-r from-[#800000] to-[#990000]">
+     <section className="py-8 bg-gradient-to-r from-[#800000] to-[#990000]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
