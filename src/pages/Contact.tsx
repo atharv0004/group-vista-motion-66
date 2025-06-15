@@ -3,7 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Clock, Send, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ExternalLink, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { toast } from '@/components/ui/sonner';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +15,7 @@ const Contact = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [mapError, setMapError] = useState(false);
 
   const handleChange = (e) => {
@@ -22,12 +25,55 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      toast.error('Please fill in all required fields');
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        "YOUR_SERVICE_ID", // Replace with your service ID
+        "YOUR_TEMPLATE_ID", // Replace with your template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          company: formData.company || 'Not specified',
+          message: formData.message,
+          to_name: 'Economic Group',
+        }
+      );
+
+      console.log('Email sent successfully:', result);
+      
+      // Show success message
+      toast.success('Thank you for your message! We\'ll get back to you within 24 hours.');
+      
+      // Reset form
+      setFormData({ name: '', email: '', company: '', message: '' });
+      
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      toast.error('Failed to send message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -76,13 +122,13 @@ const Contact = () => {
     return (
       <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg">
         <iframe
-                  className="w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d965367.2131954873!2d72.61576065381905!3d19.06524665844417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9d0072fd3db%3A0x83596087895e2849!2sSteel%20Chamber%20K%20B%20And%20O%20P%20Co-Op!5e0!3m2!1sen!2sin!4v1749924923236!5m2!1sen!2sin"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+          className="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d965367.2131954873!2d72.61576065381905!3d19.06524665844417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9d0072fd3db%3A0x83596087895e2849!2sSteel%20Chamber%20K%20B%20And%20O%20P%20Co-Op!5e0!3m2!1sen!2sin!4v1749924923236!5m2!1sen!2sin"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     );
   };
@@ -120,7 +166,7 @@ const Contact = () => {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
@@ -133,6 +179,8 @@ const Contact = () => {
                           onChange={handleChange}
                           className="w-full"
                           placeholder="Your full name"
+                          required
+                          disabled={isSubmitting}
                         />
                       </div>
                       <div>
@@ -146,6 +194,8 @@ const Contact = () => {
                           onChange={handleChange}
                           className="w-full"
                           placeholder="your.email@example.com"
+                          required
+                          disabled={isSubmitting}
                         />
                       </div>
                     </div>
@@ -161,6 +211,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-full"
                         placeholder="Your company name"
+                        disabled={isSubmitting}
                       />
                     </div>
 
@@ -175,14 +226,30 @@ const Contact = () => {
                         rows={6}
                         className="w-full"
                         placeholder="Tell us about your project or inquiry..."
+                        required
+                        disabled={isSubmitting}
                       />
                     </div>
 
-                    <Button onClick={handleSubmit} size="lg" className="w-full bg-red-600 hover:bg-red-700">
-                      Send Message
-                      <Send className="ml-2 w-5 h-5" />
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full bg-red-600 hover:bg-red-700"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+                          Sending Message...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <Send className="ml-2 w-5 h-5" />
+                        </>
+                      )}
                     </Button>
-                  </div>
+                  </form>
                 </CardContent>
               </Card>
 
