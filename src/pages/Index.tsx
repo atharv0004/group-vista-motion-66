@@ -10,28 +10,28 @@ const Index = () => {
   const categories = [
     {
       id: 'logistics',
-      title: 'Economic Logistics',
-      description: 'Comprehensive supply chain and logistics solutions for global trade',
+      title: 'ECONOMIC LOGISTICS',
+      description: 'Integrated Transport & Logistics Solutions Across India',
       href: '/logistics',
       bgGradient: 'from-red-600 to-red-800',
       textColor: 'text-red-50',
-      features: ["Pan-India Transport", "Multi-Modal Freight (Road, Rail, Sea)", "Real-Time Tracking"],
+      features: ["Pan-India Transport [FTL/PTL]", "Multi-Modal Freight (Road, Air, Sea)", "Warehousing Solutions"],
       image: 'https://cdn.pixabay.com/photo/2024/07/25/14/54/truck-8921536_1280.jpg'
     },
     {
       id: 'enterprises',
-      title: 'Economic Enterprises',
-      description: 'Business development and enterprise solutions for growth',
+      title: 'ECONOMIC ENTERPRISES',
+      description: 'One Stop Solution For All Manpower & Operational Needs',
       href: '/enterprises',
       bgGradient: 'from-blue-600 to-blue-800',
       textColor: 'text-blue-50',
-      features: [ "Manpower Solutions", "Warehouse & Facility Management", "Retail & Staffing Services"],
+      features: [ "Manpower Solutions","Commodity Trading", "Work Contract Services"],
       image: businessImage,
     },
     {
       id: 'enviro',
-      title: 'Economic Enviro Solutions',
-      description: 'Sustainable environmental solutions for a greener future',
+      title: 'ECONOMIC ENVIRO SOLUTIONS',
+      description: 'Sustainable environmental solutions for a green future',
       href: '/enviro',
       bgGradient: 'from-green-600 to-green-800',
       textColor: 'text-green-50',
@@ -41,11 +41,12 @@ const Index = () => {
   ];
 
   const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients' },
-    { icon: Globe, value: '25+', label: 'Countries Served' },
-    { icon: Award, value: '15+', label: 'Years Experience' },
-    { icon: TrendingUp, value: '95%', label: 'Success Rate' }
-  ];
+  { icon: Users, value: '100+', label: 'Happy Clients' },
+  { icon: Globe, value: '26+', label: 'States Served' },
+  { icon: Award, value: '25+', label: 'Years Experience' },
+  { icon: TrendingUp, value: '95%', label: 'Success Rate' }
+];
+
 
   const scrollToBusinessSolutions = () => {
     const element = document.getElementById('business-solutions');
@@ -59,9 +60,11 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen w-full max-w-full overflow-x-hidden">
+    <div className="min-h-screen max-w-full overflow-x-hidden md:min-h-0 md:max-w-none md:overflow-visible">
+
       {/* Hero Section with Fixed Background */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden w-full max-w-full">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden w-full max-w-full md:overflow-visible md:w-auto md:max-w-none">
+
   {/* Background Image */}
   <div className="absolute inset-0 z-0">
     <motion.div
@@ -113,7 +116,7 @@ const Index = () => {
         className="text-base sm:text-lg px-6 sm:px-8 py-3 bg-red-600 hover:bg-red-700"
         onClick={scrollToBusinessSolutions}
       >
-        Explore Our Solutions
+        Our Solutions
         <ArrowRight className="ml-2 w-5 h-5" />
       </Button>
     </motion.div>
@@ -214,7 +217,7 @@ const Index = () => {
                     
                     <Link to={category.href} className="block">
                       <Button className="w-full group-hover:scale-105 transition-transform duration-200">
-                        Explore {category.title.split(' ')[1]}
+                        Explore {category.title.split(' ')[1].charAt(0).toUpperCase() + category.title.split(' ')[1].slice(1).toLowerCase()}
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </Button>
                     </Link>
