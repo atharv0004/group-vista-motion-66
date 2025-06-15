@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Phone, Mail, Clock, Send, ExternalLink } from 'lucide-react';
 import { toast } from '@/components/ui/sonner';
+import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ const Contact = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [mapError, setMapError] = useState(false);
 
   const handleChange = (e) => {
@@ -39,11 +41,31 @@ const Contact = () => {
       return;
     }
 
-    // Show success message (since we're not actually sending emails)
-    toast.success('Thank you for your message! We\'ll get back to you within 24 hours.');
-    
-    // Reset form
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      console.log('Submitting contact form:', formData);
+      
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) {
+        console.error('Supabase function error:', error);
+        throw error;
+      }
+
+      console.log('Email sent successfully:', data);
+      toast.success('Thank you for your message! We\'ll get back to you within 24 hours.');
+      
+      // Reset form
+      setFormData({ name: '', email: '', company: '', message: '' });
+    } catch (error) {
+      console.error('Error sending contact email:', error);
+      toast.error('Failed to send message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -98,6 +120,7 @@ const Contact = () => {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          onError={() => setMapError(true)}
         ></iframe>
       </div>
     );
@@ -150,6 +173,7 @@ const Contact = () => {
                           className="w-full"
                           placeholder="Your full name"
                           required
+                          disabled={isSubmitting}
                         />
                       </div>
                       <div>
@@ -164,6 +188,7 @@ const Contact = () => {
                           className="w-full"
                           placeholder="your.email@example.com"
                           required
+                          disabled={isSubmitting}
                         />
                       </div>
                     </div>
@@ -179,6 +204,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-full"
                         placeholder="Your company name"
+                        disabled={isSubmitting}
                       />
                     </div>
 
@@ -194,6 +220,7 @@ const Contact = () => {
                         className="w-full"
                         placeholder="Tell us about your project or inquiry..."
                         required
+                        disabled={isSubmitting}
                       />
                     </div>
 
@@ -201,8 +228,9 @@ const Contact = () => {
                       type="submit" 
                       size="lg" 
                       className="w-full bg-red-600 hover:bg-red-700"
+                      disabled={isSubmitting}
                     >
-                      Send Message
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
                       <Send className="ml-2 w-5 h-5" />
                     </Button>
                   </form>
