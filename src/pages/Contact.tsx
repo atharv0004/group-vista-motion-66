@@ -46,10 +46,10 @@ const Contact = () => {
     try {
       console.log('Sending email via EmailJS:', formData);
       
-      // EmailJS configuration - You'll need to replace these with your actual EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      // EmailJS configuration with your actual credentials
+      const serviceId = 'service_xr9a02s';
+      const templateId = 'template_1cjyuul';
+      const publicKey = 'vjmV0ZKNxnLhadFXs';
       
       const templateParams = {
         from_name: formData.name,
