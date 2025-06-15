@@ -38,10 +38,10 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Received contact form submission:", { name, email, company });
 
-    // Send notification email to business
+    // Send notification email to business - changed to rupapatil781@gmail.com
     const businessEmailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["info@economicgroup.com"], // Replace with your actual business email
+      to: ["rupapatil781@gmail.com"], // Changed from info@economicgroup.com
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
