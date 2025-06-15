@@ -78,22 +78,26 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Our Location',
-      details: ['123 Business District', 'Economic Plaza, Suite 456', 'Global City, GC 12345']
+      details: [
+      'C-521, Steel Chambers, Plot # 514',
+      'KWC Road, Kalamboli',
+      'Navi Mumbai - 410 218'
+    ]
     },
     {
       icon: Phone,
       title: 'Phone Numbers',
-      details: ['+1 (555) 123-4567', '+1 (555) 765-4321', 'Toll Free: 1-800-ECONOMIC']
+      details: ['9321809438 ', ' 9324140313']
     },
     {
       icon: Mail,
       title: 'Email Addresses',
-      details: ['info@economicgroup.com', 'sales@economicgroup.com', 'support@economicgroup.com']
+      details: ['spt@economic-logistics.in', 'pramod.kadam@economic-logistics.in']
     },
     {
       icon: Clock,
       title: 'Business Hours',
-      details: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 10:00 AM - 4:00 PM', 'Sunday: Closed']
+      details: ['Monday - Friday: 10:00 AM - 6:00 PM', 'Saturday-Sunday: Closed']
     }
   ];
 
