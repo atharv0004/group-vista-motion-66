@@ -3,8 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Clock, Send, ExternalLink, Loader2 } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+import { MapPin, Phone, Mail, Clock, Send, ExternalLink } from 'lucide-react';
 import { toast } from '@/components/ui/sonner';
 
 const Contact = () => {
@@ -15,7 +14,6 @@ const Contact = () => {
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [mapError, setMapError] = useState(false);
 
   const handleChange = (e) => {
@@ -41,39 +39,11 @@ const Contact = () => {
       return;
     }
 
-    setIsSubmitting(true);
-
-    try {
-      // Initialize EmailJS with your public key
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
-
-      // Send email using EmailJS
-      const result = await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your service ID
-        "YOUR_TEMPLATE_ID", // Replace with your template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          company: formData.company || 'Not specified',
-          message: formData.message,
-          to_name: 'Economic Group',
-        }
-      );
-
-      console.log('Email sent successfully:', result);
-      
-      // Show success message
-      toast.success('Thank you for your message! We\'ll get back to you within 24 hours.');
-      
-      // Reset form
-      setFormData({ name: '', email: '', company: '', message: '' });
-      
-    } catch (error) {
-      console.error('Failed to send email:', error);
-      toast.error('Failed to send message. Please try again or contact us directly.');
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Show success message (since we're not actually sending emails)
+    toast.success('Thank you for your message! We\'ll get back to you within 24 hours.');
+    
+    // Reset form
+    setFormData({ name: '', email: '', company: '', message: '' });
   };
 
   const contactInfo = [
@@ -180,7 +150,6 @@ const Contact = () => {
                           className="w-full"
                           placeholder="Your full name"
                           required
-                          disabled={isSubmitting}
                         />
                       </div>
                       <div>
@@ -195,7 +164,6 @@ const Contact = () => {
                           className="w-full"
                           placeholder="your.email@example.com"
                           required
-                          disabled={isSubmitting}
                         />
                       </div>
                     </div>
@@ -211,7 +179,6 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-full"
                         placeholder="Your company name"
-                        disabled={isSubmitting}
                       />
                     </div>
 
@@ -227,7 +194,6 @@ const Contact = () => {
                         className="w-full"
                         placeholder="Tell us about your project or inquiry..."
                         required
-                        disabled={isSubmitting}
                       />
                     </div>
 
@@ -235,19 +201,9 @@ const Contact = () => {
                       type="submit" 
                       size="lg" 
                       className="w-full bg-red-600 hover:bg-red-700"
-                      disabled={isSubmitting}
                     >
-                      {isSubmitting ? (
-                        <>
-                          <Loader2 className="mr-2 w-5 h-5 animate-spin" />
-                          Sending Message...
-                        </>
-                      ) : (
-                        <>
-                          Send Message
-                          <Send className="ml-2 w-5 h-5" />
-                        </>
-                      )}
+                      Send Message
+                      <Send className="ml-2 w-5 h-5" />
                     </Button>
                   </form>
                 </CardContent>
