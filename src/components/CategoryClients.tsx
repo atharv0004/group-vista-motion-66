@@ -16,7 +16,7 @@ interface CategoryClientsProps {
 const CategoryClients = ({ clients }: CategoryClientsProps) => {
   return (
     <div>
-    <section className="sm:py-16 pt-20 lg:pb-5 bg-accent/5">
+    <section className="sm:py-16 pt-20 lg:pb-5 bg-accent/5 mb-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
