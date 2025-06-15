@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Phone, Mail, Clock, Send, ExternalLink } from 'lucide-react';
 import { toast } from '@/components/ui/sonner';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,17 +44,30 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      console.log('Contact form submitted:', formData);
+      console.log('Sending email via EmailJS:', formData);
       
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // EmailJS configuration - You'll need to replace these with your actual EmailJS credentials
+      const serviceId = 'YOUR_SERVICE_ID';
+      const templateId = 'YOUR_TEMPLATE_ID';
+      const publicKey = 'YOUR_PUBLIC_KEY';
       
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        message: formData.message,
+        to_email: 'rupapatil781@gmail.com'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      console.log('Email sent successfully via EmailJS');
       toast.success('Thank you for your message! We\'ll get back to you soon.');
       
       // Reset form
       setFormData({ name: '', email: '', company: '', message: '' });
     } catch (error) {
-      console.error('Error submitting contact form:', error);
+      console.error('Error sending email via EmailJS:', error);
       toast.error('Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
