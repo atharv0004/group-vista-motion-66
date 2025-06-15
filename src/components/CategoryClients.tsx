@@ -36,33 +36,6 @@ const CategoryClients = ({ clients }: CategoryClientsProps) => {
         <CompanySlider clients={clients} />
       </div>
     </section>
-    {/* CTA Section */}
-      <section className="lg:pt-10 lg:pb-20 sm:py-10 bg-accent/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Contact our team today to discuss how we can help you achieve your goals 
-              with our comprehensive solutions and expert guidance.
-            </p>
-            <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="text-lg px-8 py-3">
-                  Contact Us
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };
