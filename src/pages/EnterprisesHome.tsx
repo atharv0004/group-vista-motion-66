@@ -133,7 +133,7 @@ const features = [
       'Storage and warehousing solutions for perishables',
       'PAN India distribution and logistics network',
       'B2B trade partnerships with retailers and wholesalers',
-      'Planning for future global market expansion',
+      'Planning for future Pan India market expansion',
     ],
     icon: '🛒',
     image: 'https://images.unsplash.com/photo-1743416982545-eb6159f9746f?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',

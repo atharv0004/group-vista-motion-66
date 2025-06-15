@@ -125,7 +125,7 @@ const About = () => {
                     <h2 className="text-3xl font-bold text-foreground">Our Vision</h2>
                   </div>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    To be the global leader in integrated business solutions, recognized for our innovation, 
+                    To be the Pan India leader in integrated business solutions, recognized for our innovation, 
                     sustainability, and unwavering commitment to client success. We envision a future where 
                     businesses thrive through efficient logistics, strategic growth, and environmental responsibility.
                   </p>
@@ -150,7 +150,7 @@ const About = () => {
               Meet Our Founders
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Visionary leaders driving Economic Group's mission to transform global business solutions
+              Visionary leaders driving Economic Group's mission to transform Pan India business solutions
             </p>
           </motion.div>
 
@@ -281,33 +281,6 @@ const About = () => {
                   <IndiaMap />
                 </div>
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-red-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Partner with Us?
-            </h2>
-            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who trust Economic Group for their business needs. 
-              Let's build something great together.
-            </p>
-            <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-                Contact Us Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              
             </div>
           </motion.div>
         </div>
