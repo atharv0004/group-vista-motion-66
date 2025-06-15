@@ -1,31 +1,44 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Users, Globe, Award, Target, Eye, Heart, Upload } from 'lucide-react';
+import { ArrowRight, Users, Globe, Award, Target, Eye, Heart } from 'lucide-react';
 import { useState } from 'react';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import IndiaMap from "../components/IndiaMap.jsx"
 
+interface CoFounder {
+  id: number;
+  name: string;
+  position: string;
+  image: string;
+  education: string;
+  expertise: string;
+}
+
 const About = () => {
-  const [coFounders, setCoFounders] = useState([
+  const [coFounders] = useState<CoFounder[]>([
     {
       id: 1,
-      name: 'John Smith',
-      position: 'CEO & Co-Founder',
+      name: 'Sainath',
+      position: 'Founder - Economic Logistics and Enterprises',
       image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=center',
-      bio: 'With over 20 years of experience in business strategy and logistics, John has led Economic Group to become a global leader in integrated business solutions.',
-      education: 'MBA from Harvard Business School',
-      expertise: 'Strategic Planning, Business Development, Global Operations'
+      education: 'Post Graduate Diploma in Business Analytics.',
+      expertise: '20+ years of experience in business strategy and logistics'
     },
     {
       id: 2,
-      name: 'Sarah Johnson',
-      position: 'COO & Co-Founder',
+      name: 'Pramod Kadam',
+      position: 'Founder - Economic Logistics and Enterprises',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=center',
-      bio: 'Sarah brings extensive expertise in environmental sustainability and enterprise operations, driving our commitment to innovative and sustainable business practices.',
-      education: 'PhD in Environmental Science from MIT',
-      expertise: 'Environmental Solutions, Operations Management, Sustainability'
+      education: 'Institute of Cost and Works Accountants',
+      expertise: '20+ years of experience in business strategy and logistics'
+    },
+    {
+      id: 3,
+      name: 'Snehal Bhilare',
+      position: 'Founder - Economic Enviro',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=center',
+      education: 'Graduate in Commerce',
+      expertise: '10+ years of experience in environmental solutions, specializing in sustainable waste management and eco-friendly business practices'
     }
   ]);
 
@@ -51,26 +64,6 @@ const About = () => {
       description: 'Continuous improvement and innovative solutions drive our approach to solving complex challenges.'
     }
   ];
-
-  const handleImageUpload = (founderId: number, event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const imageUrl = e.target?.result as string;
-        setCoFounders(prev => prev.map(founder => 
-          founder.id === founderId ? { ...founder, image: imageUrl } : founder
-        ));
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const updateFounderInfo = (founderId: number, field: string, value: string) => {
-    setCoFounders(prev => prev.map(founder => 
-      founder.id === founderId ? { ...founder, [field]: value } : founder
-    ));
-  };
 
   return (
     <div className="min-h-screen pt-16">
@@ -154,14 +147,14 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Meet Our Co-Founders
+              Meet Our Founders
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Visionary leaders driving Economic Group's mission to transform global business solutions
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-3 gap-12">
             {coFounders.map((founder, index) => (
               <motion.div
                 key={founder.id}
@@ -172,69 +165,30 @@ const About = () => {
               >
                 <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <div className="relative">
-                    <div className="h-80 overflow-hidden">
+                    <div className="h-72 overflow-hidden">
                       <img
                         src={founder.image}
                         alt={founder.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <label className="cursor-pointer bg-white/90 p-2 rounded-full shadow-lg hover:bg-white transition-colors">
-                        <Upload className="w-5 h-5 text-red-600" />
-                        <input
-                          type="file"
-                          accept="image/*"
-                          className="hidden"
-                          onChange={(e) => handleImageUpload(founder.id, e)}
-                        />
-                      </label>
                     </div>
                   </div>
                   
-                  <CardContent className="p-8">
+                  <CardContent className="p-6">
                     <div className="space-y-4">
-                      <div>
-                        <Input
-                          value={founder.name}
-                          onChange={(e) => updateFounderInfo(founder.id, 'name', e.target.value)}
-                          className="text-2xl font-bold border-0 p-0 focus:ring-0 bg-transparent"
-                          placeholder="Name"
-                        />
-                        <Input
-                          value={founder.position}
-                          onChange={(e) => updateFounderInfo(founder.id, 'position', e.target.value)}
-                          className="text-lg text-red-600 font-semibold border-0 p-0 focus:ring-0 bg-transparent"
-                          placeholder="Position"
-                        />
+                      <div className="space-y-1">
+                        <h3 className="text-2xl font-bold text-gray-900">{founder.name}</h3>
+                        <p className="text-base text-red-600 font-medium">{founder.position}</p>
                       </div>
                       
-                      <Textarea
-                        value={founder.bio}
-                        onChange={(e) => updateFounderInfo(founder.id, 'bio', e.target.value)}
-                        className="text-muted-foreground leading-relaxed border-0 p-0 focus:ring-0 bg-transparent resize-none"
-                        placeholder="Biography"
-                        rows={4}
-                      />
-                      
-                      <div className="space-y-2">
+                      <div className="space-y-3 pt-2">
                         <div>
-                          <strong className="text-foreground">Education:</strong>
-                          <Input
-                            value={founder.education}
-                            onChange={(e) => updateFounderInfo(founder.id, 'education', e.target.value)}
-                            className="mt-1 border-0 p-0 focus:ring-0 bg-transparent"
-                            placeholder="Education background"
-                          />
+                          <strong className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Education</strong>
+                          <p className="mt-1 text-sm text-gray-600">{founder.education}</p>
                         </div>
                         <div>
-                          <strong className="text-foreground">Expertise:</strong>
-                          <Input
-                            value={founder.expertise}
-                            onChange={(e) => updateFounderInfo(founder.id, 'expertise', e.target.value)}
-                            className="mt-1 border-0 p-0 focus:ring-0 bg-transparent"
-                            placeholder="Areas of expertise"
-                          />
+                          <strong className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Expertise</strong>
+                          <p className="mt-1 text-sm text-gray-600">{founder.expertise}</p>
                         </div>
                       </div>
                     </div>
