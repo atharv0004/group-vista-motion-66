@@ -1,3 +1,4 @@
+
 // components/MissionFeaturesSection.tsx
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -25,22 +26,6 @@ const CategoryMission = ({ mission, features, accentColor }: CategoryMissionProp
               Our Mission
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">{mission}</p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              {features.slice(0, 4).map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-center"
-                >
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0" />
-                  <span className="text-foreground text-sm sm:text-base">{feature}</span>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
 
           <motion.div
