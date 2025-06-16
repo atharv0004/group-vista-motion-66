@@ -14,7 +14,7 @@ const Index = () => {
       description: 'Integrated Transport & Logistics Solutions Across India',
       href: '/logistics',
       bgGradient: 'from-red-600 to-red-800',
-      textColor: 'text-red-50',
+      textColor: 'text-white',
       features: ["Pan-India Transport [FTL/PTL]", "Multi-Modal Freight (Road, Air, Sea)", "Warehousing Solutions"],
       image: 'https://cdn.pixabay.com/photo/2024/07/25/14/54/truck-8921536_1280.jpg'
     },
@@ -24,7 +24,7 @@ const Index = () => {
       description: 'One Stop Solution For All Manpower & Operational Needs',
       href: '/enterprises',
       bgGradient: 'from-blue-600 to-blue-800',
-      textColor: 'text-blue-50',
+      textColor: 'text-white',
       features: [ "Manpower Solutions","Commodity Trading", "Work Contract Services"],
       image: businessImage,
     },
@@ -34,7 +34,7 @@ const Index = () => {
       description: 'Sustainable environmental solutions for a green future',
       href: '/enviro',
       bgGradient: 'from-green-600 to-green-800',
-      textColor: 'text-green-50',
+      textColor: 'text-white',
       features: [ "Waste Management", "Eco-Friendly Recycling", "Regulatory Compliance"],
       image: 'https://cdn.pixabay.com/photo/2023/07/06/18/12/recycled-8111001_1280.jpg'
     }
@@ -186,7 +186,8 @@ const Index = () => {
                       alt={category.title}
                       className="w-full h-full object-cover"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${category.bgGradient} opacity-80 group-hover:opacity-70 transition-opacity duration-300`} />
+                    {/* Subtle dark overlay for text readability */}
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-300" />
                     <div className="absolute inset-0 p-6 flex flex-col justify-end">
                       <CardHeader className="p-0 mb-4">
                         <CardTitle className={`text-2xl font-bold ${category.textColor} mb-2`}>
