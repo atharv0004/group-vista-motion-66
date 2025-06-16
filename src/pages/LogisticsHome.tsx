@@ -25,6 +25,7 @@ import johnson from "@/assets/logisticsClients/johnson.png";
 import mahanand from "@/assets/logisticsClients/mahanand.jpg";
 import pittie from "@/assets/logisticsClients/Pittie.png";
 import seabird from "@/assets/logisticsClients/seabird.png";
+import somany from "@/assets/logisticsClients/somany.jpg";
 
 const LogisticsHome = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -48,7 +49,7 @@ const LogisticsHome = () => {
   { name: 'Revival Engineers', logo: revival },
   { name: 'Indiabulls Enterprises', logo: indiabulls },
   { name: 'SML', logo: sml },
-  { name: 'Sumitomo Chemical', logo: sumitomo },
+  { name: 'Somany Tiles', logo: Somany },
   { name: 'Hr Johnson', logo: johnson },
   { name: 'Mahanand', logo: mahanand },
   { name: 'Pittie', logo: pittie },
