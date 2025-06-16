@@ -110,18 +110,18 @@ const LogisticsHome = () => {
     image: 'https://plus.unsplash.com/premium_photo-1749149653926-b6942cd3db56?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
-    title: 'Last Mile Delivery',
-    description: 'Reliable last-mile delivery solutions across urban and rural regions.',
-    features: [
-      'Timely final-mile execution',
-      'Proof of delivery and tracking',
-      'Returns handling',
-      'Flexible delivery windows',
-      'Customer service support'
-    ],
-    icon: '🚚',
-    image: 'https://plus.unsplash.com/premium_photo-1682141929497-97402f35d45e?q=80&w=2087&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
+  title: 'Air Logistics Services',
+  description: 'Swift and secure air cargo solutions for urgent, high-value, or time-sensitive shipments across domestic and international routes.',
+  features: [
+    'Priority air cargo handling',
+    'Express delivery and same-day options',
+    '24/7 cargo tracking & monitoring',
+    'Customs clearance support'
+  ],
+  icon: '✈️',
+  image: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+}
+
   {
     title: 'Sea Freight & Global Logistics',
     description: 'Export/import logistics, LCL/FCL, and specialized international routes.',
