@@ -1,3 +1,4 @@
+
 // components/HeroSection.tsx
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -23,7 +24,7 @@ const CategoryHero = ({
 }: CategoryHeroProps) => {
   return (
     <section className={`py-12 sm:py-16 lg:py-20 bg-gradient-to-br ${bgGradient} relative overflow-hidden`}>
-      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-black/10" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

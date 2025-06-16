@@ -1,4 +1,3 @@
-
 import CategoryHero from '@/components/CategoryHero';
 import CategoryMission from '@/components/CategoryMission';
 import CategoryClients from '@/components/CategoryClients';
@@ -178,8 +177,8 @@ const LogisticsHome = () => {
           }}
         />
         
-        {/* Red Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-red-600/90 to-red-800/90" />
+        {/* Lighter Red Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-red-600/60 to-red-800/70" />
         
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
