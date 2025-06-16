@@ -28,7 +28,7 @@ const About = () => {
       id: 2,
       name: 'Mr Pramod Kadam',
       position: 'Founder - Economic Logistics and Enterprises',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=center',
+      image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750073564/crop_pramod_lh3frj.jpg',
       education: 'ICWA',
       expertise: '30+ years of experience in business strategy and logistics'
     },
