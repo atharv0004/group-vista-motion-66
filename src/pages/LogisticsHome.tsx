@@ -97,19 +97,6 @@ const LogisticsHome = () => {
     image: 'https://images.unsplash.com/photo-1716512060259-d114cfba13e8?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
-    title: 'Warehousing Solutions',
-    description: 'End-to-end warehouse design, management, and distribution operations.',
-    features: [
-      'Strategically located warehouses',
-      'Inventory control systems',
-      'Order fulfillment & cross-docking',
-      'Integrated IT systems',
-      'Real-time visibility of inventory'
-    ],
-    icon: '🏬',
-    image: 'https://plus.unsplash.com/premium_photo-1749149653926-b6942cd3db56?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-  },
-  {
   title: 'Air Logistics Services',
   description: 'Swift and secure air cargo solutions for urgent, high-value, or time-sensitive shipments across domestic and international routes.',
   features: [
@@ -134,6 +121,19 @@ const LogisticsHome = () => {
     ],
     icon: '🚢',
     image: 'https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+  },
+      {
+    title: 'Warehousing Solutions',
+    description: 'End-to-end warehouse design, management, and distribution operations.',
+    features: [
+      'Strategically located warehouses',
+      'Inventory control systems',
+      'Order fulfillment & cross-docking',
+      'Integrated IT systems',
+      'Real-time visibility of inventory'
+    ],
+    icon: '🏬',
+    image: 'https://plus.unsplash.com/premium_photo-1749149653926-b6942cd3db56?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     title: 'Tracking & Backend Support',
