@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -147,30 +148,24 @@ const About = () => {
           </motion.div>
 
           <div className="flex justify-center flex-wrap gap-12">
-  {coFounders.map((founder, index) => (
-    <motion.div
-      key={founder.id}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
-      viewport={{ once: true }}
-    >
-      <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-        <div className="relative">
-          <div className="h-72 overflow-hidden">
-            <img
-              src={founder.image}
-              alt={founder.name}
-              className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
-        </div>
-      </Card>
-    </motion.div>
-  ))}
-</div>
-
-                  
+            {coFounders.map((founder, index) => (
+              <motion.div
+                key={founder.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                  <div className="relative">
+                    <div className="h-72 overflow-hidden">
+                      <img
+                        src={founder.image}
+                        alt={founder.name}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
                   <CardContent className="p-6">
                     <div className="space-y-4">
                       <div className="space-y-1">
