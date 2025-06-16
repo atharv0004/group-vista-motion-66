@@ -146,7 +146,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="flex justify-center flex-wrap gap-12">
             {coFounders.map((founder, index) => (
               <motion.div
                 key={founder.id}
