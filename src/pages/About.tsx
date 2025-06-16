@@ -20,7 +20,7 @@ const About = () => {
       id: 1,
       name: 'Mr Sainath Tatewar',
       position: 'Founder - Economic Logistics and Enterprises',
-      image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=center',
+      image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750069536/WhatsApp_Image_2025-06-16_at_3.23.17_PM_gbcsd1.jpg',
       education: 'PGDBA - Supply Chain & Operations.',
       expertise: '25+ years of experience in Supply Chain & Business strategy.'
     },
