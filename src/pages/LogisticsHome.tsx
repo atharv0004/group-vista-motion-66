@@ -21,7 +21,7 @@ import revival from "@/assets/logisticsClients/revival.jpg";
 import indiabulls from "@/assets/logisticsClients/IndiaBulls.png";
 import sml from "@/assets/logisticsClients/sml.jpg";
 import sumitomo from "@/assets/logisticsClients/sumitomo.png";
-import johnson from "@/assets/logisticsClients/johnson.jpg";
+import johnson from "@/assets/logisticsClients/johnson.png";
 import mahanand from "@/assets/logisticsClients/mahanand.jpg";
 import pittie from "@/assets/logisticsClients/Pittie.png";
 import seabird from "@/assets/logisticsClients/seabird.png";
@@ -49,7 +49,7 @@ const LogisticsHome = () => {
   { name: 'Indiabulls Enterprises', logo: indiabulls },
   { name: 'SML', logo: sml },
   { name: 'Sumitomo Chemical', logo: sumitomo },
-  { name: 'Johnson', logo: johnson },
+  { name: 'Hr Johnson', logo: johnson },
   { name: 'Mahanand', logo: mahanand },
   { name: 'Pittie', logo: pittie },
   { name: 'Seabird Int.', logo: seabird },
