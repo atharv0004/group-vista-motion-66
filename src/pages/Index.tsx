@@ -243,8 +243,8 @@ const Index = () => {
                 Building Tomorrow's Economy Today
               </h3>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                With decades of combined experience across logistics, enterprise development, 
-                and environmental solutions, Economic Group stands at the forefront of 
+                With decades of combined experience across Logistics, Enterprise development, 
+                and Environmental solutions, Economic Group stands at the forefront of 
                 innovation and sustainable growth.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">

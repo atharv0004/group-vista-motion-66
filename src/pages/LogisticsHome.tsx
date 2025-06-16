@@ -37,22 +37,23 @@ const LogisticsHome = () => {
   }, []);
 
   const clients = [
-  { name: 'company', logo:'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750073548/WhatsApp_Image_2025-06-16_at_4.09.55_PM_1_t2zidv.jpg'},
-  { name: 'Welspun Group', logo: wel },
+  { name: 'RASNA', logo:'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098004/Rasna_u9lmxq.png'},
+  { name: 'WELSPUN GROUP', logo: wel },
   { name: 'APL Logistics', logo: apl },
-  { name: 'Allana Consumer Products', logo: allana },
-  { name: 'Indofil Industries Limited', logo: indofil },
-  { name: 'Mahindra Summit', logo: mahindra },
-  { name: 'Finerchem', logo: finorchem },
-  { name: 'Rasna', logo: rasna },
-  { name: 'Truefrost', logo: trufrost },
-  { name: 'Revival Engineers', logo: revival },
-  { name: 'Indiabulls Enterprises', logo: indiabulls },
+  { name: 'SOMANY TILES', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098005/somany_muusna.jpg' },
+  { name: 'INDOFIL INDUSTRIES LTD', logo: indofil },
+  { name: 'MAHINDRA LOGISTICS', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098617/MahindraLogs_wqzyhh.jpg' },
+  { name: 'TRUFROST', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098006/TRUFROST_iydi49.png' },
+  { name: 'LEAP INDIA', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098010/leapindia_p9vhr6.webp' },
   { name: 'SML', logo: sml },
-  { name: 'Hr Johnson', logo: johnson },
-  { name: 'Mahanand', logo: mahanand },
-  { name: 'Pittie', logo: pittie },
-  { name: 'Seabird Int.', logo: seabird },
+  { name: 'HR Johnson', logo: johnson },
+  { name: 'MAHANANDA', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098016/mahanand_li9zga.png' },
+  { name: 'PITTIE', logo: pittie },
+  { name: 'SEABIRD', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750099209/Seabird_iierjt.png' },
+  { name: 'LOTUS CHOCOLATE CO', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098014/lotus_g8nkqy.png' },
+  { name: 'LILADHAR PASOO' , logo : 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098011/LILADHAR_mwlwac.png'},
+  {name: 'VOLTAS' , logo:'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098008/VOLTAS_nlziva.png'},
+  { name: 'LOGISTECH' , logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098013/Logistech_dpf4gy.png'}
 ];
 
   const features = [
