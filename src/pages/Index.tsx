@@ -36,7 +36,7 @@ const Index = () => {
       bgGradient: 'from-green-600 to-green-800',
       textColor: 'text-white',
       features: [ "Waste Management", "Eco-Friendly Recycling", "Regulatory Compliance"],
-      image: 'https://cdn.pixabay.com/photo/2023/07/06/18/12/recycled-8111001_1280.jpg'
+      image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750073548/WhatsApp_Image_2025-06-16_at_4.09.55_PM_1_t2zidv.jpg'
     }
   ];
 
