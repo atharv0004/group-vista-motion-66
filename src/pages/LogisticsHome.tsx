@@ -49,7 +49,6 @@ const LogisticsHome = () => {
   { name: 'Revival Engineers', logo: revival },
   { name: 'Indiabulls Enterprises', logo: indiabulls },
   { name: 'SML', logo: sml },
-  { name: 'Somany Tiles', logo: Somany },
   { name: 'Hr Johnson', logo: johnson },
   { name: 'Mahanand', logo: mahanand },
   { name: 'Pittie', logo: pittie },
