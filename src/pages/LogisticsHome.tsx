@@ -37,9 +37,9 @@ const LogisticsHome = () => {
   }, []);
 
   const clients = [
+  { name: 'company', logo:'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750073548/WhatsApp_Image_2025-06-16_at_4.09.55_PM_1_t2zidv.jpg'},
   { name: 'Welspun Group', logo: wel },
   { name: 'APL Logistics', logo: apl },
-  { name: 'Carlsberg Group', logo: carlsberg },
   { name: 'Allana Consumer Products', logo: allana },
   { name: 'Indofil Industries Limited', logo: indofil },
   { name: 'Mahindra Summit', logo: mahindra },

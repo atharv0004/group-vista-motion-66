@@ -71,7 +71,7 @@ const Index = () => {
       initial={{ scale: 1 }}
       className="w-full h-full bg-cover bg-center"
       style={{
-        backgroundImage: `url(${bgImage})`,
+        backgroundImage: `url('https://res.cloudinary.com/dxqsygmg1/image/upload/v1750095795/HeroImage_id2xjj.png')`,
       }}
     />
   </div>
