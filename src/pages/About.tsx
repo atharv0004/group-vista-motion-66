@@ -71,10 +71,10 @@ const About = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Economic Group
+              ABOUT ECONOMIC GROUP
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Pioneering business solutions across logistics, enterprises, and environmental sectors for over a decade
+              Pioneering business solutions across Logistics, Enterprises, and Environmental sectors for over a decade
             </p>
           </motion.div>
         </div>

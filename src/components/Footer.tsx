@@ -22,7 +22,7 @@ const Footer = () => {
               <h3 className="text-2xl font-bold text-white">Economic Group</h3>
             </Link>
             <p className="text-red-100 mb-4 leading-relaxed">
-              Leading provider of logistics, enterprise, and environmental solutions.
+              Leading provider of Logistics, Enterprise, and Environmental solutions.
             </p>
             <div className="space-y-2">
               <div className="flex items-center">

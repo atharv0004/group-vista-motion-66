@@ -24,10 +24,14 @@ const EnterprisesHome = () => {
 
 
 const clients = [
-  { name: 'APL LOGISTICS', logo: aplLogo},
-  { name: 'METRO SHOES', logo: metroLogo },
-  { name: 'HOMETOWN', logo: hometownLogo },
-  { name: 'SEABIRD', logo: seabirdLogo }
+  { name: 'ROYAL TRANSLINES PVT LTD', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100550/East_India_Udyog_ltd_j2mypp.png'},
+  { name: 'ABHISRI SERVICES PRIVATE LIMITED', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100550/abhishri_q3nls5.webp' },
+  { name: 'East India Udyog ltd', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100550/East_India_Udyog_ltd_j2mypp.png' },
+  { name: 'SEABIRD', logo: seabirdLogo },
+  { name: 'VISHVARAJ ENVIRONMENT PVT LTD', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100550/Vishvaraj_Environment_Pvt._Ltd._pdritt.png' },
+  { name: 'Kalpataru Ltd', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100990/OIP_wzworn.webp'},
+  { name: 'SMAK Fods' , logo:''},
+  { name: 'Trufresh' , logo:''}
 ];
 
 
@@ -39,7 +43,7 @@ const clients = [
     });
   }, []);
 
-  const title = "Economic Enterprises";
+  const title = "ECONOMIC ENTERPRISE";
 const subtitle = "One Stop Solution For All Manpower & Operational Needs";
 const description =
   "From sourcing manpower and machinery to compliance, RTO, and real-time support, Economic Enterprises provides end-to-end business support across warehousing, facility management, trading, and beyond. We serve clients across India with scalable, reliable, and customized solutions.";
@@ -60,18 +64,45 @@ const features = [
 ];
 
   const services = [
+    {
+      title: 'Commodity Trading Services',
+      description: 'Efficient sourcing, storage, and trading of fruits and vegetables across PAN India',
+      features: [
+        'Fruit and vegetable sourcing from reliable producers',
+        'Storage and warehousing solutions for perishables',
+        'PAN India distribution and logistics network',
+        'B2B trade partnerships with retailers and wholesalers',
+        'Planning for future Pan India market expansion',
+      ],
+      icon: '🛒',
+      image: 'https://plus.unsplash.com/premium_photo-1723618949904-136b1a67a080?q=80&w=1166&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
   {
     title: 'Manpower Solutions',
     description: 'Tailored manpower support for warehousing, retail, logistics, and corporate needs',
     features: [
       'Warehouse staff (pickers, loaders, SAP/ERP operators)',
       'Retail staff (packers, scanners, delivery personnel)',
-      'Pantry & housekeeping staff',
+      'Construction manpower',
       'Contract staffing & payroll solutions',
-      'Scalable workforce across India',
+      'RTO & ODC Permissions',
     ],
     icon: '🧑‍💼',
-    image: 'https://images.unsplash.com/photo-1551135049-8a33b5883817?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: 'https://images.unsplash.com/photo-1614127938540-a1139bee1841?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8U0tJTExFRCUyMEVNUExPWVlFU3xlbnwwfHwwfHx8MA%3D%3D',
+  },
+  
+  {
+    title: 'Equipment & Machinery Support',
+    description: 'Provision of reliable equipment and machinery for various operational needs',
+    features: [
+      'Material handling machinery',
+      'Temporary equipment rentals',
+      'Support for men, material, and machinery',
+      'Customized logistics setup',
+      'Heavy lifting and transport gear',
+    ],
+    icon: '⚙️',
+    image: 'https://images.unsplash.com/photo-1585110587043-36d457f3e803?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Financial & Strategic Solutions',
@@ -86,58 +117,7 @@ const features = [
     icon: '💼',
     image: 'https://cdn.pixabay.com/photo/2014/11/25/08/08/financial-crisis-544944_1280.jpg',
   },
-  {
-    title: 'Facility & Resource Management',
-    description: 'End-to-end operational support for businesses to run efficiently',
-    features: [
-      'Facility upkeep and management',
-      'Real-time operational support',
-      'Compliance monitoring and management',
-      '24/7 support infrastructure',
-      'Works contract and outsourcing support',
-    ],
-    icon: '🏢',
-    image: 'https://okrinternational.com/wp-content/uploads/2023/06/OKR-Examples-in-Facilities-Management-2-scaled.jpg',
-  },
-  {
-    title: 'Equipment & Machinery Support',
-    description: 'Provision of reliable equipment and machinery for various operational needs',
-    features: [
-      'Material handling machinery',
-      'Temporary equipment rentals',
-      'Support for men, material, and machinery',
-      'Customized logistics setup',
-      'Heavy lifting and transport gear',
-    ],
-    icon: '⚙️',
-    image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    title: 'Compliance & Legal Services',
-    description: 'Navigate legal requirements with ease and focus on operations',
-    features: [
-      'RTO/ODC permissions handling',
-      'Labor law and Shops & Establishments compliance',
-      '24/7 monitoring and documentation support',
-      'PAN, GST, ESIC, PF, and PT management',
-      'Audit readiness services',
-    ],
-    icon: '🛡️',
-    image: 'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    title: 'Commodity Trading Services',
-    description: 'Efficient sourcing, storage, and trading of fruits and vegetables across PAN India',
-    features: [
-      'Fruit and vegetable sourcing from reliable producers',
-      'Storage and warehousing solutions for perishables',
-      'PAN India distribution and logistics network',
-      'B2B trade partnerships with retailers and wholesalers',
-      'Planning for future Pan India market expansion',
-    ],
-    icon: '🛒',
-    image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750058815/onion_fxuk2v.avif',
-  },
+  
 ];
 
   const bgGradient = "from-blue-600 to-blue-800";
