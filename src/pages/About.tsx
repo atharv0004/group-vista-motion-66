@@ -21,8 +21,8 @@ const About = () => {
       name: 'Sainath',
       position: 'Founder - Economic Logistics and Enterprises',
       image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=center',
-      education: 'Post Graduate Diploma in Business Analytics.',
-      expertise: '20+ years of experience in business strategy and logistics'
+      education: 'PGDBA - Supply Chain & Operations.',
+      expertise: '25+ years of experience in Supply Chain & Business strategy.'
     },
     {
       id: 2,
@@ -32,14 +32,6 @@ const About = () => {
       education: 'Institute of Cost and Works Accountants',
       expertise: '20+ years of experience in business strategy and logistics'
     },
-    {
-      id: 3,
-      name: 'Snehal Bhilare',
-      position: 'Founder - Economic Enviro',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=center',
-      education: 'Graduate in Commerce',
-      expertise: '10+ years of experience in environmental solutions, specializing in sustainable waste management and eco-friendly business practices'
-    }
   ]);
 
   const values = [
