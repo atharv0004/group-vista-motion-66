@@ -69,8 +69,8 @@ const LogisticsHome = () => {
   ];
 
   const subtitle="Integrated Transport & Logistics Solutions Across India"
-  const title="Economic Logistics"
-  const description="Headquartered in Navi Mumbai, we offer Pan India logistics services with passion and commitment. Through empowered teams and innovative multilevel transport models, we ensure timely, safe, and reliable freight movement."
+  const title="ECONOMIC LOGISTICS"
+  const description="Headquartered in Navi Mumbai, we offer Pan India logistics services with passion and commitment through empowered teams and innovative multilevel transport models, we ensure timely, safe, and reliable freight movement."
   const mission="To be the most dependable and environmentally conscious logistics provider in India. Our goal is to offer cost-effective, technology-driven transportation solutions while ensuring safe, timely delivery and exceptional customer satisfaction."
   const bgGradient="from-red-600 to-red-800"
   const textColor="text-red-50"
