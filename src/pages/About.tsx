@@ -18,7 +18,7 @@ const About = () => {
   const [coFounders] = useState<CoFounder[]>([
     {
       id: 1,
-      name: 'Sainath',
+      name: 'Mr Sainath Tatewar',
       position: 'Founder - Economic Logistics and Enterprises',
       image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=center',
       education: 'PGDBA - Supply Chain & Operations.',
@@ -26,11 +26,11 @@ const About = () => {
     },
     {
       id: 2,
-      name: 'Pramod Kadam',
+      name: 'Mr Pramod Kadam',
       position: 'Founder - Economic Logistics and Enterprises',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=center',
-      education: 'Institute of Cost and Works Accountants',
-      expertise: '20+ years of experience in business strategy and logistics'
+      education: 'ICWA',
+      expertise: '30+ years of experience in business strategy and logistics'
     },
   ]);
 
