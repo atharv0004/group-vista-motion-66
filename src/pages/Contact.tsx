@@ -87,12 +87,12 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone Numbers',
-      details: ['9321809438 ', ' 9324140313']
+      details: ['9321809438 ', ' 9324140313','7666931808']
     },
     {
       icon: Mail,
       title: 'Email Addresses',
-      details: ['spt@economic-logistics.in', 'pramod.kadam@economic-logistics.in']
+      details: ['spt@economic-logistics.in', 'pramod.kadam@economic-logistics.in','rahul.t@economic-logistics.in']
     },
     {
       icon: Clock,

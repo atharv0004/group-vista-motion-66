@@ -52,7 +52,7 @@ const LogisticsHome = () => {
   { name: 'SEABIRD', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750099209/Seabird_iierjt.png' },
   { name: 'LOTUS CHOCOLATE CO', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098014/lotus_g8nkqy.png' },
   { name: 'LILADHAR PASOO' , logo : 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098011/LILADHAR_mwlwac.png'},
-  {name: 'VOLTAS' , logo:'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098008/VOLTAS_nlziva.png'},
+  {name: 'VOLTAS' , logo:'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750152425/VOLTAS_qfeaom.png'},
   { name: 'LOGISTECH' , logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750098013/Logistech_dpf4gy.png'}
 ];
 

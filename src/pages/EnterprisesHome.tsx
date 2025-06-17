@@ -30,8 +30,8 @@ const clients = [
   { name: 'SEABIRD', logo: seabirdLogo },
   { name: 'VISHVARAJ ENVIRONMENT PVT LTD', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100550/Vishvaraj_Environment_Pvt._Ltd._pdritt.png' },
   { name: 'Kalpataru Ltd', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100990/OIP_wzworn.webp'},
-  { name: 'SMAK Fods' , logo:''},
-  { name: 'Trufresh' , logo:''}
+  { name: 'SMAK Foods' , logo:'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750150919/SMAK_FOODS_qbuhzw.png'},
+  { name: 'TRUFRESH' , logo:'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750150905/TRUFRESH_hejnb6.png'}
 ];
 
 
@@ -145,7 +145,7 @@ const features = [
         />
         
         {/* Blue Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-800/90 to-blue-800/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/60 to-blue-500/40" />
         
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
