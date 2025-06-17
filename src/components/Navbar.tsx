@@ -14,7 +14,7 @@ const Navbar = () => {
     { name: 'Enterprises', href: '/enterprises', icon: List },
     { name: 'Enviro Solutions', href: '/enviro', icon: List },
     { name: 'About Us', href: '/about', icon: Users },
-    { name: 'Contact', href: '/contact', icon: Contact },
+    { name: 'Contact Us', href: '/contact', icon: Contact },
   ];
 
   return (
