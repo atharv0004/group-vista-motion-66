@@ -124,7 +124,7 @@ const features = [
         />
         
         {/* Green Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-800/90 to-green-800/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-green-800/60 to-green-500/40" />
         
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
