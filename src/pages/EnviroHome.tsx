@@ -53,7 +53,7 @@ const EnviroHome = () => {
       'Customized action plans'
     ],
     icon: '📍',
-    image: 'https://www.warehouseracks.co.in/public/images/banner-1.jpg'
+    image: 'https://wallpapers.com/images/hd/warehouse-pictures-1920-x-1080-v2i20gqoekxqoikl.jpg'
   },
   {
     title: 'Climate Solutions',
