@@ -24,7 +24,7 @@ const EnterprisesHome = () => {
 
 
 const clients = [
-  { name: 'ROYAL TRANSLINES PVT LTD', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100550/East_India_Udyog_ltd_j2mypp.png'},
+  { name: 'ROYAL TRANSLINES PVT LTD', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100549/Royal_Translines_Pvt_Ltd_cxonjk.png'},
   { name: 'ABHISRI SERVICES PRIVATE LIMITED', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100550/abhishri_q3nls5.webp' },
   { name: 'East India Udyog ltd', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750100550/East_India_Udyog_ltd_j2mypp.png' },
   { name: 'SEABIRD', logo: seabirdLogo },
@@ -75,7 +75,7 @@ const features = [
         'Planning for future Pan India market expansion',
       ],
       icon: '🛒',
-      image: 'https://plus.unsplash.com/premium_photo-1723618949904-136b1a67a080?q=80&w=1166&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750229792/WhatsApp_Image_2025-06-18_at_12.25.32_PM_ajfvj0.jpg',
     },
   {
     title: 'Manpower Solutions',
@@ -138,14 +138,15 @@ const features = [
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${businessImage})`,
+            backgroundImage: `url(https://static.vecteezy.com/system/resources/previews/049/461/667/non_2x/smiling-team-of-construction-workers-on-a-building-site-wearing-yellow-helmets-photo.jpeg)`,
             transform: `translateY(${scrollY * 0.5}px)`,
             willChange: 'transform',
           }}
         />
         
-        {/* Blue Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/60 to-blue-500/40" />
+        {/* Gray Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-800/80 via-neutral-700/70 to-neutral-600/60" />
+
         
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">

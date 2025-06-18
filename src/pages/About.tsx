@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -31,7 +30,7 @@ const About = () => {
       position: 'Founder - Economic Group',
       image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750073564/crop_pramod_lh3frj.jpg',
       education: 'ICWA',
-      expertise: '30+ years of experience in business strategy and logistics'
+      expertise: '30+ years of experience in Finance , Business strategy and Control.'
     },
   ]);
 

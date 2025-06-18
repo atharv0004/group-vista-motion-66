@@ -24,7 +24,7 @@ const EnviroHome = () => {
   const clients = [
   { name: 'Wipro', logo: wipro },
   { name: 'Healing Pharma', logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750102293/Healing_Pharma_axczvr.webp' },
-  { name: "Novo Pharma", logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750102296/Novo_Medi_sciences_p_ltd_airi63.png' },
+  { name: "Novo Medi", logo: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750102296/Novo_Medi_sciences_p_ltd_airi63.png' },
   { name: "Uniwin", logo: uniwin }
 ];
 
@@ -40,7 +40,7 @@ const EnviroHome = () => {
       'Single source implementation'
     ],
     icon: '🗑️',
-    image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750101677/photo-grid_c9b73t.png'
+    image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750231965/combined-image-2025-06-18T07-32-29-288Z_uehndp.png'
   },
   {
     title: 'Site Assessment',
@@ -53,7 +53,7 @@ const EnviroHome = () => {
       'Customized action plans'
     ],
     icon: '📍',
-    image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750101926/Building-Scams-1_znidcg.png'
+    image: 'https://www.warehouseracks.co.in/public/images/banner-1.jpg'
   },
   {
     title: 'Climate Solutions',
@@ -79,11 +79,11 @@ const EnviroHome = () => {
     'End-to-end secure chain of custody'
   ],
   icon: '✅',
-  image: 'https://images.unsplash.com/photo-1686042252299-044259596233?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QlVJTERJTkclMjBERVNUUlVDVElPTiUyMEpDQnxlbnwwfHwwfHx8MA%3D%3D'
+  image: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZmFjdG9yeXxlbnwwfHwwfHx8MA%3D%3D'
 }
 ];
 
-  const title = "ECONOMIC ENVIRO SOLUTIONS";
+  const title = "ECONOMIC ENVIRO SOLUTIONS PVT LTD";
 const subtitle = "Eco-Friendly Waste Management for a Healthier World";
 const description = "We provide clean, efficient, and compliant waste management solutions to leading pharmaceutical, FMCG, cosmetics, and personal care companies across India. Our Pan-India presence and logistics integration ensure seamless operations and certified destruction services.";
   const mission = "To lead India's waste management sector through eco-friendly, regulation-compliant destruction and logistics solutions. We are committed to reducing environmental impact for our clients through reliable service, strict safety standards, and a customer-first approach.";
