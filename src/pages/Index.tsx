@@ -26,7 +26,7 @@ const Index = () => {
       bgGradient: 'from-blue-600 to-blue-800',
       textColor: 'text-white',
       features: [ "Manpower Solutions","Commodity Trading", "Work Contract Services"],
-      image: businessImage,
+      image: 'https://static.vecteezy.com/system/resources/previews/049/461/667/non_2x/smiling-team-of-construction-workers-on-a-building-site-wearing-yellow-helmets-photo.jpeg',
     },
     {
       id: 'enviro',

@@ -47,7 +47,7 @@ const Contact = () => {
       console.log('Sending email via EmailJS:', formData);
       
       // EmailJS configuration with your actual credentials
-      const serviceId = 'service_xr9a02s';
+      const serviceId = 'service_tcxvzca';
       const templateId = 'template_1cjyuul';
       const publicKey = 'vjmV0ZKNxnLhadFXs';
       
@@ -56,7 +56,7 @@ const Contact = () => {
         from_email: formData.email,
         company: formData.company,
         message: formData.message,
-        to_email: 'rupapatil781@gmail.com'
+        to_email: 'spt@economic-logistics.in'
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
