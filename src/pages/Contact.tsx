@@ -92,7 +92,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Addresses',
-      details: ['spt@economic-logistics.in', 'pramod.kadam@economic-logistics.in','rahul.t@economic-logistics.in']
+      details: ['spt@economic-logistics.in','rahul.t@economic-logistics.in']
     },
     {
       icon: Clock,
