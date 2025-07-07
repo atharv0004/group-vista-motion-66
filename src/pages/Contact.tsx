@@ -87,7 +87,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone Numbers',
-      details: ['9321809438 ', ' 9324140313','7666931808']
+      details: ['9321809438 ','7666931808']
     },
     {
       icon: Mail,
