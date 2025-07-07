@@ -19,7 +19,7 @@ const About = () => {
     {
       id: 1,
       name: 'Mr Sainath Tatewar',
-      position: 'Founder - Economic Group',
+      position: 'Director & Founder - Economic Group',
       image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750096315/1b497514-0d6e-4ce2-a746-1d06f5222b73.png',
       education: 'PGDBA - Supply Chain & Operations.',
       expertise: '25+ years of experience in Supply Chain & Business strategy.'
@@ -27,7 +27,7 @@ const About = () => {
     {
       id: 2,
       name: 'Mr Pramod Kadam',
-      position: 'Founder - Economic Group',
+      position: 'Director & Founder - Economic Group',
       image: 'https://res.cloudinary.com/dxqsygmg1/image/upload/v1750073564/crop_pramod_lh3frj.jpg',
       education: 'ICWA',
       expertise: '30+ years of experience in Finance , Business strategy and Control.'
